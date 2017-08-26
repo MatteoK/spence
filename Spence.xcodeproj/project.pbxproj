@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A209F9EC1F5176F7009DE88D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209F9EB1F5176F7009DE88D /* AppDelegate.swift */; };
+		A209F9EE1F5176F7009DE88D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209F9ED1F5176F7009DE88D /* ViewController.swift */; };
+		A209F9F11F5176F7009DE88D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A209F9EF1F5176F7009DE88D /* Main.storyboard */; };
+		A209F9F31F5176F7009DE88D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A209F9F21F5176F7009DE88D /* Assets.xcassets */; };
+		A209F9F61F5176F7009DE88D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A209F9F41F5176F7009DE88D /* LaunchScreen.storyboard */; };
+		A209FA011F5176F7009DE88D /* SpenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA001F5176F7009DE88D /* SpenceTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A209F9FD1F5176F7009DE88D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A209F9E01F5176F7009DE88D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A209F9E71F5176F7009DE88D;
+			remoteInfo = Spence;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A209F9E81F5176F7009DE88D /* Spence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spence.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A209F9EB1F5176F7009DE88D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A209F9ED1F5176F7009DE88D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A209F9F01F5176F7009DE88D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A209F9F21F5176F7009DE88D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A209F9F51F5176F7009DE88D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A209F9F71F5176F7009DE88D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A209F9FC1F5176F7009DE88D /* SpenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A209FA001F5176F7009DE88D /* SpenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpenceTests.swift; sourceTree = "<group>"; };
+		A209FA021F5176F7009DE88D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A209F9E51F5176F7009DE88D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A209F9F91F5176F7009DE88D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A209F9DF1F5176F7009DE88D = {
+			isa = PBXGroup;
+			children = (
+				A209F9EA1F5176F7009DE88D /* Spence */,
+				A209F9FF1F5176F7009DE88D /* SpenceTests */,
+				A209F9E91F5176F7009DE88D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A209F9E91F5176F7009DE88D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A209F9E81F5176F7009DE88D /* Spence.app */,
+				A209F9FC1F5176F7009DE88D /* SpenceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A209F9EA1F5176F7009DE88D /* Spence */ = {
+			isa = PBXGroup;
+			children = (
+				A209F9EB1F5176F7009DE88D /* AppDelegate.swift */,
+				A209F9ED1F5176F7009DE88D /* ViewController.swift */,
+				A209F9EF1F5176F7009DE88D /* Main.storyboard */,
+				A209F9F21F5176F7009DE88D /* Assets.xcassets */,
+				A209F9F41F5176F7009DE88D /* LaunchScreen.storyboard */,
+				A209F9F71F5176F7009DE88D /* Info.plist */,
+			);
+			path = Spence;
+			sourceTree = "<group>";
+		};
+		A209F9FF1F5176F7009DE88D /* SpenceTests */ = {
+			isa = PBXGroup;
+			children = (
+				A209FA001F5176F7009DE88D /* SpenceTests.swift */,
+				A209FA021F5176F7009DE88D /* Info.plist */,
+			);
+			path = SpenceTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A209F9E71F5176F7009DE88D /* Spence */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A209FA051F5176F7009DE88D /* Build configuration list for PBXNativeTarget "Spence" */;
+			buildPhases = (
+				A209F9E41F5176F7009DE88D /* Sources */,
+				A209F9E51F5176F7009DE88D /* Frameworks */,
+				A209F9E61F5176F7009DE88D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Spence;
+			productName = Spence;
+			productReference = A209F9E81F5176F7009DE88D /* Spence.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A209F9FB1F5176F7009DE88D /* SpenceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A209FA081F5176F7009DE88D /* Build configuration list for PBXNativeTarget "SpenceTests" */;
+			buildPhases = (
+				A209F9F81F5176F7009DE88D /* Sources */,
+				A209F9F91F5176F7009DE88D /* Frameworks */,
+				A209F9FA1F5176F7009DE88D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A209F9FE1F5176F7009DE88D /* PBXTargetDependency */,
+			);
+			name = SpenceTests;
+			productName = SpenceTests;
+			productReference = A209F9FC1F5176F7009DE88D /* SpenceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A209F9E01F5176F7009DE88D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Matteo Koczorek";
+				TargetAttributes = {
+					A209F9E71F5176F7009DE88D = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					A209F9FB1F5176F7009DE88D = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A209F9E71F5176F7009DE88D;
+					};
+				};
+			};
+			buildConfigurationList = A209F9E31F5176F7009DE88D /* Build configuration list for PBXProject "Spence" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A209F9DF1F5176F7009DE88D;
+			productRefGroup = A209F9E91F5176F7009DE88D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A209F9E71F5176F7009DE88D /* Spence */,
+				A209F9FB1F5176F7009DE88D /* SpenceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A209F9E61F5176F7009DE88D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A209F9F61F5176F7009DE88D /* LaunchScreen.storyboard in Resources */,
+				A209F9F31F5176F7009DE88D /* Assets.xcassets in Resources */,
+				A209F9F11F5176F7009DE88D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A209F9FA1F5176F7009DE88D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A209F9E41F5176F7009DE88D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A209F9EE1F5176F7009DE88D /* ViewController.swift in Sources */,
+				A209F9EC1F5176F7009DE88D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A209F9F81F5176F7009DE88D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A209FA011F5176F7009DE88D /* SpenceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A209F9FE1F5176F7009DE88D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A209F9E71F5176F7009DE88D /* Spence */;
+			targetProxy = A209F9FD1F5176F7009DE88D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A209F9EF1F5176F7009DE88D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A209F9F01F5176F7009DE88D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A209F9F41F5176F7009DE88D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A209F9F51F5176F7009DE88D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A209FA031F5176F7009DE88D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A209FA041F5176F7009DE88D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A209FA061F5176F7009DE88D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Spence/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matteo.Spence;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A209FA071F5176F7009DE88D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Spence/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matteo.Spence;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A209FA091F5176F7009DE88D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SpenceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matteo.SpenceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spence.app/Spence";
+			};
+			name = Debug;
+		};
+		A209FA0A1F5176F7009DE88D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SpenceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matteo.SpenceTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spence.app/Spence";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A209F9E31F5176F7009DE88D /* Build configuration list for PBXProject "Spence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A209FA031F5176F7009DE88D /* Debug */,
+				A209FA041F5176F7009DE88D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A209FA051F5176F7009DE88D /* Build configuration list for PBXNativeTarget "Spence" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A209FA061F5176F7009DE88D /* Debug */,
+				A209FA071F5176F7009DE88D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A209FA081F5176F7009DE88D /* Build configuration list for PBXNativeTarget "SpenceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A209FA091F5176F7009DE88D /* Debug */,
+				A209FA0A1F5176F7009DE88D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A209F9E01F5176F7009DE88D /* Project object */;
+}
