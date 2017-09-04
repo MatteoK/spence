@@ -30,7 +30,6 @@ private enum ReuseIdentifier: String {
     
     case button
     case enqueuedAmount
-    case cancelButton
     case progressBar
     case dailySpending
     
@@ -51,14 +50,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     var timer: IQueueTimer = QueueTimer()
     var amountQueue: IAmountQueue = AmountQueue()
     fileprivate let viewModel = ViewModel.create(showButtons: false)
-    
-    @IBOutlet weak var progressBar: ProgressBar!
-    @IBOutlet weak var budgetTitleLabel: UILabel!
-    @IBOutlet weak var budgetLabel: UILabel!
-    @IBOutlet weak var spendingsTitleLabel: UILabel!
-    @IBOutlet weak var spendingsValueLabel: UILabel!
-    @IBOutlet weak var queueIndicatorView: QueueIndicatorView!
-    @IBOutlet weak var queuedAmountLabel: UILabel!
+
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -70,7 +62,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     private func registerCells() {
         registerCell(nibName: SpendingButtonCell.nibName, reuseIdentifier: .button)
         registerCell(nibName: EnqueuedAmountCell.nibName, reuseIdentifier: .enqueuedAmount)
-        registerCell(nibName: CancelButtonCell.nibName, reuseIdentifier: .cancelButton)
         registerCell(nibName: ProgressBarCell.nibName, reuseIdentifier: .progressBar)
         registerCell(nibName: DailySpendingCell.nibName, reuseIdentifier: .dailySpending)
     }
@@ -227,8 +218,6 @@ extension TodayViewController: UICollectionViewDataSource {
             return buttonCell(with: amount, at: indexPath)
         case .enqueuedAmount:
             return enqueuedAmountCell(at: indexPath)
-        case .cancelButton:
-            return cancelButtonCell(at: indexPath)
         case .progressBar:
             return progressBarCell(at: indexPath)
         case .dailySpending:
@@ -255,11 +244,6 @@ extension TodayViewController: UICollectionViewDataSource {
     private func enqueuedAmountCell(at indexPath: IndexPath) -> EnqueuedAmountCell {
         let cell: EnqueuedAmountCell = dequeueCell(reuseIdentifier: .enqueuedAmount, at: indexPath)
         cell.label.text = "\(Int(amountQueue.enqueuedAmount))"
-        return cell
-    }
-    
-    private func cancelButtonCell(at indexPath: IndexPath) -> CancelButtonCell {
-        let cell: CancelButtonCell = dequeueCell(reuseIdentifier: .cancelButton, at: indexPath)
         return cell
     }
     

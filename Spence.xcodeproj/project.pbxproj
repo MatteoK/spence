@@ -27,7 +27,6 @@
 		A209FA311F519B13009DE88D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA2F1F51986F009DE88D /* Extensions.swift */; };
 		A209FA331F519BF0009DE88D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA321F519BF0009DE88D /* RoundButton.swift */; };
 		A209FA351F519FF1009DE88D /* AmountQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA341F519FF1009DE88D /* AmountQueue.swift */; };
-		A209FA371F51A261009DE88D /* QueueIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA361F51A261009DE88D /* QueueIndicatorView.swift */; };
 		A209FA391F51A5C0009DE88D /* QeueTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA381F51A5C0009DE88D /* QeueTimer.swift */; };
 		A209FA3A1F51BB88009DE88D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A209F9F21F5176F7009DE88D /* Assets.xcassets */; };
 		A24D911E1F5ABDE40036CBEA /* SpendingButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D911C1F5ABDE40036CBEA /* SpendingButtonCell.swift */; };
@@ -38,8 +37,6 @@
 		A24D912A1F5ACB890036CBEA /* EnqueuedAmountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24D91281F5ACB890036CBEA /* EnqueuedAmountCell.xib */; };
 		A24D912C1F5AD0B90036CBEA /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D912B1F5AD0B90036CBEA /* CellType.swift */; };
 		A24D912E1F5AD0F00036CBEA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D912D1F5AD0F00036CBEA /* ViewModel.swift */; };
-		A24D91321F5AD16E0036CBEA /* CancelButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91301F5AD16E0036CBEA /* CancelButtonCell.swift */; };
-		A24D91331F5AD16E0036CBEA /* CancelButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24D91311F5AD16E0036CBEA /* CancelButtonCell.xib */; };
 		A24D91371F5ADC1F0036CBEA /* ProgressBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91351F5ADC1F0036CBEA /* ProgressBarCell.swift */; };
 		A24D91381F5ADC1F0036CBEA /* ProgressBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24D91361F5ADC1F0036CBEA /* ProgressBarCell.xib */; };
 		A24D913D1F5AEC700036CBEA /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D913C1F5AEC700036CBEA /* CancelButton.swift */; };
@@ -107,7 +104,6 @@
 		A209FA2F1F51986F009DE88D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		A209FA321F519BF0009DE88D /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		A209FA341F519FF1009DE88D /* AmountQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmountQueue.swift; sourceTree = "<group>"; };
-		A209FA361F51A261009DE88D /* QueueIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueIndicatorView.swift; sourceTree = "<group>"; };
 		A209FA381F51A5C0009DE88D /* QeueTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QeueTimer.swift; sourceTree = "<group>"; };
 		A24D911C1F5ABDE40036CBEA /* SpendingButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpendingButtonCell.swift; path = Views/Cells/SpendingButtonCell/SpendingButtonCell.swift; sourceTree = "<group>"; };
 		A24D911D1F5ABDE40036CBEA /* SpendingButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SpendingButtonCell.xib; path = Views/Cells/SpendingButtonCell/SpendingButtonCell.xib; sourceTree = "<group>"; };
@@ -117,8 +113,6 @@
 		A24D91281F5ACB890036CBEA /* EnqueuedAmountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EnqueuedAmountCell.xib; path = Views/Cells/EnqueuedAmountCell/EnqueuedAmountCell.xib; sourceTree = "<group>"; };
 		A24D912B1F5AD0B90036CBEA /* CellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellType.swift; path = Models/CellType.swift; sourceTree = "<group>"; };
 		A24D912D1F5AD0F00036CBEA /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = Models/ViewModel.swift; sourceTree = "<group>"; };
-		A24D91301F5AD16E0036CBEA /* CancelButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CancelButtonCell.swift; path = Views/Cells/CancelButton/CancelButtonCell.swift; sourceTree = "<group>"; };
-		A24D91311F5AD16E0036CBEA /* CancelButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CancelButtonCell.xib; path = Views/Cells/CancelButton/CancelButtonCell.xib; sourceTree = "<group>"; };
 		A24D91351F5ADC1F0036CBEA /* ProgressBarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressBarCell.swift; path = Views/Cells/ProgressBarCell/ProgressBarCell.swift; sourceTree = "<group>"; };
 		A24D91361F5ADC1F0036CBEA /* ProgressBarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProgressBarCell.xib; path = Views/Cells/ProgressBarCell/ProgressBarCell.xib; sourceTree = "<group>"; };
 		A24D913C1F5AEC700036CBEA /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CancelButton.swift; path = Views/CancelButtonView/CancelButton.swift; sourceTree = "<group>"; };
@@ -221,7 +215,6 @@
 				A209FA2D1F518829009DE88D /* ProgressBar.swift */,
 				A209FA321F519BF0009DE88D /* RoundButton.swift */,
 				A209FA341F519FF1009DE88D /* AmountQueue.swift */,
-				A209FA361F51A261009DE88D /* QueueIndicatorView.swift */,
 				A209FA381F51A5C0009DE88D /* QeueTimer.swift */,
 			);
 			path = SpenceWidget;
@@ -259,7 +252,6 @@
 			children = (
 				A24D91401F5B090C0036CBEA /* DailySpendingCell */,
 				A24D91341F5ADC080036CBEA /* ProgressBarCell */,
-				A24D912F1F5AD13A0036CBEA /* CancelButton */,
 				A24D91261F5ACB6A0036CBEA /* EnqueuedAmountCell */,
 				A24D91251F5ACA880036CBEA /* SpendingButtonCell */,
 			);
@@ -293,15 +285,6 @@
 				A24D91281F5ACB890036CBEA /* EnqueuedAmountCell.xib */,
 			);
 			name = EnqueuedAmountCell;
-			sourceTree = "<group>";
-		};
-		A24D912F1F5AD13A0036CBEA /* CancelButton */ = {
-			isa = PBXGroup;
-			children = (
-				A24D91301F5AD16E0036CBEA /* CancelButtonCell.swift */,
-				A24D91311F5AD16E0036CBEA /* CancelButtonCell.xib */,
-			);
-			name = CancelButton;
 			sourceTree = "<group>";
 		};
 		A24D91341F5ADC080036CBEA /* ProgressBarCell */ = {
@@ -480,7 +463,6 @@
 				A209FA181F517778009DE88D /* MainInterface.storyboard in Resources */,
 				A24D91441F5B092C0036CBEA /* DailySpendingCell.xib in Resources */,
 				A24D911F1F5ABDE40036CBEA /* SpendingButtonCell.xib in Resources */,
-				A24D91331F5AD16E0036CBEA /* CancelButtonCell.xib in Resources */,
 				A24D912A1F5ACB890036CBEA /* EnqueuedAmountCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,10 +497,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A209FA371F51A261009DE88D /* QueueIndicatorView.swift in Sources */,
 				A209FA331F519BF0009DE88D /* RoundButton.swift in Sources */,
 				A209FA311F519B13009DE88D /* Extensions.swift in Sources */,
-				A24D91321F5AD16E0036CBEA /* CancelButtonCell.swift in Sources */,
 				A24D911E1F5ABDE40036CBEA /* SpendingButtonCell.swift in Sources */,
 				A24D91371F5ADC1F0036CBEA /* ProgressBarCell.swift in Sources */,
 				A24D914B1F5DC3BB0036CBEA /* Currency.swift in Sources */,

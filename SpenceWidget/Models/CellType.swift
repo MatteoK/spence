@@ -12,7 +12,6 @@ enum CellType {
     
     case button(ButtonAmount)
     case enqueuedAmount
-    case cancelButton
     case progressBar
     case dailySpending
     case monthlySpending
@@ -26,8 +25,6 @@ func ==(lhs: CellType, rhs: CellType) -> Bool {
     case (.button(let leftAmount), .button(let rightAmount)):
         return leftAmount == rightAmount
     case (.enqueuedAmount, .enqueuedAmount):
-        return true
-    case (.cancelButton, .cancelButton):
         return true
     case (.progressBar, .progressBar):
         return true
