@@ -13,6 +13,42 @@
 		A209F9F31F5176F7009DE88D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A209F9F21F5176F7009DE88D /* Assets.xcassets */; };
 		A209F9F61F5176F7009DE88D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A209F9F41F5176F7009DE88D /* LaunchScreen.storyboard */; };
 		A209FA011F5176F7009DE88D /* SpenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA001F5176F7009DE88D /* SpenceTests.swift */; };
+		A209FA121F517778009DE88D /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A209FA111F517778009DE88D /* NotificationCenter.framework */; };
+		A209FA151F517778009DE88D /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA141F517778009DE88D /* TodayViewController.swift */; };
+		A209FA181F517778009DE88D /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A209FA161F517778009DE88D /* MainInterface.storyboard */; };
+		A209FA1C1F517778009DE88D /* SpenceWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A209FA0F1F517778009DE88D /* SpenceWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A209FA251F517B06009DE88D /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA241F517B06009DE88D /* LocalRepository.swift */; };
+		A209FA261F517C2B009DE88D /* LocalRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA241F517B06009DE88D /* LocalRepository.swift */; };
+		A209FA291F517F31009DE88D /* LocalRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA281F517F31009DE88D /* LocalRepositoryTests.swift */; };
+		A209FA2B1F518437009DE88D /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA2A1F518437009DE88D /* DateProvider.swift */; };
+		A209FA2C1F5184E6009DE88D /* DateProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA2A1F518437009DE88D /* DateProvider.swift */; };
+		A209FA2E1F518829009DE88D /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA2D1F518829009DE88D /* ProgressBar.swift */; };
+		A209FA301F51986F009DE88D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA2F1F51986F009DE88D /* Extensions.swift */; };
+		A209FA311F519B13009DE88D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA2F1F51986F009DE88D /* Extensions.swift */; };
+		A209FA331F519BF0009DE88D /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA321F519BF0009DE88D /* RoundButton.swift */; };
+		A209FA351F519FF1009DE88D /* AmountQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA341F519FF1009DE88D /* AmountQueue.swift */; };
+		A209FA371F51A261009DE88D /* QueueIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA361F51A261009DE88D /* QueueIndicatorView.swift */; };
+		A209FA391F51A5C0009DE88D /* QeueTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA381F51A5C0009DE88D /* QeueTimer.swift */; };
+		A209FA3A1F51BB88009DE88D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A209F9F21F5176F7009DE88D /* Assets.xcassets */; };
+		A24D911E1F5ABDE40036CBEA /* SpendingButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D911C1F5ABDE40036CBEA /* SpendingButtonCell.swift */; };
+		A24D911F1F5ABDE40036CBEA /* SpendingButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24D911D1F5ABDE40036CBEA /* SpendingButtonCell.xib */; };
+		A24D91221F5ABF140036CBEA /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91211F5ABF140036CBEA /* Section.swift */; };
+		A24D91241F5AC2E00036CBEA /* ButtonAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91231F5AC2E00036CBEA /* ButtonAmount.swift */; };
+		A24D91291F5ACB890036CBEA /* EnqueuedAmountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91271F5ACB890036CBEA /* EnqueuedAmountCell.swift */; };
+		A24D912A1F5ACB890036CBEA /* EnqueuedAmountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24D91281F5ACB890036CBEA /* EnqueuedAmountCell.xib */; };
+		A24D912C1F5AD0B90036CBEA /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D912B1F5AD0B90036CBEA /* CellType.swift */; };
+		A24D912E1F5AD0F00036CBEA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D912D1F5AD0F00036CBEA /* ViewModel.swift */; };
+		A24D91321F5AD16E0036CBEA /* CancelButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91301F5AD16E0036CBEA /* CancelButtonCell.swift */; };
+		A24D91331F5AD16E0036CBEA /* CancelButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24D91311F5AD16E0036CBEA /* CancelButtonCell.xib */; };
+		A24D91371F5ADC1F0036CBEA /* ProgressBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91351F5ADC1F0036CBEA /* ProgressBarCell.swift */; };
+		A24D91381F5ADC1F0036CBEA /* ProgressBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24D91361F5ADC1F0036CBEA /* ProgressBarCell.xib */; };
+		A24D913D1F5AEC700036CBEA /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D913C1F5AEC700036CBEA /* CancelButton.swift */; };
+		A24D91431F5B092C0036CBEA /* DailySpendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91411F5B092C0036CBEA /* DailySpendingCell.swift */; };
+		A24D91441F5B092C0036CBEA /* DailySpendingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24D91421F5B092C0036CBEA /* DailySpendingCell.xib */; };
+		A24D91471F5DC2930036CBEA /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91461F5DC2930036CBEA /* Spending.swift */; };
+		A24D91481F5DC2EF0036CBEA /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91461F5DC2930036CBEA /* Spending.swift */; };
+		A24D914A1F5DC3080036CBEA /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91491F5DC3080036CBEA /* Currency.swift */; };
+		A24D914B1F5DC3BB0036CBEA /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91491F5DC3080036CBEA /* Currency.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +59,28 @@
 			remoteGlobalIDString = A209F9E71F5176F7009DE88D;
 			remoteInfo = Spence;
 		};
+		A209FA1A1F517778009DE88D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A209F9E01F5176F7009DE88D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A209FA0E1F517778009DE88D;
+			remoteInfo = SpenceWidget;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A209FA201F517778009DE88D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A209FA1C1F517778009DE88D /* SpenceWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A209F9E81F5176F7009DE88D /* Spence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spence.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +93,39 @@
 		A209F9FC1F5176F7009DE88D /* SpenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A209FA001F5176F7009DE88D /* SpenceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpenceTests.swift; sourceTree = "<group>"; };
 		A209FA021F5176F7009DE88D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A209FA0F1F517778009DE88D /* SpenceWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SpenceWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A209FA111F517778009DE88D /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		A209FA141F517778009DE88D /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		A209FA171F517778009DE88D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A209FA191F517778009DE88D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A209FA211F517A53009DE88D /* SpenceWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SpenceWidget.entitlements; sourceTree = "<group>"; };
+		A209FA221F517AA5009DE88D /* Spence.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spence.entitlements; sourceTree = "<group>"; };
+		A209FA241F517B06009DE88D /* LocalRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalRepository.swift; path = Repository/LocalRepository.swift; sourceTree = "<group>"; };
+		A209FA281F517F31009DE88D /* LocalRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalRepositoryTests.swift; path = Repository/LocalRepositoryTests.swift; sourceTree = "<group>"; };
+		A209FA2A1F518437009DE88D /* DateProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateProvider.swift; path = Repository/DateProvider.swift; sourceTree = "<group>"; };
+		A209FA2D1F518829009DE88D /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		A209FA2F1F51986F009DE88D /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A209FA321F519BF0009DE88D /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		A209FA341F519FF1009DE88D /* AmountQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmountQueue.swift; sourceTree = "<group>"; };
+		A209FA361F51A261009DE88D /* QueueIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueueIndicatorView.swift; sourceTree = "<group>"; };
+		A209FA381F51A5C0009DE88D /* QeueTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QeueTimer.swift; sourceTree = "<group>"; };
+		A24D911C1F5ABDE40036CBEA /* SpendingButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpendingButtonCell.swift; path = Views/Cells/SpendingButtonCell/SpendingButtonCell.swift; sourceTree = "<group>"; };
+		A24D911D1F5ABDE40036CBEA /* SpendingButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SpendingButtonCell.xib; path = Views/Cells/SpendingButtonCell/SpendingButtonCell.xib; sourceTree = "<group>"; };
+		A24D91211F5ABF140036CBEA /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Section.swift; path = Models/Section.swift; sourceTree = "<group>"; };
+		A24D91231F5AC2E00036CBEA /* ButtonAmount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonAmount.swift; path = Models/ButtonAmount.swift; sourceTree = "<group>"; };
+		A24D91271F5ACB890036CBEA /* EnqueuedAmountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnqueuedAmountCell.swift; path = Views/Cells/EnqueuedAmountCell/EnqueuedAmountCell.swift; sourceTree = "<group>"; };
+		A24D91281F5ACB890036CBEA /* EnqueuedAmountCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EnqueuedAmountCell.xib; path = Views/Cells/EnqueuedAmountCell/EnqueuedAmountCell.xib; sourceTree = "<group>"; };
+		A24D912B1F5AD0B90036CBEA /* CellType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CellType.swift; path = Models/CellType.swift; sourceTree = "<group>"; };
+		A24D912D1F5AD0F00036CBEA /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = Models/ViewModel.swift; sourceTree = "<group>"; };
+		A24D91301F5AD16E0036CBEA /* CancelButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CancelButtonCell.swift; path = Views/Cells/CancelButton/CancelButtonCell.swift; sourceTree = "<group>"; };
+		A24D91311F5AD16E0036CBEA /* CancelButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CancelButtonCell.xib; path = Views/Cells/CancelButton/CancelButtonCell.xib; sourceTree = "<group>"; };
+		A24D91351F5ADC1F0036CBEA /* ProgressBarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressBarCell.swift; path = Views/Cells/ProgressBarCell/ProgressBarCell.swift; sourceTree = "<group>"; };
+		A24D91361F5ADC1F0036CBEA /* ProgressBarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProgressBarCell.xib; path = Views/Cells/ProgressBarCell/ProgressBarCell.xib; sourceTree = "<group>"; };
+		A24D913C1F5AEC700036CBEA /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CancelButton.swift; path = Views/CancelButtonView/CancelButton.swift; sourceTree = "<group>"; };
+		A24D91411F5B092C0036CBEA /* DailySpendingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailySpendingCell.swift; path = Views/Cells/DailySpendingCell/DailySpendingCell.swift; sourceTree = "<group>"; };
+		A24D91421F5B092C0036CBEA /* DailySpendingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DailySpendingCell.xib; path = Views/Cells/DailySpendingCell/DailySpendingCell.xib; sourceTree = "<group>"; };
+		A24D91461F5DC2930036CBEA /* Spending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spending.swift; path = Repository/Models/Spending.swift; sourceTree = "<group>"; };
+		A24D91491F5DC3080036CBEA /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Currency.swift; path = Repository/Models/Currency.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +143,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A209FA0C1F517778009DE88D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A209FA121F517778009DE88D /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -61,6 +159,8 @@
 			children = (
 				A209F9EA1F5176F7009DE88D /* Spence */,
 				A209F9FF1F5176F7009DE88D /* SpenceTests */,
+				A209FA131F517778009DE88D /* SpenceWidget */,
+				A209FA101F517778009DE88D /* Frameworks */,
 				A209F9E91F5176F7009DE88D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +170,7 @@
 			children = (
 				A209F9E81F5176F7009DE88D /* Spence.app */,
 				A209F9FC1F5176F7009DE88D /* SpenceTests.xctest */,
+				A209FA0F1F517778009DE88D /* SpenceWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,12 +178,15 @@
 		A209F9EA1F5176F7009DE88D /* Spence */ = {
 			isa = PBXGroup;
 			children = (
+				A209FA231F517ADC009DE88D /* Repository */,
+				A209FA221F517AA5009DE88D /* Spence.entitlements */,
 				A209F9EB1F5176F7009DE88D /* AppDelegate.swift */,
 				A209F9ED1F5176F7009DE88D /* ViewController.swift */,
 				A209F9EF1F5176F7009DE88D /* Main.storyboard */,
 				A209F9F21F5176F7009DE88D /* Assets.xcassets */,
 				A209F9F41F5176F7009DE88D /* LaunchScreen.storyboard */,
 				A209F9F71F5176F7009DE88D /* Info.plist */,
+				A209FA2F1F51986F009DE88D /* Extensions.swift */,
 			);
 			path = Spence;
 			sourceTree = "<group>";
@@ -90,10 +194,149 @@
 		A209F9FF1F5176F7009DE88D /* SpenceTests */ = {
 			isa = PBXGroup;
 			children = (
+				A209FA271F517F03009DE88D /* Repository */,
 				A209FA001F5176F7009DE88D /* SpenceTests.swift */,
 				A209FA021F5176F7009DE88D /* Info.plist */,
 			);
 			path = SpenceTests;
+			sourceTree = "<group>";
+		};
+		A209FA101F517778009DE88D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A209FA111F517778009DE88D /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A209FA131F517778009DE88D /* SpenceWidget */ = {
+			isa = PBXGroup;
+			children = (
+				A24D91201F5ABF060036CBEA /* Models */,
+				A24D911A1F5ABDA20036CBEA /* Views */,
+				A209FA211F517A53009DE88D /* SpenceWidget.entitlements */,
+				A209FA141F517778009DE88D /* TodayViewController.swift */,
+				A209FA161F517778009DE88D /* MainInterface.storyboard */,
+				A209FA191F517778009DE88D /* Info.plist */,
+				A209FA2D1F518829009DE88D /* ProgressBar.swift */,
+				A209FA321F519BF0009DE88D /* RoundButton.swift */,
+				A209FA341F519FF1009DE88D /* AmountQueue.swift */,
+				A209FA361F51A261009DE88D /* QueueIndicatorView.swift */,
+				A209FA381F51A5C0009DE88D /* QeueTimer.swift */,
+			);
+			path = SpenceWidget;
+			sourceTree = "<group>";
+		};
+		A209FA231F517ADC009DE88D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A24D91451F5DC2860036CBEA /* Models */,
+				A209FA241F517B06009DE88D /* LocalRepository.swift */,
+				A209FA2A1F518437009DE88D /* DateProvider.swift */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
+		A209FA271F517F03009DE88D /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A209FA281F517F31009DE88D /* LocalRepositoryTests.swift */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
+		A24D911A1F5ABDA20036CBEA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A24D913B1F5AEC550036CBEA /* CancelButtonView */,
+				A24D911B1F5ABDA60036CBEA /* Cells */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A24D911B1F5ABDA60036CBEA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A24D91401F5B090C0036CBEA /* DailySpendingCell */,
+				A24D91341F5ADC080036CBEA /* ProgressBarCell */,
+				A24D912F1F5AD13A0036CBEA /* CancelButton */,
+				A24D91261F5ACB6A0036CBEA /* EnqueuedAmountCell */,
+				A24D91251F5ACA880036CBEA /* SpendingButtonCell */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		A24D91201F5ABF060036CBEA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A24D91211F5ABF140036CBEA /* Section.swift */,
+				A24D91231F5AC2E00036CBEA /* ButtonAmount.swift */,
+				A24D912B1F5AD0B90036CBEA /* CellType.swift */,
+				A24D912D1F5AD0F00036CBEA /* ViewModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A24D91251F5ACA880036CBEA /* SpendingButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				A24D911C1F5ABDE40036CBEA /* SpendingButtonCell.swift */,
+				A24D911D1F5ABDE40036CBEA /* SpendingButtonCell.xib */,
+			);
+			name = SpendingButtonCell;
+			sourceTree = "<group>";
+		};
+		A24D91261F5ACB6A0036CBEA /* EnqueuedAmountCell */ = {
+			isa = PBXGroup;
+			children = (
+				A24D91271F5ACB890036CBEA /* EnqueuedAmountCell.swift */,
+				A24D91281F5ACB890036CBEA /* EnqueuedAmountCell.xib */,
+			);
+			name = EnqueuedAmountCell;
+			sourceTree = "<group>";
+		};
+		A24D912F1F5AD13A0036CBEA /* CancelButton */ = {
+			isa = PBXGroup;
+			children = (
+				A24D91301F5AD16E0036CBEA /* CancelButtonCell.swift */,
+				A24D91311F5AD16E0036CBEA /* CancelButtonCell.xib */,
+			);
+			name = CancelButton;
+			sourceTree = "<group>";
+		};
+		A24D91341F5ADC080036CBEA /* ProgressBarCell */ = {
+			isa = PBXGroup;
+			children = (
+				A24D91351F5ADC1F0036CBEA /* ProgressBarCell.swift */,
+				A24D91361F5ADC1F0036CBEA /* ProgressBarCell.xib */,
+			);
+			name = ProgressBarCell;
+			sourceTree = "<group>";
+		};
+		A24D913B1F5AEC550036CBEA /* CancelButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				A24D913C1F5AEC700036CBEA /* CancelButton.swift */,
+			);
+			name = CancelButtonView;
+			sourceTree = "<group>";
+		};
+		A24D91401F5B090C0036CBEA /* DailySpendingCell */ = {
+			isa = PBXGroup;
+			children = (
+				A24D91411F5B092C0036CBEA /* DailySpendingCell.swift */,
+				A24D91421F5B092C0036CBEA /* DailySpendingCell.xib */,
+			);
+			name = DailySpendingCell;
+			sourceTree = "<group>";
+		};
+		A24D91451F5DC2860036CBEA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A24D91461F5DC2930036CBEA /* Spending.swift */,
+				A24D91491F5DC3080036CBEA /* Currency.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,10 +349,12 @@
 				A209F9E41F5176F7009DE88D /* Sources */,
 				A209F9E51F5176F7009DE88D /* Frameworks */,
 				A209F9E61F5176F7009DE88D /* Resources */,
+				A209FA201F517778009DE88D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A209FA1B1F517778009DE88D /* PBXTargetDependency */,
 			);
 			name = Spence;
 			productName = Spence;
@@ -134,6 +379,23 @@
 			productReference = A209F9FC1F5176F7009DE88D /* SpenceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A209FA0E1F517778009DE88D /* SpenceWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A209FA1D1F517778009DE88D /* Build configuration list for PBXNativeTarget "SpenceWidget" */;
+			buildPhases = (
+				A209FA0B1F517778009DE88D /* Sources */,
+				A209FA0C1F517778009DE88D /* Frameworks */,
+				A209FA0D1F517778009DE88D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpenceWidget;
+			productName = SpenceWidget;
+			productReference = A209FA0F1F517778009DE88D /* SpenceWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -146,12 +408,28 @@
 				TargetAttributes = {
 					A209F9E71F5176F7009DE88D = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CRH98TAFEK;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A209F9FB1F5176F7009DE88D = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 						TestTargetID = A209F9E71F5176F7009DE88D;
+					};
+					A209FA0E1F517778009DE88D = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = CRH98TAFEK;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -170,6 +448,7 @@
 			targets = (
 				A209F9E71F5176F7009DE88D /* Spence */,
 				A209F9FB1F5176F7009DE88D /* SpenceTests */,
+				A209FA0E1F517778009DE88D /* SpenceWidget */,
 			);
 		};
 /* End PBXProject section */
@@ -192,6 +471,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A209FA0D1F517778009DE88D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A24D91381F5ADC1F0036CBEA /* ProgressBarCell.xib in Resources */,
+				A209FA3A1F51BB88009DE88D /* Assets.xcassets in Resources */,
+				A209FA181F517778009DE88D /* MainInterface.storyboard in Resources */,
+				A24D91441F5B092C0036CBEA /* DailySpendingCell.xib in Resources */,
+				A24D911F1F5ABDE40036CBEA /* SpendingButtonCell.xib in Resources */,
+				A24D91331F5AD16E0036CBEA /* CancelButtonCell.xib in Resources */,
+				A24D912A1F5ACB890036CBEA /* EnqueuedAmountCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -199,7 +492,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A209FA301F51986F009DE88D /* Extensions.swift in Sources */,
 				A209F9EE1F5176F7009DE88D /* ViewController.swift in Sources */,
+				A209FA251F517B06009DE88D /* LocalRepository.swift in Sources */,
+				A24D91471F5DC2930036CBEA /* Spending.swift in Sources */,
+				A209FA2B1F518437009DE88D /* DateProvider.swift in Sources */,
+				A24D914A1F5DC3080036CBEA /* Currency.swift in Sources */,
 				A209F9EC1F5176F7009DE88D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,6 +507,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				A209FA011F5176F7009DE88D /* SpenceTests.swift in Sources */,
+				A209FA291F517F31009DE88D /* LocalRepositoryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A209FA0B1F517778009DE88D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A209FA371F51A261009DE88D /* QueueIndicatorView.swift in Sources */,
+				A209FA331F519BF0009DE88D /* RoundButton.swift in Sources */,
+				A209FA311F519B13009DE88D /* Extensions.swift in Sources */,
+				A24D91321F5AD16E0036CBEA /* CancelButtonCell.swift in Sources */,
+				A24D911E1F5ABDE40036CBEA /* SpendingButtonCell.swift in Sources */,
+				A24D91371F5ADC1F0036CBEA /* ProgressBarCell.swift in Sources */,
+				A24D914B1F5DC3BB0036CBEA /* Currency.swift in Sources */,
+				A24D91291F5ACB890036CBEA /* EnqueuedAmountCell.swift in Sources */,
+				A24D91221F5ABF140036CBEA /* Section.swift in Sources */,
+				A24D91431F5B092C0036CBEA /* DailySpendingCell.swift in Sources */,
+				A24D91241F5AC2E00036CBEA /* ButtonAmount.swift in Sources */,
+				A209FA351F519FF1009DE88D /* AmountQueue.swift in Sources */,
+				A209FA261F517C2B009DE88D /* LocalRepository.swift in Sources */,
+				A209FA391F51A5C0009DE88D /* QeueTimer.swift in Sources */,
+				A24D912E1F5AD0F00036CBEA /* ViewModel.swift in Sources */,
+				A209FA2C1F5184E6009DE88D /* DateProvider.swift in Sources */,
+				A24D912C1F5AD0B90036CBEA /* CellType.swift in Sources */,
+				A209FA2E1F518829009DE88D /* ProgressBar.swift in Sources */,
+				A24D91481F5DC2EF0036CBEA /* Spending.swift in Sources */,
+				A24D913D1F5AEC700036CBEA /* CancelButton.swift in Sources */,
+				A209FA151F517778009DE88D /* TodayViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +546,11 @@
 			isa = PBXTargetDependency;
 			target = A209F9E71F5176F7009DE88D /* Spence */;
 			targetProxy = A209F9FD1F5176F7009DE88D /* PBXContainerItemProxy */;
+		};
+		A209FA1B1F517778009DE88D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A209FA0E1F517778009DE88D /* SpenceWidget */;
+			targetProxy = A209FA1A1F517778009DE88D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -237,6 +569,14 @@
 				A209F9F51F5176F7009DE88D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A209FA161F517778009DE88D /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A209FA171F517778009DE88D /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -340,8 +680,12 @@
 		A209FA061F5176F7009DE88D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Spence/Spence.entitlements;
+				DEVELOPMENT_TEAM = CRH98TAFEK;
 				INFOPLIST_FILE = Spence/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matteo.Spence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,8 +696,12 @@
 		A209FA071F5176F7009DE88D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Spence/Spence.entitlements;
+				DEVELOPMENT_TEAM = CRH98TAFEK;
 				INFOPLIST_FILE = Spence/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.matteo.Spence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -389,6 +737,36 @@
 			};
 			name = Release;
 		};
+		A209FA1E1F517778009DE88D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SpenceWidget/SpenceWidget.entitlements;
+				DEVELOPMENT_TEAM = CRH98TAFEK;
+				INFOPLIST_FILE = SpenceWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matteo.Spence.SpenceWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A209FA1F1F517778009DE88D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = SpenceWidget/SpenceWidget.entitlements;
+				DEVELOPMENT_TEAM = CRH98TAFEK;
+				INFOPLIST_FILE = SpenceWidget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.matteo.Spence.SpenceWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -408,6 +786,7 @@
 				A209FA071F5176F7009DE88D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A209FA081F5176F7009DE88D /* Build configuration list for PBXNativeTarget "SpenceTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +795,16 @@
 				A209FA0A1F5176F7009DE88D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A209FA1D1F517778009DE88D /* Build configuration list for PBXNativeTarget "SpenceWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A209FA1E1F517778009DE88D /* Debug */,
+				A209FA1F1F517778009DE88D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

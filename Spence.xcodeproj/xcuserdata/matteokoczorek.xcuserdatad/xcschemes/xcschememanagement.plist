@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>SpenceWidget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>A209F9FB1F5176F7009DE88D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A209FA0E1F517778009DE88D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ProgressBarCell" customModule="SpenceWidget" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="216" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="216" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40E-3R-BIp" customClass="ProgressBar" customModule="SpenceWidget" customModuleProvider="target">
+                        <rect key="frame" x="15" y="15" width="186" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.051083846830985914" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="Xm4-9M-DVS"/>
+                        </constraints>
+                    </view>
+                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Reh-hK-lUv">
+                        <rect key="frame" x="201" y="5" width="88" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+5€" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3T-yP-UGz">
+                                <rect key="frame" x="0.0" y="11.5" width="40" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="y6Y-2g-PdB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqM-S7-bpu" customClass="CancelButton" customModule="SpenceWidget" customModuleProvider="target">
+                                <rect key="frame" x="48" y="0.0" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Cvi-Xa-7ft"/>
+                                    <constraint firstAttribute="width" constant="40" id="HDe-XF-GGY"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="cancel">
+                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelButtonPressedWithSender:" destination="gTV-IL-0wX" eventType="touchUpInside" id="4qO-cZ-s3X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f3T-yP-UGz" firstAttribute="centerY" secondItem="Reh-hK-lUv" secondAttribute="centerY" id="1Sn-X0-dXQ"/>
+                            <constraint firstItem="f3T-yP-UGz" firstAttribute="leading" secondItem="Reh-hK-lUv" secondAttribute="leading" id="Owp-Jw-KGW"/>
+                            <constraint firstAttribute="width" constant="88" id="XJP-wq-4Rn"/>
+                            <constraint firstItem="fqM-S7-bpu" firstAttribute="centerY" secondItem="Reh-hK-lUv" secondAttribute="centerY" id="g4D-h8-42W"/>
+                            <constraint firstAttribute="height" constant="40" id="wVD-T5-pck"/>
+                            <constraint firstAttribute="trailing" secondItem="fqM-S7-bpu" secondAttribute="trailing" id="zMI-4l-CP0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="40E-3R-BIp" secondAttribute="trailing" constant="15" id="3aF-wK-fpQ"/>
+                <constraint firstItem="Reh-hK-lUv" firstAttribute="leading" secondItem="40E-3R-BIp" secondAttribute="trailing" id="jDK-A6-Od2"/>
+                <constraint firstItem="Reh-hK-lUv" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="lnq-Fy-PHd"/>
+                <constraint firstItem="40E-3R-BIp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="nj5-tO-8aA"/>
+                <constraint firstItem="40E-3R-BIp" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="uIn-bn-l57"/>
+            </constraints>
+            <size key="customSize" width="216" height="50"/>
+            <connections>
+                <outlet property="buttonContainer" destination="Reh-hK-lUv" id="A0b-BL-zhz"/>
+                <outlet property="cancelButton" destination="fqM-S7-bpu" id="fkk-9o-Mom"/>
+                <outlet property="progressBar" destination="40E-3R-BIp" id="0yS-U6-aFj"/>
+                <outlet property="progressBarTrailingConstraint" destination="3aF-wK-fpQ" id="7La-n7-Dhv"/>
+                <outlet property="valueLabel" destination="f3T-yP-UGz" id="9FA-tP-6JT"/>
+            </connections>
+            <point key="canvasLocation" x="117" y="75"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="cancel" width="48" height="48"/>
+    </resources>
+</document>
