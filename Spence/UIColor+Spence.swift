@@ -48,32 +48,3 @@ extension UIColor {
     }
     
 }
-
-extension NSLayoutConstraint {
-    
-    static func equalConstraint(from: UIView, to: UIView, attribute: NSLayoutAttribute, constant: CGFloat = 0) -> NSLayoutConstraint {
-        return NSLayoutConstraint(item: from, attribute: attribute, relatedBy: .equal, toItem: to, attribute: attribute, multiplier: 1, constant: constant)
-    }
-    
-    static func equalConstraints(from: UIView, to: UIView, attributes: [NSLayoutAttribute], constant: CGFloat = 0) -> [NSLayoutConstraint] {
-        return attributes.map({
-            let constant = [NSLayoutAttribute.bottom, NSLayoutAttribute.trailing].contains($0) ? -constant : constant
-            return self.equalConstraint(from: from, to: to, attribute: $0, constant: constant)
-        })
-    }
-    
-}
-
-extension UIView {
-    
-    func addExpandedSubview(view: UIView) {
-        addSubview(view)
-        view.expand(in: self)
-    }
-    
-    func expand(in view: UIView) {
-        translatesAutoresizingMaskIntoConstraints = false
-        view.addConstraints(NSLayoutConstraint.equalConstraints(from: view, to: self, attributes: [.leading, .trailing, .top, .bottom]))
-    }
-    
-}

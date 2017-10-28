@@ -43,7 +43,7 @@ extension ViewController: UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "\(row*budgetSteps) \(localRepository.currency.symbol)"
+        return "\(row*budgetSteps) \(Currency.selected.symbol)"
     }
     
 }

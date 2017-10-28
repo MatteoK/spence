@@ -197,7 +197,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     private func valueTextWithCurrency(value: Float) -> String {
-        return "\(localRepository.currency.symbol) \(Int(value))"
+        return "\(Currency.selected.symbol) \(Int(value))"
     }
     
 }

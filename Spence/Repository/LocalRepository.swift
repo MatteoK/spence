@@ -16,7 +16,6 @@ protocol ILocalRepository {
     var thisMonthsSpendings: Float { get }
     var percentSpentToday: Float { get }
     var todaysBudget: Float { get }
-    var currency: Currency { get set }
     var spendings: [Spending] { get }
     
 }
@@ -93,29 +92,6 @@ final class LocalRepository: ILocalRepository {
         return Calendar.current.component(.day, from: dateProvider.currentDate())
     }
     
-    var currency: Currency {
-        get {
-            guard let rawValue = defaults.string(forKey: .currencyKey),
-                let currency = Currency(rawValue: rawValue) else {
-                    return Currency.defaultCurrency
-            }
-            return currency
-        }
-        set {
-            defaults.set(newValue.rawValue, forKey: .currencyKey)
-        }
-    }
-    
-}
-
-private extension Date {
-    
-    var defaultsKey: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "ddMMyyyy"
-        return formatter.string(from: self)
-    }
-    
 }
 
 private extension String {
@@ -123,7 +99,6 @@ private extension String {
     static let monthlyBudgetKey = "monthlyBudget"
     static let dailySpendingsKey = "dailySpendings"
     static let defaultsSuiteName = "group.spence"
-    static let currencyKey = "currency"
     static let spendingsKey = "currency"
     
 }

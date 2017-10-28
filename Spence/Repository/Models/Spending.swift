@@ -46,3 +46,9 @@ struct Spending {
     }
     
 }
+
+extension Spending: Equatable {}
+
+func ==(lhs: Spending, rhs: Spending) -> Bool {
+    return lhs.date == rhs.date && lhs.value == rhs.value
+}
