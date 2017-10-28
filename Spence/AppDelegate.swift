@@ -12,10 +12,11 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var expenseListWireframe = ExpenseListWireframe()
+    let expenseListWireframe = ExpenseListWireframe()
+    let overviewWireframe = OverviewWireframe()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        (UIApplication.shared.windows.first?.rootViewController as? UINavigationController)?.pushViewController(expenseListWireframe.view, animated: false)
+        (UIApplication.shared.windows.first?.rootViewController as? UINavigationController)?.pushViewController(overviewWireframe.view, animated: false)
         return true
     }
 

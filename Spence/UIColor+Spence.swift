@@ -48,3 +48,14 @@ extension UIColor {
     }
     
 }
+
+extension UIColor {
+    
+    static let backgroundColor = UIColor(red: 56/255.0, green: 65/255.0, blue: 78/255.0, alpha: 1)
+    static let darkBackground = UIColor(red: 36/255.0, green: 35/255.0, blue: 48/255.0, alpha: 1)
+    static let spenceGreen = UIColor.green
+    static let spenceRed = UIColor.red
+    static let cta = UIColor(red: 89/255.0, green: 212/255.0, blue: 217/255.0, alpha: 1)
+    static let ctaActive = UIColor(red: 69/255.0, green: 192/255.0, blue: 197/255.0, alpha: 1)
+    
+}

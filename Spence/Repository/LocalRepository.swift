@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ILocalRepository {
+protocol ILocalRepository: class {
     
     var monthlyBudget: Float { get set }
     var todaysExpenses: Float { get }

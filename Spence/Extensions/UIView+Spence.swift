@@ -10,14 +10,19 @@ import UIKit
 
 extension UIView {
     
-    func addExpandedSubview(view: UIView) {
+    func addExpandedSubview(view: UIView, insets: UIEdgeInsets = .zero) {
         addSubview(view)
         view.expand(in: self)
     }
     
-    func expand(in view: UIView) {
+    func expand(in view: UIView, insets: UIEdgeInsets = .zero) {
         translatesAutoresizingMaskIntoConstraints = false
-        view.addConstraints(NSLayoutConstraint.equalConstraints(from: view, to: self, attributes: [.leading, .trailing, .top, .bottom]))
+        view.addConstraints([
+            .equalConstraint(from: view, to: self, attribute: .leading, constant: insets.left),
+            .equalConstraint(from: view, to: self, attribute: .top, constant: insets.top),
+            .equalConstraint(from: view, to: self, attribute: .trailing, constant: insets.right),
+            .equalConstraint(from: view, to: self, attribute: .bottom, constant: insets.bottom)
+        ])
     }
     
 }

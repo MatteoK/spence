@@ -21,4 +21,8 @@ extension NSLayoutConstraint {
         })
     }
     
+    static func absoluteConstraint(view: UIView, attribute: NSLayoutAttribute, constant: CGFloat) -> NSLayoutConstraint {
+        return NSLayoutConstraint(item: view, attribute: attribute, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: constant)
+    }
+    
 }
