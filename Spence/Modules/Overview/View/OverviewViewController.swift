@@ -24,7 +24,7 @@ final class OverviewViewController: UIViewController, IOverviewView {
     let pickerView = SpencePickerView()
     
     override func viewDidLoad() {
-        view.backgroundColor = .backgroundColor
+        view.backgroundColor = .background
         configureProgressBars()
         configurePickerView()
         presenter?.viewDidLoad()

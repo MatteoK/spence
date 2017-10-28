@@ -29,7 +29,7 @@ final class ExpenseListViewController: UIViewController, IExpenseListView {
     }
     
     private func registerCells() {
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.register(ExpenseListItemCell.nib, forCellReuseIdentifier: reuseIdentifier)
     }
     
     func show(viewModel: ExpenseListViewModel) {
@@ -52,14 +52,17 @@ extension ExpenseListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = viewModel!.sections[indexPath.section].items[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
-        cell.textLabel?.text = "\(item.date) - \(item.value)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ExpenseListItemCell
+        cell.timeLabel.text = item.date
+        cell.valueLabel.text = item.value
         cell.backgroundColor = .clear
         return cell
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return viewModel?.sections[section].title
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let view = SectionHeaderView.fromNib as? SectionHeaderView else { return nil }
+        view.titleLabel.text = viewModel?.sections[section].title
+        return view
     }
     
 }

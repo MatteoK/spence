@@ -33,8 +33,16 @@ extension UIView {
         return UINib(nibName: nibName, bundle: nil)
     }
     
-    private static var nibName: String {
+    fileprivate static var nibName: String {
         return String(describing: self)
+    }
+    
+}
+
+extension UIView {
+    
+    static var fromNib: UIView? {
+        return Bundle.main.loadNibNamed(self.nibName, owner: nil, options: nil)?.first as? UIView
     }
     
 }
