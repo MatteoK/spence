@@ -14,10 +14,12 @@ final class LocalRepositoryTests: XCTestCase {
     private var localRepository: LocalRepository!
     private let userDefaultsSuite = "test.defaults"
     private let dateProvider = MockDateProvider()
+    private var defaults: UserDefaults!
     
     override func setUp() {
         super.setUp()
-        localRepository = LocalRepository(defaults: UserDefaults(suiteName: userDefaultsSuite)!, dateProvider: dateProvider)
+        defaults = UserDefaults(suiteName: userDefaultsSuite)!
+        localRepository = LocalRepository(defaults: defaults, dateProvider: dateProvider)
     }
     
     override func tearDown() {
@@ -76,6 +78,15 @@ final class LocalRepositoryTests: XCTestCase {
     func assertExpensesAreEqual(left: Expense, right: Expense) {
         XCTAssertEqual(Int(left.date.timeIntervalSince1970), Int(right.date.timeIntervalSince1970))
         XCTAssertEqual(left.value, right.value)
+    }
+    
+    func test_whenDeleteExpenseIsCalled_thenExpenseIsDeleted() {
+        let expenseA = Expense(date: Date(), value: 0)
+        let expenseB = Expense(date: Date(), value: 1)
+        let expenseC = Expense(date: Date(), value: 2)
+        localRepository.expenses = [expenseA, expenseB, expenseC]
+        localRepository.delete(expense: expenseB)
+        XCTAssertEqual(localRepository.expenses, [expenseA, expenseC])
     }
     
 }

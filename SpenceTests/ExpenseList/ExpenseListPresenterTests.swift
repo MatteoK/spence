@@ -38,6 +38,12 @@ final class ExpenseListPresenterTests: XCTestCase {
         XCTAssertEqual(view.viewModel?.sections ?? [], sectionFactory.result)
     }
     
+    func test_whenDeleteItemIsPressed_thenAsksInteractorToDeleteCorrectExpense() {
+        presenter.interactorDidFetch(expenses: [])
+        presenter.deleteButtonPressedForItem(section: 1, row: 1)
+        XCTAssertEqual(interactor.expenseToDelete, sectionFactory.domainResult[1].expenses[1])
+    }
+    
 }
 
 extension ExpenseListPresenterTests {
@@ -56,9 +62,14 @@ extension ExpenseListPresenterTests {
         
         var delegate: ExpenseListInteractorDelegate?
         var fetchExpensesWasCalled = false
+        var expenseToDelete: Expense?
         
         func fetchExpenses() {
             fetchExpensesWasCalled = true
+        }
+        
+        func delete(expense: Expense) {
+            expenseToDelete = expense
         }
         
     }
@@ -74,12 +85,40 @@ extension ExpenseListPresenterTests {
                     ExpenseListItemViewModel(date: "19:22", value: "0"),
                     ExpenseListItemViewModel(date: "20:44", value: "1")
                 ]
+            ),
+            ExpenseListSectionViewModel(
+                title: "June 2017",
+                items: [
+                    ExpenseListItemViewModel(date: "22:40", value: "0"),
+                    ExpenseListItemViewModel(date: "20:22", value: "1")
+                ]
+            )
+        ]
+        
+        let domainResult = [
+            ExpenseListSection(
+                firstDate: Date(),
+                expenses: [
+                    Expense(date: Date(), value: 0),
+                    Expense(date: Date(), value: 1)
+                ]
+            ),
+            ExpenseListSection(
+                firstDate: Date(),
+                expenses: [
+                    Expense(date: Date(), value: 2),
+                    Expense(date: Date(), value: 3)
+                ]
             )
         ]
         
         func create(from expenses: [Expense]) -> [ExpenseListSectionViewModel] {
             self.expenses = expenses
             return result
+        }
+        
+        func createDomainModelSections(from expenses: [Expense]) -> [ExpenseListSection] {
+            return domainResult
         }
         
     }

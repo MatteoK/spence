@@ -28,11 +28,22 @@ final class ExpenseListInteractorTests: XCTestCase {
         XCTAssertEqual(delegate.expenses ?? [], expenses)
     }
     
+    func test_whenDeleteExpenseIsCalled_thenDeletesExpenseInRepositoryAndDelegateIsNotified() {
+        let expense = Expense(date: Date(), value: 4)
+        let expenses = [Expense(date: Date(), value: 1)]
+        repository.expenses = expenses
+        interactor.delete(expense: expense)
+        XCTAssertEqual(repository.expenseToDelete, expense)
+        XCTAssertEqual(delegate.expenses ?? [], expenses)
+    }
+    
 }
 
 extension ExpenseListInteractorTests {
     
     final class MockRepository: ILocalRepository {
+        
+        var expenseToDelete: Expense?
         
         var monthlyBudget: Float =  0
         var todaysExpenses: Float = 0
@@ -41,6 +52,10 @@ extension ExpenseListInteractorTests {
         var percentSpentToday: Float = 0
         var todaysBudget: Float = 0
         var expenses: [Expense] = []
+        
+        func delete(expense: Expense) {
+            expenseToDelete = expense
+        }
         
     }
     

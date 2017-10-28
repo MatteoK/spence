@@ -48,6 +48,7 @@ extension OverviewInteractorTests {
         var percentSpentToday: Float = 0
         var todaysBudget: Float = 10
         var expenses: [Expense] = []
+        func delete(expense: Expense) {}
         
     }
     

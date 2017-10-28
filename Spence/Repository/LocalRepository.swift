@@ -17,6 +17,7 @@ protocol ILocalRepository: class {
     var percentSpentToday: Float { get }
     var todaysBudget: Float { get }
     var expenses: [Expense] { get }
+    func delete(expense: Expense)
     
 }
 
@@ -92,6 +93,11 @@ final class LocalRepository: ILocalRepository {
         return Calendar.current.component(.day, from: dateProvider.currentDate())
     }
     
+    func delete(expense: Expense) {
+        guard let index = expenses.index(of: expense) else { return }
+        expenses.remove(at: index)
+    }
+    
 }
 
 private extension String {
@@ -99,5 +105,23 @@ private extension String {
     static let monthlyBudgetKey = "monthlyBudget"
     static let defaultsSuiteName = "group.spence"
     static let expensesKey = "expensesKey"
+    
+}
+
+class DateContainer: NSCoding {
+    
+    let date = Date()
+    
+    init() {
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        aDecoder.decodeObject(forKey: "date")
+    }
+    
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(date, forKey: "date")
+    }
     
 }

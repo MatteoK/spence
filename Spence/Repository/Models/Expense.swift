@@ -42,7 +42,7 @@ struct Expense {
     }
     
     private static func dateFormat() -> String {
-        return "ddMMyyyyHHmmss"
+        return "ddMMyyyyHHmmssSSS"
     }
     
 }
@@ -50,5 +50,5 @@ struct Expense {
 extension Expense: Equatable {}
 
 func ==(lhs: Expense, rhs: Expense) -> Bool {
-    return lhs.date == rhs.date && lhs.value == rhs.value
+    return lhs.toString() == rhs.toString()
 }

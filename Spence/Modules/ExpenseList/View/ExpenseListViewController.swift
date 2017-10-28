@@ -67,4 +67,18 @@ extension ExpenseListViewController: UITableViewDataSource {
     
 }
 
-extension ExpenseListViewController: UITableViewDelegate {}
+extension ExpenseListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        deleteItem(at: indexPath)
+    }
+    
+    private func deleteItem(at indexPath: IndexPath) {
+        presenter?.deleteButtonPressedForItem(section: indexPath.section, row: indexPath.row)
+    }
+    
+}

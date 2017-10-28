@@ -11,6 +11,7 @@ import Foundation
 protocol IExpenseListPresenter: class {
     
     func viewDidLoad()
+    func deleteButtonPressedForItem(section: Int, row: Int)
     
 }
 
@@ -19,6 +20,7 @@ final class ExpenseListPresenter: IExpenseListPresenter {
     fileprivate let interactor: IExpenseListInteractor
     fileprivate weak var view: IExpenseListView?
     fileprivate let sectionFactory: IExpenseListSectionViewModelFactory
+    fileprivate var domainSections: [ExpenseListSection] = []
     
     init(view: IExpenseListView,
          interactor: IExpenseListInteractor = ExpenseListInteractor(),
@@ -33,12 +35,22 @@ final class ExpenseListPresenter: IExpenseListPresenter {
         interactor.fetchExpenses()
     }
     
+    func deleteButtonPressedForItem(section: Int, row: Int) {
+        let expense = domainSections[section].expenses[row]
+        interactor.delete(expense: expense)
+    }
+    
 }
 
 extension ExpenseListPresenter: ExpenseListInteractorDelegate {
     
     func interactorDidFetch(expenses: [Expense]) {
+        storeDomainSectionsForDeleteLookup(expenses: expenses)
         view?.show(viewModel: viewModel(from: expenses))
+    }
+    
+    private func storeDomainSectionsForDeleteLookup(expenses: [Expense]) {
+        domainSections = sectionFactory.createDomainModelSections(from: expenses)
     }
     
     private func viewModel(from expenses: [Expense]) -> ExpenseListViewModel {

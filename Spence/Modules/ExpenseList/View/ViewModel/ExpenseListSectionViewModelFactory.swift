@@ -15,10 +15,18 @@ enum ExpenseListSectionGroupingType {
     
 }
 
+struct ExpenseListSection {
+    
+    let firstDate: Date
+    let expenses: [Expense]
+    
+}
+
 protocol IExpenseListSectionViewModelFactory: class {
     
     var groupingType: ExpenseListSectionGroupingType { get set }
     func create(from expenses: [Expense]) -> [ExpenseListSectionViewModel]
+    func createDomainModelSections(from expenses: [Expense]) -> [ExpenseListSection]
     
 }
 
@@ -45,6 +53,13 @@ final class ExpenseListSectionViewModelFactory: IExpenseListSectionViewModelFact
     }
     
     func create(from expenses: [Expense]) -> [ExpenseListSectionViewModel] {
+        return createDomainModelSections(from: expenses)
+            .map({ section -> ExpenseListSectionViewModel in
+                return ExpenseListSectionViewModel(title: self.sectionTitle(from: section.firstDate), items: items(from: section.expenses))
+            })
+    }
+    
+    func createDomainModelSections(from expenses: [Expense]) -> [ExpenseListSection] {
         return expenses
             .group(by: { self.sectionTitle(from: $0.date) } )
             .map {$1}
@@ -56,8 +71,8 @@ final class ExpenseListSectionViewModelFactory: IExpenseListSectionViewModelFact
             .sorted(by: { lhs, rhs in
                 return lhs.0.timeIntervalSince1970 > rhs.0.timeIntervalSince1970
             })
-            .map({ tuple -> ExpenseListSectionViewModel in
-                return ExpenseListSectionViewModel(title: self.sectionTitle(from: tuple.0), items: items(from: tuple.1))
+            .map({ tuple -> ExpenseListSection in
+                return ExpenseListSection(firstDate: tuple.0, expenses: tuple.1)
             })
     }
     

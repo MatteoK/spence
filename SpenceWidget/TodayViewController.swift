@@ -97,7 +97,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     private func startTimer() {
-        timer.start(duration: 5.0) { [weak self] state in
+        timer.start(duration: 2.0) { [weak self] state in
             guard let strongSelf = self else { return }
             switch state {
             case .start:
