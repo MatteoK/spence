@@ -34,6 +34,7 @@ final class LocalRepository: ILocalRepository {
         self.defaults = defaults
         self.dateProvider = dateProvider
         subscribeChangeNotification()
+        subscribeAppDidBecomeActiveNotification()
     }
     
     private func subscribeChangeNotification() {
@@ -41,6 +42,14 @@ final class LocalRepository: ILocalRepository {
             self,
             selector: #selector(didChange),
             name: changeNotificationName,
+            object: nil)
+    }
+    
+    private func subscribeAppDidBecomeActiveNotification() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(didChange),
+            name: NotificationNames.appDidBecomeActive,
             object: nil)
     }
     

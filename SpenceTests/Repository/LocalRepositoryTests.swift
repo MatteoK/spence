@@ -122,6 +122,16 @@ final class LocalRepositoryTests: XCTestCase {
         waitForExpectations(timeout: 1, handler: nil)
     }
     
+    func test_whenAppBecomesActive_thenChangeIsNotifiedToAllInstances() {
+        let onChangeWasCalled = expectation(description: "on change was called 1")
+        let repository = LocalRepository()
+        repository.onChange = {
+            onChangeWasCalled.fulfill()
+        }
+        NotificationCenter.default.post(name: NotificationNames.appDidBecomeActive, object: nil)
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
 }
 
 extension LocalRepositoryTests {
