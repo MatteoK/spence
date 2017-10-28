@@ -76,6 +76,18 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         updateUI()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        commitOngoingExpenseTimers()
+    }
+    
+    private func commitOngoingExpenseTimers() {
+        if timer.isActive {
+            timer.cancel()
+            commit()
+        }
+    }
+    
     private func updateUI(animated: Bool = false) {
         updateProgressBar(animated: animated)
         refreshDailyExpensesCell()
