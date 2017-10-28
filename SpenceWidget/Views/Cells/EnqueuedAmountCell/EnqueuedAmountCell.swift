@@ -9,8 +9,6 @@
 import UIKit
 
 class EnqueuedAmountCell: UICollectionViewCell {
-
-    static let nibName = "EnqueuedAmountCell"
     
     @IBOutlet weak var label: UILabel!
 

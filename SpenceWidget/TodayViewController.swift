@@ -60,14 +60,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     private func registerCells() {
-        registerCell(nibName: ExpenseButtonCell.nibName, reuseIdentifier: .button)
-        registerCell(nibName: EnqueuedAmountCell.nibName, reuseIdentifier: .enqueuedAmount)
-        registerCell(nibName: ProgressBarCell.nibName, reuseIdentifier: .progressBar)
-        registerCell(nibName: DailyExpensesCell.nibName, reuseIdentifier: .dailyExpenses)
+        registerCell(nib: ExpenseButtonCell.nib, reuseIdentifier: .button)
+        registerCell(nib: EnqueuedAmountCell.nib, reuseIdentifier: .enqueuedAmount)
+        registerCell(nib: ProgressBarCell.nib, reuseIdentifier: .progressBar)
+        registerCell(nib: DailyExpensesCell.nib, reuseIdentifier: .dailyExpenses)
     }
     
-    private func registerCell(nibName: String, reuseIdentifier: ReuseIdentifier) {
-        collectionView.register(UINib(nibName: nibName, bundle: nil), forCellWithReuseIdentifier: reuseIdentifier.rawValue)
+    private func registerCell(nib: UINib, reuseIdentifier: ReuseIdentifier) {
+        collectionView.register(nib, forCellWithReuseIdentifier: reuseIdentifier.rawValue)
     }
     
     override func viewDidAppear(_ animated: Bool) {

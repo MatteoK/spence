@@ -11,8 +11,6 @@ import UIKit
 private let padding: CGFloat = 15
 
 class ProgressBarCell: UICollectionViewCell {
-
-    static let nibName = "ProgressBarCell"
    
     @IBOutlet weak var progressBarTrailingConstraint: NSLayoutConstraint!
     

@@ -21,3 +21,15 @@ extension UIView {
     }
     
 }
+
+extension UIView {
+    
+    static var nib: UINib {
+        return UINib(nibName: nibName, bundle: nil)
+    }
+    
+    private static var nibName: String {
+        return String(describing: self)
+    }
+    
+}

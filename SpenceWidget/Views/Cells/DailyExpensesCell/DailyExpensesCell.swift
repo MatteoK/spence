@@ -9,8 +9,6 @@
 import UIKit
 
 class DailyExpensesCell: UICollectionViewCell {
-
-    static let nibName = "DailyExpensesCell"
     
     @IBOutlet weak var expenseLabel: UILabel!
     @IBOutlet weak var budgetLabel: UILabel!

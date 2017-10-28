@@ -9,8 +9,6 @@
 import UIKit
 
 class ExpenseButtonCell: UICollectionViewCell {
-
-    static let nibName = "ExpenseButtonCell"
     
     var onButtonPressed: (()->Void)?
     
