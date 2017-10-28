@@ -72,8 +72,15 @@ final class ExpenseListSectionViewModelFactory: IExpenseListSectionViewModelFact
                 return lhs.0.timeIntervalSince1970 > rhs.0.timeIntervalSince1970
             })
             .map({ tuple -> ExpenseListSection in
-                return ExpenseListSection(firstDate: tuple.0, expenses: tuple.1)
+                return ExpenseListSection(
+                    firstDate: tuple.0,
+                    expenses: tuple.1.sorted(by: recentDatesFirst)
+                )
             })
+    }
+    
+    private func recentDatesFirst(lhs: Expense, rhs: Expense) -> Bool {
+        return lhs.date.timeIntervalSince1970 > rhs.date.timeIntervalSince1970
     }
     
     private func sectionTitle(from date: Date) -> String {
