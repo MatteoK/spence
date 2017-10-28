@@ -24,10 +24,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="-573.46326836581716"/>
         </scene>
-        <!--Spending List View Controller-->
+        <!--Expense List View Controller-->
         <scene sceneID="HO5-gv-unR">
             <objects>
-                <viewController storyboardIdentifier="SpendingListViewController" id="OW0-Cy-DpV" customClass="SpendingListViewController" customModule="Spence" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExpenseListViewController" id="OW0-Cy-DpV" customClass="ExpenseListViewController" customModule="Spence" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Hyx-W3-dG5"/>
                         <viewControllerLayoutGuide type="bottom" id="ZZc-GE-YUa"/>

@@ -1,5 +1,5 @@
 //
-//  SpendingListViewController.swift
+//  ExpenseListViewController.swift
 //  Spence
 //
 //  Created by Matteo Koczorek on 9/4/17.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-protocol ISpendingListView: class {
+protocol IExpenseListView: class {
     
-    func show(viewModel: SpendingListViewModel)
+    func show(viewModel: ExpenseListViewModel)
     
 }
 
-final class SpendingListViewController: UIViewController, ISpendingListView {
+final class ExpenseListViewController: UIViewController, IExpenseListView {
     
-    weak var presenter: ISpendingListPresenter?
+    weak var presenter: IExpenseListPresenter?
     
     @IBOutlet weak var tableView: UITableView!
-    fileprivate var viewModel: SpendingListViewModel?
+    fileprivate var viewModel: ExpenseListViewModel?
     fileprivate let reuseIdentifier = "cell"
     
     override func viewDidLoad() {
@@ -32,14 +32,14 @@ final class SpendingListViewController: UIViewController, ISpendingListView {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
     }
     
-    func show(viewModel: SpendingListViewModel) {
+    func show(viewModel: ExpenseListViewModel) {
         self.viewModel = viewModel
         tableView.reloadData()
     }
     
 }
 
-extension SpendingListViewController: UITableViewDataSource {
+extension ExpenseListViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return viewModel?.sections.count ?? 0
@@ -63,4 +63,4 @@ extension SpendingListViewController: UITableViewDataSource {
     
 }
 
-extension SpendingListViewController: UITableViewDelegate {}
+extension ExpenseListViewController: UITableViewDelegate {}

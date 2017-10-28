@@ -1,5 +1,5 @@
 //
-//  DailySpendingCell.swift
+//  DailyExpensesCell.swift
 //  Spence
 //
 //  Created by Matteo Koczorek on 9/2/17.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class DailySpendingCell: UICollectionViewCell {
+class DailyExpensesCell: UICollectionViewCell {
 
-    static let nibName = "DailySpendingCell"
+    static let nibName = "DailyExpensesCell"
     
-    @IBOutlet weak var spendingLabel: UILabel!
+    @IBOutlet weak var expenseLabel: UILabel!
     @IBOutlet weak var budgetLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     

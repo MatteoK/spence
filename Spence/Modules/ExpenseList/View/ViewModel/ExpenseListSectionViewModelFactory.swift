@@ -1,5 +1,5 @@
 //
-//  SpendingListSectionViewModelFactory.swift
+//  ExpenseListSectionViewModelFactory.swift
 //  Spence
 //
 //  Created by Matteo Koczorek on 10/16/17.
@@ -8,30 +8,30 @@
 
 import Foundation
 
-enum SpendingListSectionGroupingType {
+enum ExpenseListSectionGroupingType {
     
     case month
     case day
     
 }
 
-protocol ISpendingListSectionViewModelFactory: class {
+protocol IExpenseListSectionViewModelFactory: class {
     
-    var groupingType: SpendingListSectionGroupingType { get set }
-    func create(from spendings: [Spending]) -> [SpendingListSectionViewModel]
+    var groupingType: ExpenseListSectionGroupingType { get set }
+    func create(from expenses: [Expense]) -> [ExpenseListSectionViewModel]
     
 }
 
-final class SpendingListSectionViewModelFactory: ISpendingListSectionViewModelFactory {
+final class ExpenseListSectionViewModelFactory: IExpenseListSectionViewModelFactory {
     
-    let itemFactory: ISpendingListItemViewModelFactory
-    var groupingType: SpendingListSectionGroupingType = .day {
+    let itemFactory: IExpenseListItemViewModelFactory
+    var groupingType: ExpenseListSectionGroupingType = .day {
         didSet {
             itemFactory.dateFormat = itemDateFormat()
         }
     }
     
-    private func itemDateFormat() -> SpendingListItemDateFormat {
+    private func itemDateFormat() -> ExpenseListItemDateFormat {
         switch groupingType {
         case .day:
             return .time
@@ -40,24 +40,24 @@ final class SpendingListSectionViewModelFactory: ISpendingListSectionViewModelFa
         }
     }
     
-    init(itemFactory: ISpendingListItemViewModelFactory = SpendingListItemViewModelFactory()) {
+    init(itemFactory: IExpenseListItemViewModelFactory = ExpenseListItemViewModelFactory()) {
         self.itemFactory = itemFactory
     }
     
-    func create(from spendings: [Spending]) -> [SpendingListSectionViewModel] {
-        return spendings
+    func create(from expenses: [Expense]) -> [ExpenseListSectionViewModel] {
+        return expenses
             .group(by: { self.sectionTitle(from: $0.date) } )
             .map {$1}
-            .map { spendings -> (Date, [Spending])? in
-                guard let first = spendings.first else { return nil }
-                return (first.date, spendings)
+            .map { expenses -> (Date, [Expense])? in
+                guard let first = expenses.first else { return nil }
+                return (first.date, expenses)
             }
             .flatMap({$0})
             .sorted(by: { lhs, rhs in
                 return lhs.0.timeIntervalSince1970 > rhs.0.timeIntervalSince1970
             })
-            .map({ tuple -> SpendingListSectionViewModel in
-                return SpendingListSectionViewModel(title: self.sectionTitle(from: tuple.0), items: items(from: tuple.1))
+            .map({ tuple -> ExpenseListSectionViewModel in
+                return ExpenseListSectionViewModel(title: self.sectionTitle(from: tuple.0), items: items(from: tuple.1))
             })
     }
     
@@ -87,8 +87,8 @@ final class SpendingListSectionViewModelFactory: ISpendingListSectionViewModelFa
         return formatter.string(from: date)
     }
     
-    private func items(from spendings: [Spending]) -> [SpendingListItemViewModel] {
-        return spendings.map({self.itemFactory.create(from: $0)})
+    private func items(from expenses: [Expense]) -> [ExpenseListItemViewModel] {
+        return expenses.map({self.itemFactory.create(from: $0)})
     }
     
 }

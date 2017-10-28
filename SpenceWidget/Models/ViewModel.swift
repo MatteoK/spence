@@ -16,7 +16,7 @@ struct ViewModel {
         let buttons = ButtonAmount.all.map({ CellType.button($0) })
         return ViewModel(sections: [
             Section(type: .top, cells: [.progressBar]),
-            Section(type: .bottom, cells: [.dailySpending, .monthlySpending] + buttons)
+            Section(type: .bottom, cells: [.dailyExpenses, .monthlyExpenses] + buttons)
             ])
     }
     

@@ -35,7 +35,7 @@ final class AmountQueue: IAmountQueue {
     }
     
     func commit() {
-        localRepository.addToTodaysSpendings(value: enqueuedAmount)
+        localRepository.addToTodaysExpenses(value: enqueuedAmount)
         clear()
     }
     

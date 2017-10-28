@@ -1,5 +1,5 @@
 //
-//  SpendingListItem.swift
+//  ExpenseListItemViewModel.swift
 //  Spence
 //
 //  Created by Matteo Koczorek on 9/4/17.
@@ -8,15 +8,15 @@
 
 import Foundation
 
-struct SpendingListItemViewModel {
+struct ExpenseListItemViewModel {
     
     let date: String
     let value: String
     
 }
 
-extension SpendingListItemViewModel: Equatable {}
+extension ExpenseListItemViewModel: Equatable {}
 
-func ==(lhs: SpendingListItemViewModel, rhs: SpendingListItemViewModel) -> Bool {
+func ==(lhs: ExpenseListItemViewModel, rhs: ExpenseListItemViewModel) -> Bool {
     return lhs.date == rhs.date && lhs.value == rhs.value
 }

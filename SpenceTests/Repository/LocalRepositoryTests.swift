@@ -9,7 +9,7 @@
 import XCTest
 @testable import Spence
 
-class LocalRepositoryTests: XCTestCase {
+final class LocalRepositoryTests: XCTestCase {
     
     private var localRepository: LocalRepository!
     private let userDefaultsSuite = "test.defaults"
@@ -25,55 +25,55 @@ class LocalRepositoryTests: XCTestCase {
         UserDefaults().removePersistentDomain(forName: userDefaultsSuite)
     }
     
-    func test_whenAddingTodaysSpendings_thenTodaysSpendingsValueIsUpdated() {
-        XCTAssertEqual(localRepository.todaysSpendings, 0)
-        localRepository.addToTodaysSpendings(value: 5)
-        XCTAssertEqual(localRepository.todaysSpendings, 5)
+    func test_whenAddingTodaysExpenses_thenTodaysExpensesValueIsUpdated() {
+        XCTAssertEqual(localRepository.todaysExpenses, 0)
+        localRepository.addToTodaysExpenses(value: 5)
+        XCTAssertEqual(localRepository.todaysExpenses, 5)
     }
     
-    func test_monthlySpending_isSumOfDailySpendingsInMonth() {
+    func test_monthlyExpenses_isSumOfDailyExpensesInMonth() {
         let firstDay = Date(timeIntervalSince1970: 0)
         dateProvider.date = firstDay
-        localRepository.addToTodaysSpendings(value: 5)
+        localRepository.addToTodaysExpenses(value: 5)
         dateProvider.date = firstDay.adding(days: 1)
-        localRepository.addToTodaysSpendings(value: 7)
+        localRepository.addToTodaysExpenses(value: 7)
         dateProvider.date = firstDay.adding(days: 2)
-        localRepository.addToTodaysSpendings(value: 3)
+        localRepository.addToTodaysExpenses(value: 3)
         dateProvider.date = firstDay.adding(days: 32)
-        localRepository.addToTodaysSpendings(value: 20)
+        localRepository.addToTodaysExpenses(value: 20)
         dateProvider.date = firstDay
-        XCTAssertEqual(localRepository.thisMonthsSpendings, 15)
+        XCTAssertEqual(localRepository.thisMonthsExpenses, 15)
     }
     
     func test_todaysBudget_isRemainingBudgetDividedByRemainingDays() {
         localRepository.monthlyBudget = 290
         let firstDay = Date(timeIntervalSince1970: 0)
         dateProvider.date = firstDay
-        localRepository.addToTodaysSpendings(value: 5)
+        localRepository.addToTodaysExpenses(value: 5)
         dateProvider.date = firstDay.adding(days: 1)
-        localRepository.addToTodaysSpendings(value: 5)
+        localRepository.addToTodaysExpenses(value: 5)
         dateProvider.date = firstDay.adding(days: 2)
         XCTAssertEqual(localRepository.todaysBudget, 10)
     }
     
-    func test_whenSettingSpendings_valuesAreCorrect() {
+    func test_whenSettingExpenses_thenValuesAreCorrect() {
         let dateA = Date()
         let valueA = Float(1)
         let dateB = Date()
         let valueB = Float(2)
         let dateC = Date()
         let valueC = Float(3)
-        let spendingA = Spending(date: dateA, value: valueA)
-        let spendingB = Spending(date: dateB, value: valueB)
-        let spendingC = Spending(date: dateC, value: valueC)
-        localRepository.spendings = [spendingA, spendingB, spendingC]
-        XCTAssertEqual(localRepository.spendings.count, 3)
-        assertSpendingsAreEqual(left: localRepository.spendings[0], right: spendingA)
-        assertSpendingsAreEqual(left: localRepository.spendings[1], right: spendingB)
-        assertSpendingsAreEqual(left: localRepository.spendings[2], right: spendingC)
+        let expenseA = Expense(date: dateA, value: valueA)
+        let expenseB = Expense(date: dateB, value: valueB)
+        let expenseC = Expense(date: dateC, value: valueC)
+        localRepository.expenses = [expenseA, expenseB, expenseC]
+        XCTAssertEqual(localRepository.expenses.count, 3)
+        assertExpensesAreEqual(left: localRepository.expenses[0], right: expenseA)
+        assertExpensesAreEqual(left: localRepository.expenses[1], right: expenseB)
+        assertExpensesAreEqual(left: localRepository.expenses[2], right: expenseC)
     }
     
-    func assertSpendingsAreEqual(left: Spending, right: Spending) {
+    func assertExpensesAreEqual(left: Expense, right: Expense) {
         XCTAssertEqual(Int(left.date.timeIntervalSince1970), Int(right.date.timeIntervalSince1970))
         XCTAssertEqual(left.value, right.value)
     }

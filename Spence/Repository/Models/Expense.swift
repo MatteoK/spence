@@ -1,5 +1,5 @@
 //
-//  Spending.swift
+//  Expense.swift
 //  Spence
 //
 //  Created by Matteo Koczorek on 9/4/17.
@@ -8,19 +8,19 @@
 
 import Foundation
 
-struct Spending {
+struct Expense {
     
     let date: Date
     let value: Float
     
-    static func from(string: String) -> Spending? {
+    static func from(string: String) -> Expense? {
         let split = string.components(separatedBy: "_")
         guard split.count == 2 else { return nil }
         let dateString = split[0]
         let valueString = split[1]
         guard let date = dateFormatter().date(from: dateString) else { return nil }
         let value = (valueString as NSString).floatValue
-        return Spending(date: date, value: value)
+        return Expense(date: date, value: value)
     }
     
     func toString() -> String {
@@ -28,7 +28,7 @@ struct Spending {
     }
     
     private func dateString() -> String {
-        return Spending.dateFormatter().string(from: date)
+        return Expense.dateFormatter().string(from: date)
     }
     
     private func valueString() -> String {
@@ -47,8 +47,8 @@ struct Spending {
     
 }
 
-extension Spending: Equatable {}
+extension Expense: Equatable {}
 
-func ==(lhs: Spending, rhs: Spending) -> Bool {
+func ==(lhs: Expense, rhs: Expense) -> Bool {
     return lhs.date == rhs.date && lhs.value == rhs.value
 }

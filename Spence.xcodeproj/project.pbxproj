@@ -29,7 +29,7 @@
 		A209FA351F519FF1009DE88D /* AmountQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA341F519FF1009DE88D /* AmountQueue.swift */; };
 		A209FA391F51A5C0009DE88D /* QeueTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA381F51A5C0009DE88D /* QeueTimer.swift */; };
 		A209FA3A1F51BB88009DE88D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A209F9F21F5176F7009DE88D /* Assets.xcassets */; };
-		A23AC9211FA4735200CC0352 /* SpendingListSectionViewModelFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23AC9201FA4735200CC0352 /* SpendingListSectionViewModelFactoryTests.swift */; };
+		A23AC9211FA4735200CC0352 /* ExpenseListSectionViewModelFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23AC9201FA4735200CC0352 /* ExpenseListSectionViewModelFactoryTests.swift */; };
 		A23AC9241FA475B600CC0352 /* NSLayoutConstraint+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23AC9231FA475B600CC0352 /* NSLayoutConstraint+Spence.swift */; };
 		A23AC9261FA475DF00CC0352 /* UIView+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23AC9251FA475DF00CC0352 /* UIView+Spence.swift */; };
 		A23AC9271FA4760E00CC0352 /* UIView+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23AC9251FA475DF00CC0352 /* UIView+Spence.swift */; };
@@ -37,8 +37,8 @@
 		A23AC92A1FA4764300CC0352 /* Int+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23AC9291FA4764300CC0352 /* Int+Spence.swift */; };
 		A23AC92B1FA4764300CC0352 /* Int+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23AC9291FA4764300CC0352 /* Int+Spence.swift */; };
 		A23AC92C1FA4764300CC0352 /* Int+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23AC9291FA4764300CC0352 /* Int+Spence.swift */; };
-		A24D911E1F5ABDE40036CBEA /* SpendingButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D911C1F5ABDE40036CBEA /* SpendingButtonCell.swift */; };
-		A24D911F1F5ABDE40036CBEA /* SpendingButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24D911D1F5ABDE40036CBEA /* SpendingButtonCell.xib */; };
+		A24D911E1F5ABDE40036CBEA /* ExpenseButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D911C1F5ABDE40036CBEA /* ExpenseButtonCell.swift */; };
+		A24D911F1F5ABDE40036CBEA /* ExpenseButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24D911D1F5ABDE40036CBEA /* ExpenseButtonCell.xib */; };
 		A24D91221F5ABF140036CBEA /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91211F5ABF140036CBEA /* Section.swift */; };
 		A24D91241F5AC2E00036CBEA /* ButtonAmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91231F5AC2E00036CBEA /* ButtonAmount.swift */; };
 		A24D91291F5ACB890036CBEA /* EnqueuedAmountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91271F5ACB890036CBEA /* EnqueuedAmountCell.swift */; };
@@ -48,33 +48,33 @@
 		A24D91371F5ADC1F0036CBEA /* ProgressBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91351F5ADC1F0036CBEA /* ProgressBarCell.swift */; };
 		A24D91381F5ADC1F0036CBEA /* ProgressBarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24D91361F5ADC1F0036CBEA /* ProgressBarCell.xib */; };
 		A24D913D1F5AEC700036CBEA /* CancelButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D913C1F5AEC700036CBEA /* CancelButton.swift */; };
-		A24D91431F5B092C0036CBEA /* DailySpendingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91411F5B092C0036CBEA /* DailySpendingCell.swift */; };
-		A24D91441F5B092C0036CBEA /* DailySpendingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24D91421F5B092C0036CBEA /* DailySpendingCell.xib */; };
-		A24D91471F5DC2930036CBEA /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91461F5DC2930036CBEA /* Spending.swift */; };
-		A24D91481F5DC2EF0036CBEA /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91461F5DC2930036CBEA /* Spending.swift */; };
+		A24D91431F5B092C0036CBEA /* DailyExpensesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91411F5B092C0036CBEA /* DailyExpensesCell.swift */; };
+		A24D91441F5B092C0036CBEA /* DailyExpensesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A24D91421F5B092C0036CBEA /* DailyExpensesCell.xib */; };
+		A24D91471F5DC2930036CBEA /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91461F5DC2930036CBEA /* Expense.swift */; };
+		A24D91481F5DC2EF0036CBEA /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91461F5DC2930036CBEA /* Expense.swift */; };
 		A24D914A1F5DC3080036CBEA /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91491F5DC3080036CBEA /* Currency.swift */; };
 		A24D914B1F5DC3BB0036CBEA /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91491F5DC3080036CBEA /* Currency.swift */; };
-		A24D91571F5DC6AE0036CBEA /* SpendingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91561F5DC6AE0036CBEA /* SpendingListViewController.swift */; };
-		A24D91591F5DC6BB0036CBEA /* SpendingListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91581F5DC6BB0036CBEA /* SpendingListPresenter.swift */; };
-		A24D915C1F5DC8530036CBEA /* SpendingListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D915B1F5DC8530036CBEA /* SpendingListItemViewModel.swift */; };
-		A24D915E1F5DC8820036CBEA /* SpendingListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D915D1F5DC8820036CBEA /* SpendingListViewModel.swift */; };
-		A24D91601F5DC8940036CBEA /* SpendingListSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D915F1F5DC8940036CBEA /* SpendingListSectionViewModel.swift */; };
+		A24D91571F5DC6AE0036CBEA /* ExpenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91561F5DC6AE0036CBEA /* ExpenseListViewController.swift */; };
+		A24D91591F5DC6BB0036CBEA /* ExpenseListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D91581F5DC6BB0036CBEA /* ExpenseListPresenter.swift */; };
+		A24D915C1F5DC8530036CBEA /* ExpenseListItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D915B1F5DC8530036CBEA /* ExpenseListItemViewModel.swift */; };
+		A24D915E1F5DC8820036CBEA /* ExpenseListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D915D1F5DC8820036CBEA /* ExpenseListViewModel.swift */; };
+		A24D91601F5DC8940036CBEA /* ExpenseListSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24D915F1F5DC8940036CBEA /* ExpenseListSectionViewModel.swift */; };
 		A24E6BD31FA4770F00116E44 /* Date+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BD21FA4770F00116E44 /* Date+Spence.swift */; };
 		A24E6BD41FA4770F00116E44 /* Date+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BD21FA4770F00116E44 /* Date+Spence.swift */; };
 		A24E6BD51FA4770F00116E44 /* Date+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BD21FA4770F00116E44 /* Date+Spence.swift */; };
 		A24E6BD61FA4773800116E44 /* UIView+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23AC9251FA475DF00CC0352 /* UIView+Spence.swift */; };
 		A24E6BD71FA4773A00116E44 /* NSLayoutConstraint+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23AC9231FA475B600CC0352 /* NSLayoutConstraint+Spence.swift */; };
 		A24E6BD81FA4773D00116E44 /* UIColor+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA2F1F51986F009DE88D /* UIColor+Spence.swift */; };
-		A24E6BDB1FA47CD600116E44 /* SpendingListItemFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BDA1FA47CD600116E44 /* SpendingListItemFactoryTests.swift */; };
-		A24E6BDD1FA4899900116E44 /* SpendingListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BDC1FA4899900116E44 /* SpendingListWireframe.swift */; };
+		A24E6BDB1FA47CD600116E44 /* ExpenseListItemFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BDA1FA47CD600116E44 /* ExpenseListItemFactoryTests.swift */; };
+		A24E6BDD1FA4899900116E44 /* ExpenseListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BDC1FA4899900116E44 /* ExpenseListWireframe.swift */; };
 		A24E6BE11FA48AA700116E44 /* UIViewController+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BE01FA48AA700116E44 /* UIViewController+Spence.swift */; };
 		A24E6BE21FA48AA700116E44 /* UIViewController+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BE01FA48AA700116E44 /* UIViewController+Spence.swift */; };
 		A24E6BE31FA48AA700116E44 /* UIViewController+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BE01FA48AA700116E44 /* UIViewController+Spence.swift */; };
-		A24E6BE51FA4902400116E44 /* SpendingListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BE41FA4902400116E44 /* SpendingListInteractorTests.swift */; };
-		A2670ACA1F95121900E3F338 /* SpendingListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2670AC91F95121900E3F338 /* SpendingListPresenterTests.swift */; };
-		A2670ACC1F9514F400E3F338 /* SpendingListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2670ACB1F9514F400E3F338 /* SpendingListInteractor.swift */; };
-		A2670AD11F95239E00E3F338 /* SpendingListItemViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2670AD01F95239E00E3F338 /* SpendingListItemViewModelFactory.swift */; };
-		A2670AD31F95256700E3F338 /* SpendingListSectionViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2670AD21F95256700E3F338 /* SpendingListSectionViewModelFactory.swift */; };
+		A24E6BE51FA4902400116E44 /* ExpenseListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BE41FA4902400116E44 /* ExpenseListInteractorTests.swift */; };
+		A2670ACA1F95121900E3F338 /* ExpenseListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2670AC91F95121900E3F338 /* ExpenseListPresenterTests.swift */; };
+		A2670ACC1F9514F400E3F338 /* ExpenseListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2670ACB1F9514F400E3F338 /* ExpenseListInteractor.swift */; };
+		A2670AD11F95239E00E3F338 /* ExpenseListItemViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2670AD01F95239E00E3F338 /* ExpenseListItemViewModelFactory.swift */; };
+		A2670AD31F95256700E3F338 /* ExpenseListSectionViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2670AD21F95256700E3F338 /* ExpenseListSectionViewModelFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,12 +134,12 @@
 		A209FA321F519BF0009DE88D /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		A209FA341F519FF1009DE88D /* AmountQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmountQueue.swift; sourceTree = "<group>"; };
 		A209FA381F51A5C0009DE88D /* QeueTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QeueTimer.swift; sourceTree = "<group>"; };
-		A23AC9201FA4735200CC0352 /* SpendingListSectionViewModelFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpendingListSectionViewModelFactoryTests.swift; path = SpendingList/View/ViewModels/Section/SpendingListSectionViewModelFactoryTests.swift; sourceTree = "<group>"; };
+		A23AC9201FA4735200CC0352 /* ExpenseListSectionViewModelFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpenseListSectionViewModelFactoryTests.swift; path = ExpenseList/View/ViewModels/Section/ExpenseListSectionViewModelFactoryTests.swift; sourceTree = "<group>"; };
 		A23AC9231FA475B600CC0352 /* NSLayoutConstraint+Spence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "NSLayoutConstraint+Spence.swift"; path = "Extensions/NSLayoutConstraint+Spence.swift"; sourceTree = "<group>"; };
 		A23AC9251FA475DF00CC0352 /* UIView+Spence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Spence.swift"; path = "Extensions/UIView+Spence.swift"; sourceTree = "<group>"; };
 		A23AC9291FA4764300CC0352 /* Int+Spence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Int+Spence.swift"; path = "Extensions/Int+Spence.swift"; sourceTree = "<group>"; };
-		A24D911C1F5ABDE40036CBEA /* SpendingButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpendingButtonCell.swift; path = Views/Cells/SpendingButtonCell/SpendingButtonCell.swift; sourceTree = "<group>"; };
-		A24D911D1F5ABDE40036CBEA /* SpendingButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SpendingButtonCell.xib; path = Views/Cells/SpendingButtonCell/SpendingButtonCell.xib; sourceTree = "<group>"; };
+		A24D911C1F5ABDE40036CBEA /* ExpenseButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseButtonCell.swift; path = Views/Cells/ExpenseButtonCell/ExpenseButtonCell.swift; sourceTree = "<group>"; };
+		A24D911D1F5ABDE40036CBEA /* ExpenseButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExpenseButtonCell.xib; path = Views/Cells/ExpenseButtonCell/ExpenseButtonCell.xib; sourceTree = "<group>"; };
 		A24D91211F5ABF140036CBEA /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Section.swift; path = Models/Section.swift; sourceTree = "<group>"; };
 		A24D91231F5AC2E00036CBEA /* ButtonAmount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ButtonAmount.swift; path = Models/ButtonAmount.swift; sourceTree = "<group>"; };
 		A24D91271F5ACB890036CBEA /* EnqueuedAmountCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EnqueuedAmountCell.swift; path = Views/Cells/EnqueuedAmountCell/EnqueuedAmountCell.swift; sourceTree = "<group>"; };
@@ -149,24 +149,24 @@
 		A24D91351F5ADC1F0036CBEA /* ProgressBarCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgressBarCell.swift; path = Views/Cells/ProgressBarCell/ProgressBarCell.swift; sourceTree = "<group>"; };
 		A24D91361F5ADC1F0036CBEA /* ProgressBarCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProgressBarCell.xib; path = Views/Cells/ProgressBarCell/ProgressBarCell.xib; sourceTree = "<group>"; };
 		A24D913C1F5AEC700036CBEA /* CancelButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CancelButton.swift; path = Views/CancelButtonView/CancelButton.swift; sourceTree = "<group>"; };
-		A24D91411F5B092C0036CBEA /* DailySpendingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailySpendingCell.swift; path = Views/Cells/DailySpendingCell/DailySpendingCell.swift; sourceTree = "<group>"; };
-		A24D91421F5B092C0036CBEA /* DailySpendingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DailySpendingCell.xib; path = Views/Cells/DailySpendingCell/DailySpendingCell.xib; sourceTree = "<group>"; };
-		A24D91461F5DC2930036CBEA /* Spending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Spending.swift; path = Repository/Models/Spending.swift; sourceTree = "<group>"; };
+		A24D91411F5B092C0036CBEA /* DailyExpensesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DailyExpensesCell.swift; path = Views/Cells/DailyExpensesCell/DailyExpensesCell.swift; sourceTree = "<group>"; };
+		A24D91421F5B092C0036CBEA /* DailyExpensesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DailyExpensesCell.xib; path = Views/Cells/DailyExpensesCell/DailyExpensesCell.xib; sourceTree = "<group>"; };
+		A24D91461F5DC2930036CBEA /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Expense.swift; path = Repository/Models/Expense.swift; sourceTree = "<group>"; };
 		A24D91491F5DC3080036CBEA /* Currency.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Currency.swift; path = Repository/Models/Currency.swift; sourceTree = "<group>"; };
-		A24D91561F5DC6AE0036CBEA /* SpendingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpendingListViewController.swift; path = Modules/SpendingList/View/SpendingListViewController.swift; sourceTree = "<group>"; };
-		A24D91581F5DC6BB0036CBEA /* SpendingListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpendingListPresenter.swift; path = Modules/SpendingList/SpendingListPresenter.swift; sourceTree = "<group>"; };
-		A24D915B1F5DC8530036CBEA /* SpendingListItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpendingListItemViewModel.swift; path = Modules/SpendingList/View/ViewModel/SpendingListItemViewModel.swift; sourceTree = "<group>"; };
-		A24D915D1F5DC8820036CBEA /* SpendingListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpendingListViewModel.swift; path = Modules/SpendingList/View/ViewModel/SpendingListViewModel.swift; sourceTree = "<group>"; };
-		A24D915F1F5DC8940036CBEA /* SpendingListSectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpendingListSectionViewModel.swift; path = Modules/SpendingList/View/ViewModel/SpendingListSectionViewModel.swift; sourceTree = "<group>"; };
+		A24D91561F5DC6AE0036CBEA /* ExpenseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseListViewController.swift; path = Modules/ExpenseList/View/ExpenseListViewController.swift; sourceTree = "<group>"; };
+		A24D91581F5DC6BB0036CBEA /* ExpenseListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseListPresenter.swift; path = Modules/ExpenseList/ExpenseListPresenter.swift; sourceTree = "<group>"; };
+		A24D915B1F5DC8530036CBEA /* ExpenseListItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseListItemViewModel.swift; path = Modules/ExpenseList/View/ViewModel/ExpenseListItemViewModel.swift; sourceTree = "<group>"; };
+		A24D915D1F5DC8820036CBEA /* ExpenseListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseListViewModel.swift; path = Modules/ExpenseList/View/ViewModel/ExpenseListViewModel.swift; sourceTree = "<group>"; };
+		A24D915F1F5DC8940036CBEA /* ExpenseListSectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseListSectionViewModel.swift; path = Modules/ExpenseList/View/ViewModel/ExpenseListSectionViewModel.swift; sourceTree = "<group>"; };
 		A24E6BD21FA4770F00116E44 /* Date+Spence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Date+Spence.swift"; path = "Extensions/Date+Spence.swift"; sourceTree = "<group>"; };
-		A24E6BDA1FA47CD600116E44 /* SpendingListItemFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpendingListItemFactoryTests.swift; path = SpendingList/View/ViewModels/Item/SpendingListItemFactoryTests.swift; sourceTree = "<group>"; };
-		A24E6BDC1FA4899900116E44 /* SpendingListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpendingListWireframe.swift; path = Modules/SpendingList/SpendingListWireframe.swift; sourceTree = "<group>"; };
+		A24E6BDA1FA47CD600116E44 /* ExpenseListItemFactoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpenseListItemFactoryTests.swift; path = ExpenseList/View/ViewModels/Item/ExpenseListItemFactoryTests.swift; sourceTree = "<group>"; };
+		A24E6BDC1FA4899900116E44 /* ExpenseListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpenseListWireframe.swift; path = Modules/ExpenseList/ExpenseListWireframe.swift; sourceTree = "<group>"; };
 		A24E6BE01FA48AA700116E44 /* UIViewController+Spence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+Spence.swift"; path = "Extensions/UIViewController+Spence.swift"; sourceTree = "<group>"; };
-		A24E6BE41FA4902400116E44 /* SpendingListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SpendingListInteractorTests.swift; path = SpendingList/SpendingListInteractorTests.swift; sourceTree = "<group>"; };
-		A2670AC91F95121900E3F338 /* SpendingListPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpendingListPresenterTests.swift; path = SpendingList/SpendingListPresenterTests.swift; sourceTree = "<group>"; };
-		A2670ACB1F9514F400E3F338 /* SpendingListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpendingListInteractor.swift; path = Modules/SpendingList/SpendingListInteractor.swift; sourceTree = "<group>"; };
-		A2670AD01F95239E00E3F338 /* SpendingListItemViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpendingListItemViewModelFactory.swift; path = Modules/SpendingList/View/ViewModel/SpendingListItemViewModelFactory.swift; sourceTree = "<group>"; };
-		A2670AD21F95256700E3F338 /* SpendingListSectionViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpendingListSectionViewModelFactory.swift; path = Modules/SpendingList/View/SpendingListSectionViewModelFactory.swift; sourceTree = "<group>"; };
+		A24E6BE41FA4902400116E44 /* ExpenseListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpenseListInteractorTests.swift; path = ExpenseList/ExpenseListInteractorTests.swift; sourceTree = "<group>"; };
+		A2670AC91F95121900E3F338 /* ExpenseListPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseListPresenterTests.swift; path = ExpenseList/ExpenseListPresenterTests.swift; sourceTree = "<group>"; };
+		A2670ACB1F9514F400E3F338 /* ExpenseListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseListInteractor.swift; path = Modules/ExpenseList/ExpenseListInteractor.swift; sourceTree = "<group>"; };
+		A2670AD01F95239E00E3F338 /* ExpenseListItemViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseListItemViewModelFactory.swift; path = Modules/ExpenseList/View/ViewModel/ExpenseListItemViewModelFactory.swift; sourceTree = "<group>"; };
+		A2670AD21F95256700E3F338 /* ExpenseListSectionViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseListSectionViewModelFactory.swift; path = Modules/ExpenseList/View/ViewModel/ExpenseListSectionViewModelFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -299,7 +299,7 @@
 		A23AC91F1FA4731B00CC0352 /* Section */ = {
 			isa = PBXGroup;
 			children = (
-				A23AC9201FA4735200CC0352 /* SpendingListSectionViewModelFactoryTests.swift */,
+				A23AC9201FA4735200CC0352 /* ExpenseListSectionViewModelFactoryTests.swift */,
 			);
 			name = Section;
 			sourceTree = "<group>";
@@ -329,10 +329,10 @@
 		A24D911B1F5ABDA60036CBEA /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				A24D91401F5B090C0036CBEA /* DailySpendingCell */,
+				A24D91401F5B090C0036CBEA /* DailyExpensesCell */,
 				A24D91341F5ADC080036CBEA /* ProgressBarCell */,
 				A24D91261F5ACB6A0036CBEA /* EnqueuedAmountCell */,
-				A24D91251F5ACA880036CBEA /* SpendingButtonCell */,
+				A24D91251F5ACA880036CBEA /* ExpenseButtonCell */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -348,13 +348,13 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
-		A24D91251F5ACA880036CBEA /* SpendingButtonCell */ = {
+		A24D91251F5ACA880036CBEA /* ExpenseButtonCell */ = {
 			isa = PBXGroup;
 			children = (
-				A24D911C1F5ABDE40036CBEA /* SpendingButtonCell.swift */,
-				A24D911D1F5ABDE40036CBEA /* SpendingButtonCell.xib */,
+				A24D911C1F5ABDE40036CBEA /* ExpenseButtonCell.swift */,
+				A24D911D1F5ABDE40036CBEA /* ExpenseButtonCell.xib */,
 			);
-			name = SpendingButtonCell;
+			name = ExpenseButtonCell;
 			sourceTree = "<group>";
 		};
 		A24D91261F5ACB6A0036CBEA /* EnqueuedAmountCell */ = {
@@ -383,19 +383,19 @@
 			name = CancelButtonView;
 			sourceTree = "<group>";
 		};
-		A24D91401F5B090C0036CBEA /* DailySpendingCell */ = {
+		A24D91401F5B090C0036CBEA /* DailyExpensesCell */ = {
 			isa = PBXGroup;
 			children = (
-				A24D91411F5B092C0036CBEA /* DailySpendingCell.swift */,
-				A24D91421F5B092C0036CBEA /* DailySpendingCell.xib */,
+				A24D91411F5B092C0036CBEA /* DailyExpensesCell.swift */,
+				A24D91421F5B092C0036CBEA /* DailyExpensesCell.xib */,
 			);
-			name = DailySpendingCell;
+			name = DailyExpensesCell;
 			sourceTree = "<group>";
 		};
 		A24D91451F5DC2860036CBEA /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A24D91461F5DC2930036CBEA /* Spending.swift */,
+				A24D91461F5DC2930036CBEA /* Expense.swift */,
 				A24D91491F5DC3080036CBEA /* Currency.swift */,
 			);
 			name = Models;
@@ -404,27 +404,27 @@
 		A24D91531F5DC68E0036CBEA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				A24D91541F5DC6940036CBEA /* SpendingList */,
+				A24D91541F5DC6940036CBEA /* ExpenseList */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
 		};
-		A24D91541F5DC6940036CBEA /* SpendingList */ = {
+		A24D91541F5DC6940036CBEA /* ExpenseList */ = {
 			isa = PBXGroup;
 			children = (
 				A24D91551F5DC69C0036CBEA /* View */,
-				A24D91581F5DC6BB0036CBEA /* SpendingListPresenter.swift */,
-				A2670ACB1F9514F400E3F338 /* SpendingListInteractor.swift */,
-				A24E6BDC1FA4899900116E44 /* SpendingListWireframe.swift */,
+				A24D91581F5DC6BB0036CBEA /* ExpenseListPresenter.swift */,
+				A2670ACB1F9514F400E3F338 /* ExpenseListInteractor.swift */,
+				A24E6BDC1FA4899900116E44 /* ExpenseListWireframe.swift */,
 			);
-			name = SpendingList;
+			name = ExpenseList;
 			sourceTree = "<group>";
 		};
 		A24D91551F5DC69C0036CBEA /* View */ = {
 			isa = PBXGroup;
 			children = (
 				A24D915A1F5DC8360036CBEA /* ViewModels */,
-				A24D91561F5DC6AE0036CBEA /* SpendingListViewController.swift */,
+				A24D91561F5DC6AE0036CBEA /* ExpenseListViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -432,9 +432,9 @@
 		A24D915A1F5DC8360036CBEA /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A2670ACF1F95237900E3F338 /* SpendingListSection */,
-				A2670ACE1F95235D00E3F338 /* SpendingListItem */,
-				A2670ACD1F95234B00E3F338 /* SpendingList */,
+				A2670ACF1F95237900E3F338 /* ExpenseListSection */,
+				A2670ACE1F95235D00E3F338 /* ExpenseListItem */,
+				A2670ACD1F95234B00E3F338 /* ExpenseList */,
 			);
 			name = ViewModels;
 			sourceTree = "<group>";
@@ -442,19 +442,19 @@
 		A24D91611F5DDC520036CBEA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				A24D91621F5DDC590036CBEA /* SpendingList */,
+				A24D91621F5DDC590036CBEA /* ExpenseList */,
 			);
 			name = Modules;
 			sourceTree = "<group>";
 		};
-		A24D91621F5DDC590036CBEA /* SpendingList */ = {
+		A24D91621F5DDC590036CBEA /* ExpenseList */ = {
 			isa = PBXGroup;
 			children = (
 				A24D91631F5DDC610036CBEA /* View */,
-				A2670AC91F95121900E3F338 /* SpendingListPresenterTests.swift */,
-				A24E6BE41FA4902400116E44 /* SpendingListInteractorTests.swift */,
+				A2670AC91F95121900E3F338 /* ExpenseListPresenterTests.swift */,
+				A24E6BE41FA4902400116E44 /* ExpenseListInteractorTests.swift */,
 			);
-			name = SpendingList;
+			name = ExpenseList;
 			sourceTree = "<group>";
 		};
 		A24D91631F5DDC610036CBEA /* View */ = {
@@ -468,35 +468,35 @@
 		A24E6BD91FA47CAB00116E44 /* Item */ = {
 			isa = PBXGroup;
 			children = (
-				A24E6BDA1FA47CD600116E44 /* SpendingListItemFactoryTests.swift */,
+				A24E6BDA1FA47CD600116E44 /* ExpenseListItemFactoryTests.swift */,
 			);
 			name = Item;
 			sourceTree = "<group>";
 		};
-		A2670ACD1F95234B00E3F338 /* SpendingList */ = {
+		A2670ACD1F95234B00E3F338 /* ExpenseList */ = {
 			isa = PBXGroup;
 			children = (
-				A24D915D1F5DC8820036CBEA /* SpendingListViewModel.swift */,
+				A24D915D1F5DC8820036CBEA /* ExpenseListViewModel.swift */,
 			);
-			name = SpendingList;
+			name = ExpenseList;
 			sourceTree = "<group>";
 		};
-		A2670ACE1F95235D00E3F338 /* SpendingListItem */ = {
+		A2670ACE1F95235D00E3F338 /* ExpenseListItem */ = {
 			isa = PBXGroup;
 			children = (
-				A24D915B1F5DC8530036CBEA /* SpendingListItemViewModel.swift */,
-				A2670AD01F95239E00E3F338 /* SpendingListItemViewModelFactory.swift */,
+				A24D915B1F5DC8530036CBEA /* ExpenseListItemViewModel.swift */,
+				A2670AD01F95239E00E3F338 /* ExpenseListItemViewModelFactory.swift */,
 			);
-			name = SpendingListItem;
+			name = ExpenseListItem;
 			sourceTree = "<group>";
 		};
-		A2670ACF1F95237900E3F338 /* SpendingListSection */ = {
+		A2670ACF1F95237900E3F338 /* ExpenseListSection */ = {
 			isa = PBXGroup;
 			children = (
-				A24D915F1F5DC8940036CBEA /* SpendingListSectionViewModel.swift */,
-				A2670AD21F95256700E3F338 /* SpendingListSectionViewModelFactory.swift */,
+				A24D915F1F5DC8940036CBEA /* ExpenseListSectionViewModel.swift */,
+				A2670AD21F95256700E3F338 /* ExpenseListSectionViewModelFactory.swift */,
 			);
-			name = SpendingListSection;
+			name = ExpenseListSection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -638,8 +638,8 @@
 				A24D91381F5ADC1F0036CBEA /* ProgressBarCell.xib in Resources */,
 				A209FA3A1F51BB88009DE88D /* Assets.xcassets in Resources */,
 				A209FA181F517778009DE88D /* MainInterface.storyboard in Resources */,
-				A24D91441F5B092C0036CBEA /* DailySpendingCell.xib in Resources */,
-				A24D911F1F5ABDE40036CBEA /* SpendingButtonCell.xib in Resources */,
+				A24D91441F5B092C0036CBEA /* DailyExpensesCell.xib in Resources */,
+				A24D911F1F5ABDE40036CBEA /* ExpenseButtonCell.xib in Resources */,
 				A24D912A1F5ACB890036CBEA /* EnqueuedAmountCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -651,23 +651,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A24D915E1F5DC8820036CBEA /* SpendingListViewModel.swift in Sources */,
-				A24D91601F5DC8940036CBEA /* SpendingListSectionViewModel.swift in Sources */,
-				A2670ACC1F9514F400E3F338 /* SpendingListInteractor.swift in Sources */,
-				A24D915C1F5DC8530036CBEA /* SpendingListItemViewModel.swift in Sources */,
-				A24E6BDD1FA4899900116E44 /* SpendingListWireframe.swift in Sources */,
+				A24D915E1F5DC8820036CBEA /* ExpenseListViewModel.swift in Sources */,
+				A24D91601F5DC8940036CBEA /* ExpenseListSectionViewModel.swift in Sources */,
+				A2670ACC1F9514F400E3F338 /* ExpenseListInteractor.swift in Sources */,
+				A24D915C1F5DC8530036CBEA /* ExpenseListItemViewModel.swift in Sources */,
+				A24E6BDD1FA4899900116E44 /* ExpenseListWireframe.swift in Sources */,
 				A209FA301F51986F009DE88D /* UIColor+Spence.swift in Sources */,
 				A209F9EE1F5176F7009DE88D /* ViewController.swift in Sources */,
 				A209FA251F517B06009DE88D /* LocalRepository.swift in Sources */,
 				A24E6BD31FA4770F00116E44 /* Date+Spence.swift in Sources */,
-				A24D91471F5DC2930036CBEA /* Spending.swift in Sources */,
+				A24D91471F5DC2930036CBEA /* Expense.swift in Sources */,
 				A23AC9241FA475B600CC0352 /* NSLayoutConstraint+Spence.swift in Sources */,
-				A2670AD11F95239E00E3F338 /* SpendingListItemViewModelFactory.swift in Sources */,
-				A24D91591F5DC6BB0036CBEA /* SpendingListPresenter.swift in Sources */,
+				A2670AD11F95239E00E3F338 /* ExpenseListItemViewModelFactory.swift in Sources */,
+				A24D91591F5DC6BB0036CBEA /* ExpenseListPresenter.swift in Sources */,
 				A23AC9261FA475DF00CC0352 /* UIView+Spence.swift in Sources */,
-				A24D91571F5DC6AE0036CBEA /* SpendingListViewController.swift in Sources */,
+				A24D91571F5DC6AE0036CBEA /* ExpenseListViewController.swift in Sources */,
 				A209FA2B1F518437009DE88D /* DateProvider.swift in Sources */,
-				A2670AD31F95256700E3F338 /* SpendingListSectionViewModelFactory.swift in Sources */,
+				A2670AD31F95256700E3F338 /* ExpenseListSectionViewModelFactory.swift in Sources */,
 				A23AC92A1FA4764300CC0352 /* Int+Spence.swift in Sources */,
 				A24E6BE11FA48AA700116E44 /* UIViewController+Spence.swift in Sources */,
 				A24D914A1F5DC3080036CBEA /* Currency.swift in Sources */,
@@ -681,15 +681,15 @@
 			files = (
 				A209FA011F5176F7009DE88D /* SpenceTests.swift in Sources */,
 				A24E6BD81FA4773D00116E44 /* UIColor+Spence.swift in Sources */,
-				A23AC9211FA4735200CC0352 /* SpendingListSectionViewModelFactoryTests.swift in Sources */,
+				A23AC9211FA4735200CC0352 /* ExpenseListSectionViewModelFactoryTests.swift in Sources */,
 				A209FA291F517F31009DE88D /* LocalRepositoryTests.swift in Sources */,
 				A24E6BD41FA4770F00116E44 /* Date+Spence.swift in Sources */,
-				A24E6BDB1FA47CD600116E44 /* SpendingListItemFactoryTests.swift in Sources */,
+				A24E6BDB1FA47CD600116E44 /* ExpenseListItemFactoryTests.swift in Sources */,
 				A24E6BE21FA48AA700116E44 /* UIViewController+Spence.swift in Sources */,
-				A2670ACA1F95121900E3F338 /* SpendingListPresenterTests.swift in Sources */,
+				A2670ACA1F95121900E3F338 /* ExpenseListPresenterTests.swift in Sources */,
 				A23AC92B1FA4764300CC0352 /* Int+Spence.swift in Sources */,
 				A24E6BD61FA4773800116E44 /* UIView+Spence.swift in Sources */,
-				A24E6BE51FA4902400116E44 /* SpendingListInteractorTests.swift in Sources */,
+				A24E6BE51FA4902400116E44 /* ExpenseListInteractorTests.swift in Sources */,
 				A24E6BD71FA4773A00116E44 /* NSLayoutConstraint+Spence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -700,14 +700,14 @@
 			files = (
 				A209FA331F519BF0009DE88D /* RoundButton.swift in Sources */,
 				A209FA311F519B13009DE88D /* UIColor+Spence.swift in Sources */,
-				A24D911E1F5ABDE40036CBEA /* SpendingButtonCell.swift in Sources */,
+				A24D911E1F5ABDE40036CBEA /* ExpenseButtonCell.swift in Sources */,
 				A23AC92C1FA4764300CC0352 /* Int+Spence.swift in Sources */,
 				A24D91371F5ADC1F0036CBEA /* ProgressBarCell.swift in Sources */,
 				A24D914B1F5DC3BB0036CBEA /* Currency.swift in Sources */,
 				A23AC9281FA4761100CC0352 /* NSLayoutConstraint+Spence.swift in Sources */,
 				A24D91291F5ACB890036CBEA /* EnqueuedAmountCell.swift in Sources */,
 				A24D91221F5ABF140036CBEA /* Section.swift in Sources */,
-				A24D91431F5B092C0036CBEA /* DailySpendingCell.swift in Sources */,
+				A24D91431F5B092C0036CBEA /* DailyExpensesCell.swift in Sources */,
 				A23AC9271FA4760E00CC0352 /* UIView+Spence.swift in Sources */,
 				A24D91241F5AC2E00036CBEA /* ButtonAmount.swift in Sources */,
 				A209FA351F519FF1009DE88D /* AmountQueue.swift in Sources */,
@@ -718,7 +718,7 @@
 				A209FA2C1F5184E6009DE88D /* DateProvider.swift in Sources */,
 				A24D912C1F5AD0B90036CBEA /* CellType.swift in Sources */,
 				A209FA2E1F518829009DE88D /* ProgressBar.swift in Sources */,
-				A24D91481F5DC2EF0036CBEA /* Spending.swift in Sources */,
+				A24D91481F5DC2EF0036CBEA /* Expense.swift in Sources */,
 				A24D913D1F5AEC700036CBEA /* CancelButton.swift in Sources */,
 				A24E6BE31FA48AA700116E44 /* UIViewController+Spence.swift in Sources */,
 				A209FA151F517778009DE88D /* TodayViewController.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  SpendingListItemViewModelFactory.swift
+//  ExpenseListItemViewModelFactory.swift
 //  Spence
 //
 //  Created by Matteo Koczorek on 10/16/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum SpendingListItemDateFormat {
+enum ExpenseListItemDateFormat {
     
     case time
     case dayTime
@@ -24,19 +24,19 @@ enum SpendingListItemDateFormat {
     
 }
 
-protocol ISpendingListItemViewModelFactory: class {
+protocol IExpenseListItemViewModelFactory: class {
     
-    var dateFormat: SpendingListItemDateFormat { get set }
-    func create(from spending: Spending) -> SpendingListItemViewModel
+    var dateFormat: ExpenseListItemDateFormat { get set }
+    func create(from expense: Expense) -> ExpenseListItemViewModel
     
 }
 
-final class SpendingListItemViewModelFactory: ISpendingListItemViewModelFactory {
+final class ExpenseListItemViewModelFactory: IExpenseListItemViewModelFactory {
     
-    var dateFormat: SpendingListItemDateFormat = .time
+    var dateFormat: ExpenseListItemDateFormat = .time
     
-    func create(from spending: Spending) -> SpendingListItemViewModel {
-        return SpendingListItemViewModel(date: string(from: spending.date), value: "\(Int(spending.value))\(Currency.selected.symbol)")
+    func create(from expense: Expense) -> ExpenseListItemViewModel {
+        return ExpenseListItemViewModel(date: string(from: expense.date), value: "\(Int(expense.value))\(Currency.selected.symbol)")
     }
     
     private func string(from date: Date) -> String {

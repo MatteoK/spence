@@ -11,12 +11,12 @@ import Foundation
 protocol ILocalRepository {
     
     var monthlyBudget: Float { get set }
-    var todaysSpendings: Float { get }
-    func addToTodaysSpendings(value: Float)
-    var thisMonthsSpendings: Float { get }
+    var todaysExpenses: Float { get }
+    func addToTodaysExpenses(value: Float)
+    var thisMonthsExpenses: Float { get }
     var percentSpentToday: Float { get }
     var todaysBudget: Float { get }
-    var spendings: [Spending] { get }
+    var expenses: [Expense] { get }
     
 }
 
@@ -39,29 +39,29 @@ final class LocalRepository: ILocalRepository {
         }
     }
     
-    var todaysSpendings: Float {
+    var todaysExpenses: Float {
         get {
-            return spendings.filter({ Calendar.current.isDateInToday($0.date) }).map({ $0.value }).reduce(0, +)
+            return expenses.filter({ Calendar.current.isDateInToday($0.date) }).map({ $0.value }).reduce(0, +)
         }
     }
     
-    var spendings: [Spending] {
+    var expenses: [Expense] {
         get {
-            return (defaults.object(forKey: .spendingsKey) as? [String])?
-                .map({ Spending.from(string: $0) })
+            return (defaults.object(forKey: .expensesKey) as? [String])?
+                .map({ Expense.from(string: $0) })
                 .flatMap({$0}) ?? []
         }
         set {
-            defaults.set(newValue.map({ $0.toString() }), forKey: .spendingsKey)
+            defaults.set(newValue.map({ $0.toString() }), forKey: .expensesKey)
         }
     }
     
-    func addToTodaysSpendings(value: Float) {
-        spendings.append(Spending(date: dateProvider.currentDate(), value: value))
+    func addToTodaysExpenses(value: Float) {
+        expenses.append(Expense(date: dateProvider.currentDate(), value: value))
     }
     
-    var thisMonthsSpendings: Float {
-        return spendings
+    var thisMonthsExpenses: Float {
+        return expenses
             .filter({ Calendar.current.isDate($0.date, equalTo: dateProvider.currentDate(), toGranularity: .month) })
             .map({ $0.value })
             .reduce(0, +)
@@ -69,11 +69,11 @@ final class LocalRepository: ILocalRepository {
     
     var percentSpentToday: Float {
         guard todaysBudget > 0 else { return 1 }
-        return todaysSpendings / todaysBudget
+        return todaysExpenses / todaysBudget
     }
     
     var todaysBudget: Float {
-        let remainingBudget = monthlyBudget - (thisMonthsSpendings - todaysSpendings)
+        let remainingBudget = monthlyBudget - (thisMonthsExpenses - todaysExpenses)
         let calculatedBudget = remainingBudget / Float(daysLeftInCurrentMonth())
         return max(calculatedBudget, 0)
     }
@@ -97,8 +97,7 @@ final class LocalRepository: ILocalRepository {
 private extension String {
     
     static let monthlyBudgetKey = "monthlyBudget"
-    static let dailySpendingsKey = "dailySpendings"
     static let defaultsSuiteName = "group.spence"
-    static let spendingsKey = "currency"
+    static let expensesKey = "expensesKey"
     
 }

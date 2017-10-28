@@ -1,5 +1,5 @@
 //
-//  SpendingButtonCell.swift
+//  ExpenseButtonCell.swift
 //  Spence
 //
 //  Created by Matteo Koczorek on 9/2/17.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class SpendingButtonCell: UICollectionViewCell {
+class ExpenseButtonCell: UICollectionViewCell {
 
-    static let nibName = "SpendingButtonCell"
+    static let nibName = "ExpenseButtonCell"
     
     var onButtonPressed: (()->Void)?
     
-    @IBOutlet weak var spendingButton: UIButton!
+    @IBOutlet weak var expenseButton: UIButton!
     
     @IBAction func buttonPressed(sender: UIButton) {
         onButtonPressed?()

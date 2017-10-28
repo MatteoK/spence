@@ -31,7 +31,7 @@ private enum ReuseIdentifier: String {
     case button
     case enqueuedAmount
     case progressBar
-    case dailySpending
+    case dailyExpenses
     
 }
 
@@ -60,10 +60,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     private func registerCells() {
-        registerCell(nibName: SpendingButtonCell.nibName, reuseIdentifier: .button)
+        registerCell(nibName: ExpenseButtonCell.nibName, reuseIdentifier: .button)
         registerCell(nibName: EnqueuedAmountCell.nibName, reuseIdentifier: .enqueuedAmount)
         registerCell(nibName: ProgressBarCell.nibName, reuseIdentifier: .progressBar)
-        registerCell(nibName: DailySpendingCell.nibName, reuseIdentifier: .dailySpending)
+        registerCell(nibName: DailyExpensesCell.nibName, reuseIdentifier: .dailyExpenses)
     }
     
     private func registerCell(nibName: String, reuseIdentifier: ReuseIdentifier) {
@@ -77,8 +77,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     private func updateUI() {
         updateProgressBar()
-        refreshDailySpendingCell()
-        refreshMonthlySpendingCell()
+        refreshDailyExpensesCell()
+        refreshMonthlyExpensesCell()
     }
 
     func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
@@ -176,24 +176,24 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         progressBarCell()?.progressBar.progress = localRepository.percentSpentToday
     }
     
-    private func dailySpendingCell() -> DailySpendingCell? {
-        return self.cell(with: .dailySpending) as? DailySpendingCell
+    private func dailyExpensesCell() -> DailyExpensesCell? {
+        return self.cell(with: .dailyExpenses) as? DailyExpensesCell
     }
     
-    private func refreshDailySpendingCell() {
-        dailySpendingCell()?.titleLabel.text = "TODAY"
-        dailySpendingCell()?.spendingLabel.text = valueTextWithCurrency(value: localRepository.todaysSpendings)
-        dailySpendingCell()?.budgetLabel.text = "of \(Int(localRepository.todaysBudget))"
+    private func refreshDailyExpensesCell() {
+        dailyExpensesCell()?.titleLabel.text = "TODAY"
+        dailyExpensesCell()?.expenseLabel.text = valueTextWithCurrency(value: localRepository.todaysExpenses)
+        dailyExpensesCell()?.budgetLabel.text = "of \(Int(localRepository.todaysBudget))"
     }
     
-    private func refreshMonthlySpendingCell() {
-        monthlySpendingCell()?.titleLabel.text = "MONTH"
-        monthlySpendingCell()?.spendingLabel.text = valueTextWithCurrency(value: localRepository.thisMonthsSpendings)
-        monthlySpendingCell()?.budgetLabel.text = "of \(Int(localRepository.monthlyBudget))"
+    private func refreshMonthlyExpensesCell() {
+        monthlyExpensesCell()?.titleLabel.text = "MONTH"
+        monthlyExpensesCell()?.expenseLabel.text = valueTextWithCurrency(value: localRepository.thisMonthsExpenses)
+        monthlyExpensesCell()?.budgetLabel.text = "of \(Int(localRepository.monthlyBudget))"
     }
     
-    private func monthlySpendingCell() -> DailySpendingCell? {
-        return self.cell(with: .monthlySpending) as? DailySpendingCell
+    private func monthlyExpensesCell() -> DailyExpensesCell? {
+        return self.cell(with: .monthlyExpenses) as? DailyExpensesCell
     }
     
     private func valueTextWithCurrency(value: Float) -> String {
@@ -220,10 +220,10 @@ extension TodayViewController: UICollectionViewDataSource {
             return enqueuedAmountCell(at: indexPath)
         case .progressBar:
             return progressBarCell(at: indexPath)
-        case .dailySpending:
-            return dailySpendingCell(at: indexPath)
-        case .monthlySpending:
-            return dailySpendingCell(at: indexPath)
+        case .dailyExpenses:
+            return dailyExpensesCell(at: indexPath)
+        case .monthlyExpenses:
+            return dailyExpensesCell(at: indexPath)
         }
     }
     
@@ -231,9 +231,9 @@ extension TodayViewController: UICollectionViewDataSource {
         return viewModel.sections[indexPath.section].cells[indexPath.row]
     }
     
-    private func buttonCell(with amount: ButtonAmount, at indexPath: IndexPath) -> SpendingButtonCell {
-        let cell: SpendingButtonCell = dequeueCell(reuseIdentifier: .button, at: indexPath)
-        cell.spendingButton.setTitle("\(Int(amount.value))", for: .normal)
+    private func buttonCell(with amount: ButtonAmount, at indexPath: IndexPath) -> ExpenseButtonCell {
+        let cell: ExpenseButtonCell = dequeueCell(reuseIdentifier: .button, at: indexPath)
+        cell.expenseButton.setTitle("\(Int(amount.value))", for: .normal)
         cell.onButtonPressed = { [weak self] in
             self?.enqueue(amount: amount.value)
             self?.updateAmountCell()
@@ -255,8 +255,8 @@ extension TodayViewController: UICollectionViewDataSource {
         return cell
     }
     
-    private func dailySpendingCell(at indexPath: IndexPath) -> DailySpendingCell {
-        return dequeueCell(reuseIdentifier: .dailySpending, at: indexPath)
+    private func dailyExpensesCell(at indexPath: IndexPath) -> DailyExpensesCell {
+        return dequeueCell(reuseIdentifier: .dailyExpenses, at: indexPath)
     }
     
     private func dequeueCell<T>(reuseIdentifier: ReuseIdentifier, at indexPath: IndexPath) -> T {
@@ -299,7 +299,7 @@ extension TodayViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: 40, height: 40)
         case .progressBar:
             return CGSize(width: collectionView.frame.width, height: 40)
-        case .dailySpending, .monthlySpending:
+        case .dailyExpenses, .monthlyExpenses:
             return CGSize(width: (collectionView.frame.width - buttonsWidth() - sizes.inset*2 - sizes.buttonMargin)/2, height: 60)
         default:
             return CGSize.zero
