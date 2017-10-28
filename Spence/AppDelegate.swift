@@ -14,9 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let expenseListWireframe = ExpenseListWireframe()
     let overviewWireframe = OverviewWireframe()
+    let homeWireframe = HomeWireframe()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        (UIApplication.shared.windows.first?.rootViewController as? UINavigationController)?.pushViewController(overviewWireframe.view, animated: false)
+        (UIApplication.shared.windows.first?.rootViewController as? UINavigationController)?.pushViewController(homeWireframe.view, animated: false)
         return true
     }
 

@@ -23,6 +23,24 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="-573.46326836581716"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="DVp-WC-Y0P">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="TA7-sY-lFU" customClass="HomeViewController" customModule="Spence" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="go5-4j-wzd"/>
+                        <viewControllerLayoutGuide type="bottom" id="stn-D4-Uaa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ed3-Km-fcW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LVN-d3-sNR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="892" y="-1268"/>
+        </scene>
         <!--Overview View Controller-->
         <scene sceneID="LIc-9f-u5b">
             <objects>
@@ -118,7 +136,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ft1-og-egZ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="OW0-Cy-DpV" id="p99-To-XpI"/>
                                     <outlet property="delegate" destination="OW0-Cy-DpV" id="4AJ-6q-7aZ"/>

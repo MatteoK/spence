@@ -54,6 +54,7 @@ extension ExpenseListViewController: UITableViewDataSource {
         let item = viewModel!.sections[indexPath.section].items[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
         cell.textLabel?.text = "\(item.date) - \(item.value)"
+        cell.backgroundColor = .clear
         return cell
     }
     

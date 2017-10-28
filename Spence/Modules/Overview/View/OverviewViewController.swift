@@ -30,6 +30,11 @@ final class OverviewViewController: UIViewController, IOverviewView {
         presenter?.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        presenter?.viewDidLoad()
+    }
+    
     private func configureProgressBars() {
         [todayProgressBar, thisMonthProgressBar].flatMap({$0}).forEach {
             $0.configure(backgroundColor: UIColor.black.withAlphaComponent(0.2))
