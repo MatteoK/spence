@@ -50,6 +50,7 @@ final class OverviewViewController: UIViewController, IOverviewView {
     }
     
     func show(viewModel: OverviewViewModel) {
+        guard todayProgressBar != nil && thisMonthProgressBar != nil else { return }
         todayProgressBar.updateProgress(value: CGFloat(viewModel.todaysExpenseProgress), animated: true)
         thisMonthProgressBar.updateProgress(value: CGFloat(viewModel.thisMonthsExpenseProgress), animated: true)
         todayProgressBar.topLabel.text = viewModel.todaysExpenses

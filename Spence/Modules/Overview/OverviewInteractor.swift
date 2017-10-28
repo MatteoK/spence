@@ -29,6 +29,14 @@ final class OverviewInteractor: IOverviewInteractor {
     
     init(repository: ILocalRepository = LocalRepository()) {
         self.repository = repository
+        subscribeRepositoryChanges()
+    }
+    
+    private func subscribeRepositoryChanges() {
+        repository.onChange = { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.delegate?.interactorDidFetch(data: strongSelf.dataFromRepository())
+        }
     }
     
     func fetchData() {

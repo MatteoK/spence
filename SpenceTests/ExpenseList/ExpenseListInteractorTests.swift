@@ -12,29 +12,31 @@ import XCTest
 final class ExpenseListInteractorTests: XCTestCase {
     
     private var interactor: ExpenseListInteractor!
-    private let repository = MockRepository()
-    private let delegate = Delegate()
+    private var repository: MockRepository!
+    private var delegate: Delegate!
     
     override func setUp() {
         super.setUp()
+        repository = MockRepository()
+        delegate = Delegate()
         interactor = ExpenseListInteractor(repository: repository)
         interactor.delegate = delegate
     }
     
     func test_whenFetchExpensesIsCalled_thenUpdatesDelegateWithExpensesFromRepository() {
-        let expenses = [Expense(date: Date(), value: 21)]
-        repository.expenses = expenses
         interactor.fetchExpenses()
-        XCTAssertEqual(delegate.expenses ?? [], expenses)
+        XCTAssertEqual(delegate.expenses ?? [], repository.expenses)
     }
     
-    func test_whenDeleteExpenseIsCalled_thenDeletesExpenseInRepositoryAndDelegateIsNotified() {
+    func test_whenDeleteExpenseIsCalled_thenDeletesExpenseInRepository() {
         let expense = Expense(date: Date(), value: 4)
-        let expenses = [Expense(date: Date(), value: 1)]
-        repository.expenses = expenses
         interactor.delete(expense: expense)
         XCTAssertEqual(repository.expenseToDelete, expense)
-        XCTAssertEqual(delegate.expenses ?? [], expenses)
+    }
+    
+    func test_whenRepositoryChanges_thenDelegateIsNotified() {
+        repository.onChange?()
+        XCTAssertEqual(delegate.expenses ?? [], repository.expenses)
     }
     
 }
@@ -51,7 +53,8 @@ extension ExpenseListInteractorTests {
         var thisMonthsExpenses: Float = 0
         var percentSpentToday: Float = 0
         var todaysBudget: Float = 0
-        var expenses: [Expense] = []
+        var expenses: [Expense] = [Expense(date: Date(), value: 21)]
+        var onChange: (() -> Void)?
         
         func delete(expense: Expense) {
             expenseToDelete = expense

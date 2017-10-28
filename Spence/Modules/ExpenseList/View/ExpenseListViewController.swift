@@ -33,6 +33,7 @@ final class ExpenseListViewController: UIViewController, IExpenseListView {
     }
     
     func show(viewModel: ExpenseListViewModel) {
+        guard tableView != nil else { return }
         self.viewModel = viewModel
         tableView.reloadData()
     }

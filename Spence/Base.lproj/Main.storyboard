@@ -153,7 +153,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lOq-4k-Oa8"/>
                     <connections>
-                        <outlet property="tableView" destination="Ft1-og-egZ" id="BCf-hs-FWj"/>
+                        <outlet property="tableView" destination="Ft1-og-egZ" id="U48-79-SAv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nx7-kV-dxi" userLabel="First Responder" sceneMemberID="firstResponder"/>

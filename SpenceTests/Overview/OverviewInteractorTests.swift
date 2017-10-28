@@ -12,11 +12,13 @@ import XCTest
 class OverviewInteractorTests: XCTestCase {
     
     private var interactor: OverviewInteractor!
-    private let repository = MockRepository()
-    private let delegate = Delegate()
+    private var repository: MockRepository!
+    private var delegate: Delegate!
     
     override func setUp() {
         super.setUp()
+        repository = MockRepository()
+        delegate = Delegate()
         interactor = OverviewInteractor(repository: repository)
         interactor.delegate = delegate
     }
@@ -29,10 +31,14 @@ class OverviewInteractorTests: XCTestCase {
         XCTAssertEqual(delegate.data?.todaysExpenses, 2)
     }
     
-    func test_whenUpdateBudgetIsCalled_thenBudgetIsUpdatedInRepositoryAndDelegateIsNotified() {
+    func test_whenUpdateBudgetIsCalled_thenBudgetIsUpdatedInRepository() {
         interactor.updateMonthlyBudget(to: 33)
         XCTAssertEqual(repository.monthlyBudget, 33)
-        XCTAssertEqual(delegate.data?.monthlyBudget, 33)
+    }
+    
+    func test_whenRepositoryChanges_thenDelegateIsNotified() {
+        repository.onChange?()
+        XCTAssertNotNil(delegate.data)
     }
     
 }
@@ -49,6 +55,7 @@ extension OverviewInteractorTests {
         var todaysBudget: Float = 10
         var expenses: [Expense] = []
         func delete(expense: Expense) {}
+        var onChange: (() -> Void)?
         
     }
     

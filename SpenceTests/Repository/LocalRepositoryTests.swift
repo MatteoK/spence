@@ -13,11 +13,12 @@ final class LocalRepositoryTests: XCTestCase {
     
     private var localRepository: LocalRepository!
     private let userDefaultsSuite = "test.defaults"
-    private let dateProvider = MockDateProvider()
+    private var dateProvider: MockDateProvider!
     private var defaults: UserDefaults!
     
     override func setUp() {
         super.setUp()
+        dateProvider = MockDateProvider()
         defaults = UserDefaults(suiteName: userDefaultsSuite)!
         localRepository = LocalRepository(defaults: defaults, dateProvider: dateProvider)
     }
@@ -87,6 +88,38 @@ final class LocalRepositoryTests: XCTestCase {
         localRepository.expenses = [expenseA, expenseB, expenseC]
         localRepository.delete(expense: expenseB)
         XCTAssertEqual(localRepository.expenses, [expenseA, expenseC])
+    }
+    
+    func test_whenAddingToTodaysExpense_thenChangeIsNotifiedToAllInstances() {
+        let otherRepository = LocalRepository()
+        let onChangeWasCalled = expectation(description: "on change was called")
+        otherRepository.onChange = {
+            onChangeWasCalled.fulfill()
+        }
+        localRepository.addToTodaysExpenses(value: 5)
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+    func test_whenMonthlyBudgetIsChanged_thenChangeIsNotifiedToAllInstances() {
+        let otherRepository = LocalRepository()
+        let onChangeWasCalled = expectation(description: "on change was called")
+        otherRepository.onChange = {
+            onChangeWasCalled.fulfill()
+        }
+        localRepository.monthlyBudget = 10
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+    func test_whenDeletingExpense_thenChangeIsNotifiedToAllInstances() {
+        let otherRepository = LocalRepository()
+        let onChangeWasCalled = expectation(description: "on change was called")
+        otherRepository.onChange = {
+            onChangeWasCalled.fulfill()
+        }
+        let expense = Expense(date: Date(), value: 12)
+        localRepository.expenses = [expense]
+        localRepository.delete(expense: expense)
+        waitForExpectations(timeout: 1, handler: nil)
     }
     
 }

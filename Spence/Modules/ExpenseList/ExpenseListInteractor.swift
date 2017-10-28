@@ -29,6 +29,14 @@ final class ExpenseListInteractor: IExpenseListInteractor {
     
     init(repository: ILocalRepository = LocalRepository()) {
         self.repository = repository
+        subscribeRepositoryChanges()
+    }
+    
+    private func subscribeRepositoryChanges() {
+        repository.onChange = { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.delegate?.interactorDidFetch(expenses: strongSelf.repository.expenses)
+        }
     }
     
     func fetchExpenses() {
@@ -38,7 +46,6 @@ final class ExpenseListInteractor: IExpenseListInteractor {
     
     func delete(expense: Expense) {
         repository.delete(expense: expense)
-        delegate?.interactorDidFetch(expenses: repository.expenses)
     }
     
 }

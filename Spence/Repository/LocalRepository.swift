@@ -18,6 +18,7 @@ protocol ILocalRepository: class {
     var todaysBudget: Float { get }
     var expenses: [Expense] { get }
     func delete(expense: Expense)
+    var onChange: (()->Void)? { get set }
     
 }
 
@@ -25,10 +26,26 @@ final class LocalRepository: ILocalRepository {
     
     let defaults: UserDefaults
     let dateProvider: IDateProvider
+    private let changeNotificationName = NSNotification.Name(rawValue: "LocalRepository_didChange")
+    
+    var onChange: (()->Void)?
     
     init(defaults: UserDefaults = UserDefaults(suiteName: .defaultsSuiteName)!, dateProvider: IDateProvider = DateProvider()) {
         self.defaults = defaults
         self.dateProvider = dateProvider
+        subscribeChangeNotification()
+    }
+    
+    private func subscribeChangeNotification() {
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(didChange),
+            name: changeNotificationName,
+            object: nil)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     var monthlyBudget: Float {
@@ -37,6 +54,7 @@ final class LocalRepository: ILocalRepository {
         }
         set {
             defaults.set(newValue, forKey: .monthlyBudgetKey)
+            notifyChange()
         }
     }
     
@@ -59,6 +77,7 @@ final class LocalRepository: ILocalRepository {
     
     func addToTodaysExpenses(value: Float) {
         expenses.append(Expense(date: dateProvider.currentDate(), value: value))
+        notifyChange()
     }
     
     var thisMonthsExpenses: Float {
@@ -96,6 +115,15 @@ final class LocalRepository: ILocalRepository {
     func delete(expense: Expense) {
         guard let index = expenses.index(of: expense) else { return }
         expenses.remove(at: index)
+        notifyChange()
+    }
+    
+    private func notifyChange() {
+        NotificationCenter.default.post(name: changeNotificationName, object: nil)
+    }
+    
+    @objc func didChange() {
+        onChange?()
     }
     
 }
