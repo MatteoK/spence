@@ -23,17 +23,16 @@ class RoundButton: UIButton {
     }
     
     func construct() {
-        blurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-        addExpandedSubview(view: blurView)
-        blurView.layer.borderWidth = 1
-        blurView.layer.borderColor = UIColor.black.withAlphaComponent(0.6).cgColor
-        blurView.isUserInteractionEnabled = false
-        blurView.layer.masksToBounds = true
+        backgroundColor = .cta
+        layer.borderWidth = 1
+        layer.borderColor = UIColor.black.withAlphaComponent(0.6).cgColor
+        layer.masksToBounds = true
+        setTitleColor(.white, for: .normal)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        blurView.layer.cornerRadius = frame.size.height / 2
+        layer.cornerRadius = frame.size.height / 2
     }
     
     override var isHighlighted: Bool {

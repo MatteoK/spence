@@ -55,6 +55,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .background
         registerCells()
         updateUI()
     }
@@ -75,8 +76,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         updateUI()
     }
     
-    private func updateUI() {
-        updateProgressBar()
+    private func updateUI(animated: Bool = false) {
+        updateProgressBar(animated: animated)
         refreshDailyExpensesCell()
         refreshMonthlyExpensesCell()
     }
@@ -112,22 +113,19 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     private func commit() {
         amountQueue.commit()
-        hideCancelButton { [weak self] in
-            self?.updateCancelButton(progress: 0)
-        }
-        updateUI()
+        hideCancelButton()
+        updateUI(animated: true)
     }
     
     fileprivate func cancel() {
         timer.cancel()
         amountQueue.clear()
-        clearValueLabel()
         hideCancelButton()
     }
     
-    private func hideCancelButton(completion: (()->Void)? = nil) {
-        setCancelButtonVisible(value: false) {
-            completion?()
+    private func hideCancelButton() {
+        setCancelButtonVisible(value: false) { [weak self] in
+            self?.updateCancelButton(progress: 0)
         }
     }
     
@@ -172,8 +170,19 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         return self.cell(with: .progressBar) as? ProgressBarCell
     }
     
-    private func updateProgressBar() {
-        progressBarCell()?.progressBar.progress = localRepository.percentSpentToday
+    private func updateProgressBar(animated: Bool = false) {
+        let block = { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.progressBarCell()?.progressBar.progress = strongSelf.localRepository.percentSpentToday
+            strongSelf.progressBarCell()?.layoutIfNeeded()
+        }
+        if animated {
+            UIView.animate(withDuration: 0.3) { [weak self] in
+                block()
+            }
+        } else {
+            block()
+        }
     }
     
     private func dailyExpensesCell() -> DailyExpensesCell? {

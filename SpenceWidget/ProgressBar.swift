@@ -39,7 +39,8 @@ class ProgressBar: UIView {
         layer.masksToBounds = false
         clipsToBounds = true
         bar = UIView()
-        bar.backgroundColor = fromColor
+        bar.layer.cornerRadius = 8
+        backgroundColor = UIColor.black.withAlphaComponent(0.2)
         let leading = constraintToSelf(view: bar, attribute: .leading)
         let top = constraintToSelf(view: bar, attribute: .top)
         let bottom = constraintToSelf(view: bar, attribute: .bottom)
