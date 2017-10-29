@@ -82,15 +82,15 @@ extension ExpenseListPresenterTests {
             ExpenseListSectionViewModel(
                 title: "June 1990",
                 items: [
-                    ExpenseListItemViewModel(date: "19:22", value: "0"),
-                    ExpenseListItemViewModel(date: "20:44", value: "1")
+                    ExpenseListItemViewModel(date: "19:22", value: "0", currency: "€"),
+                    ExpenseListItemViewModel(date: "20:44", value: "1", currency: "€")
                 ]
             ),
             ExpenseListSectionViewModel(
                 title: "June 2017",
                 items: [
-                    ExpenseListItemViewModel(date: "22:40", value: "0"),
-                    ExpenseListItemViewModel(date: "20:22", value: "1")
+                    ExpenseListItemViewModel(date: "22:40", value: "0", currency: "€"),
+                    ExpenseListItemViewModel(date: "20:22", value: "1", currency: "€")
                 ]
             )
         ]

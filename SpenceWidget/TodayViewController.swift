@@ -185,7 +185,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     private func updateProgressBar(animated: Bool = false) {
         let block = { [weak self] in
             guard let strongSelf = self else { return }
-            strongSelf.progressBarCell()?.progressBar.progress = strongSelf.localRepository.percentSpentToday
+            strongSelf.progressBarCell()?.progressBar
+                .updateProgress(value: strongSelf.localRepository.percentSpentToday)
             strongSelf.progressBarCell()?.layoutIfNeeded()
         }
         if animated {

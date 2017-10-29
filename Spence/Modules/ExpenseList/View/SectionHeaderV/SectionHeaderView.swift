@@ -14,7 +14,7 @@ class SectionHeaderView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundColor = .lightBackground
+        backgroundColor = .darkBackground
     }
     
 }

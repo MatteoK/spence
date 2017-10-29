@@ -12,11 +12,12 @@ struct ExpenseListItemViewModel {
     
     let date: String
     let value: String
+    let currency: String
     
 }
 
 extension ExpenseListItemViewModel: Equatable {}
 
 func ==(lhs: ExpenseListItemViewModel, rhs: ExpenseListItemViewModel) -> Bool {
-    return lhs.date == rhs.date && lhs.value == rhs.value
+    return lhs.date == rhs.date && lhs.value == rhs.value && lhs.currency == rhs.currency
 }

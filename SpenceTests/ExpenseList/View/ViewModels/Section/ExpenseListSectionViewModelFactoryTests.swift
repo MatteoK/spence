@@ -70,7 +70,7 @@ extension ExpenseListSectionViewModelFactoryTests {
     
     fileprivate class MockItemFactory: IExpenseListItemViewModelFactory {
         
-        let result = ExpenseListItemViewModel(date: "Monday", value: "27")
+        let result = ExpenseListItemViewModel(date: "Monday", value: "27", currency: "€")
         
         var dateFormat: ExpenseListItemDateFormat = .time
         

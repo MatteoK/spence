@@ -24,7 +24,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b5s-qc-9Vi">
-                    <rect key="frame" x="8" y="18" width="35.5" height="17"/>
+                    <rect key="frame" x="16" y="18" width="35.5" height="17"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
@@ -36,7 +36,7 @@
                 <constraint firstItem="QIj-xZ-wjz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ggg-b4-UPN"/>
                 <constraint firstItem="b5s-qc-9Vi" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="HG0-BY-OF5"/>
                 <constraint firstAttribute="bottom" secondItem="QIj-xZ-wjz" secondAttribute="bottom" id="HbK-48-5Ew"/>
-                <constraint firstItem="b5s-qc-9Vi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="Imf-Ek-zVQ"/>
+                <constraint firstItem="b5s-qc-9Vi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Imf-Ek-zVQ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

@@ -36,7 +36,11 @@ final class ExpenseListItemViewModelFactory: IExpenseListItemViewModelFactory {
     var dateFormat: ExpenseListItemDateFormat = .time
     
     func create(from expense: Expense) -> ExpenseListItemViewModel {
-        return ExpenseListItemViewModel(date: string(from: expense.date), value: "\(Int(expense.value))\(Currency.selected.symbol)")
+        return ExpenseListItemViewModel(
+            date: string(from: expense.date),
+            value: "\(Int(expense.value)),-",
+            currency: "\(Currency.selected.symbol)"
+        )
     }
     
     private func string(from date: Date) -> String {

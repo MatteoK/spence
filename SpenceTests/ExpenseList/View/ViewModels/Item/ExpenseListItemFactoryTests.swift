@@ -28,10 +28,16 @@ final class ExpenseListItemFactoryTests: XCTestCase {
         XCTAssertEqual(item.date, "24. 09:41")
     }
     
-    func test_whenConvertingFromExpense_thenUsesValueAndAddsCurrencySymbol() {
+    func test_whenConvertingFromExpense_thenAddsCommaAndDashToValue() {
         let expense = Expense(date: Date(), value: 8)
         let item = factory.create(from: expense)
-        XCTAssertEqual(item.value, "8\(Currency.selected.symbol)")
+        XCTAssertEqual(item.value, "8,-")
+    }
+    
+    func test_whenConvertingFromExpense_thenUsesSelectedCurrency() {
+        let expense = Expense(date: Date(), value: 8)
+        let item = factory.create(from: expense)
+        XCTAssertEqual(item.currency, Currency.selected.symbol)
     }
     
 }

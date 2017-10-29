@@ -52,7 +52,7 @@ extension UIColor {
 extension UIColor {
     
     static let background = UIColor(red: 56/255.0, green: 65/255.0, blue: 78/255.0, alpha: 1)
-    static let darkBackground = UIColor(red: 36/255.0, green: 35/255.0, blue: 48/255.0, alpha: 1)
+    static let darkBackground = UIColor(red: 40/255.0, green: 47/255.0, blue: 56/255.0, alpha: 1)
     static let lightBackground = UIColor(red: 76/255.0, green: 85/255.0, blue: 98/255.0, alpha: 1)
     static let spenceGreen = UIColor.green
     static let spenceRed = UIColor.red

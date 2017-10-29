@@ -19,11 +19,18 @@ final class ExpenseListViewController: UIViewController, IExpenseListView {
     weak var presenter: IExpenseListPresenter?
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var titleBar: UIView!
+    @IBOutlet weak var titleLabel: UILabel!
     fileprivate var viewModel: ExpenseListViewModel?
     fileprivate let reuseIdentifier = "cell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleBar.backgroundColor = .background
+//        titleBar.layer.shadowOpacity = 1
+//        titleBar.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        titleBar.layer.shadowRadius = 2
+//        titleBar.layer.shadowColor = UIColor.black.withAlphaComponent(0.8).cgColor
         registerCells()
         presenter?.viewDidLoad()
     }
@@ -56,6 +63,7 @@ extension ExpenseListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! ExpenseListItemCell
         cell.timeLabel.text = item.date
         cell.valueLabel.text = item.value
+        cell.currencyLabel.text = item.currency
         cell.backgroundColor = .clear
         return cell
     }

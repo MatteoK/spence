@@ -25,7 +25,7 @@ class OverviewViewModelFactoryTests: XCTestCase {
     }
     
     func test_whenConvertsToViewModel_thenThisMonthsExpensesIsCorrect() {
-        XCTAssertEqual(viewModel.thisMonthsExpenses, "10\(Currency.selected.symbol)")
+        XCTAssertEqual(viewModel.thisMonthsExpenses, "\(Currency.selected.symbol)\(String.thinSpace)10")
     }
     
     func test_whenConvertsToViewModel_thenTodaysBudgetIsCorrect() {
@@ -33,7 +33,7 @@ class OverviewViewModelFactoryTests: XCTestCase {
     }
     
     func test_whenConvertsToViewModel_thenTodaysExpensesIsCorrect() {
-        XCTAssertEqual(viewModel.todaysExpenses, "5\(Currency.selected.symbol)")
+        XCTAssertEqual(viewModel.todaysExpenses, "\(Currency.selected.symbol)\(String.thinSpace)5")
     }
     
     func test_whenConvertsToViewModel_thenMonthlyExpenseProgressIsCorrect() {

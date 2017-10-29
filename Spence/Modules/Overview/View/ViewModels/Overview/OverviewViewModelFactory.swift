@@ -22,8 +22,8 @@ final class OverViewViewModelFactory: IOverviewViewModelFactory {
             todaysExpenseProgress: expenseProgress(budget: data.todaysBudged, expenses: data.todaysExpenses),
             todaysBudget: "of \(data.todaysBudged)",
             monthlyBudget: "of \(data.monthlyBudget)",
-            todaysExpenses: "\(data.todaysExpenses)\(Currency.selected.symbol)",
-            thisMonthsExpenses: "\(data.thisMonthsExpenses)\(Currency.selected.symbol)"
+            todaysExpenses: "\(Currency.selected.symbol)\(String.thinSpace)\(data.todaysExpenses)",
+            thisMonthsExpenses: "\(Currency.selected.symbol)\(String.thinSpace)\(data.thisMonthsExpenses)"
         )
     }
     

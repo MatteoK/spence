@@ -22,12 +22,16 @@ final class OverviewViewController: UIViewController, IOverviewView {
     @IBOutlet weak var thisMonthProgressBar: CircularProgressBar!
     @IBOutlet weak var hiddenTextField: UITextField!
     let pickerView = SpencePickerView()
+    private var dimmer: UIView?
     
     override func viewDidLoad() {
         view.backgroundColor = .background
         configureProgressBars()
         configurePickerView()
         presenter?.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardDidHide, object: nil)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -63,7 +67,36 @@ final class OverviewViewController: UIViewController, IOverviewView {
         pickerView.items = viewModel.options
         pickerView.selectedIndex = viewModel.selectedIndex
         pickerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 250)
+        addDimmer()
         hiddenTextField.becomeFirstResponder()
+    }
+    
+    func keyboardWillShow() {
+        dimmer?.alpha = 1
+    }
+    
+    func keyboardWillHide() {
+        dimmer?.alpha = 0
+    }
+    
+    func keyboardDidHide() {
+        removeDimmer()
+    }
+    
+    private func addDimmer() {
+        guard let window = UIApplication.shared.windows.first else { return }
+        self.dimmer?.removeFromSuperview()
+        let dimmer = UIView()
+        dimmer.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        dimmer.frame.size = window.frame.size
+        dimmer.alpha = 0
+        window.addSubview(dimmer)
+        self.dimmer = dimmer
+    }
+    
+    private func removeDimmer() {
+        dimmer?.removeFromSuperview()
+        dimmer = nil
     }
 
     @IBAction func changeBudgetButtonPressed(sender: UIButton) {

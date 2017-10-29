@@ -91,6 +91,7 @@
 		A2670AD11F95239E00E3F338 /* ExpenseListItemViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2670AD01F95239E00E3F338 /* ExpenseListItemViewModelFactory.swift */; };
 		A2670AD31F95256700E3F338 /* ExpenseListSectionViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2670AD21F95256700E3F338 /* ExpenseListSectionViewModelFactory.swift */; };
 		A2753B871FA51F8F00104835 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2753B861FA51F8F00104835 /* Notifications.swift */; };
+		A2E6161B1FA5DFEC00E1C6B6 /* String+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E6161A1FA5DFEC00E1C6B6 /* String+Spence.swift */; };
 		A2E85CA11FA4A9C800FE648E /* OverviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E85CA01FA4A9C800FE648E /* OverviewPresenter.swift */; };
 		A2E85CA41FA4AA1100FE648E /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E85CA31FA4AA1100FE648E /* OverviewViewController.swift */; };
 		A2E85CA71FA4AAAF00FE648E /* OverviewPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E85CA61FA4AAAF00FE648E /* OverviewPresenterTests.swift */; };
@@ -156,7 +157,7 @@
 		A209FA281F517F31009DE88D /* LocalRepositoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocalRepositoryTests.swift; path = Repository/LocalRepositoryTests.swift; sourceTree = "<group>"; };
 		A209FA2A1F518437009DE88D /* DateProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateProvider.swift; path = Repository/DateProvider.swift; sourceTree = "<group>"; };
 		A209FA2D1F518829009DE88D /* ProgressBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
-		A209FA2F1F51986F009DE88D /* UIColor+Spence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Spence.swift"; sourceTree = "<group>"; };
+		A209FA2F1F51986F009DE88D /* UIColor+Spence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Spence.swift"; path = "Extensions/UIColor+Spence.swift"; sourceTree = "<group>"; };
 		A209FA321F519BF0009DE88D /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		A209FA341F519FF1009DE88D /* AmountQueue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AmountQueue.swift; sourceTree = "<group>"; };
 		A209FA381F51A5C0009DE88D /* QeueTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QeueTimer.swift; sourceTree = "<group>"; };
@@ -208,6 +209,7 @@
 		A2670AD01F95239E00E3F338 /* ExpenseListItemViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseListItemViewModelFactory.swift; path = Modules/ExpenseList/View/ViewModel/ExpenseListItemViewModelFactory.swift; sourceTree = "<group>"; };
 		A2670AD21F95256700E3F338 /* ExpenseListSectionViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseListSectionViewModelFactory.swift; path = Modules/ExpenseList/View/ViewModel/ExpenseListSectionViewModelFactory.swift; sourceTree = "<group>"; };
 		A2753B861FA51F8F00104835 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Common/Notifications.swift; sourceTree = "<group>"; };
+		A2E6161A1FA5DFEC00E1C6B6 /* String+Spence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Spence.swift"; path = "Extensions/String+Spence.swift"; sourceTree = "<group>"; };
 		A2E85CA01FA4A9C800FE648E /* OverviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewPresenter.swift; path = Modules/Overview/OverviewPresenter.swift; sourceTree = "<group>"; };
 		A2E85CA31FA4AA1100FE648E /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewViewController.swift; path = Modules/Overview/View/OverviewViewController.swift; sourceTree = "<group>"; };
 		A2E85CA61FA4AAAF00FE648E /* OverviewPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewPresenterTests.swift; path = Overview/OverviewPresenterTests.swift; sourceTree = "<group>"; };
@@ -364,6 +366,7 @@
 				A23AC9291FA4764300CC0352 /* Int+Spence.swift */,
 				A24E6BD21FA4770F00116E44 /* Date+Spence.swift */,
 				A24E6BE01FA48AA700116E44 /* UIViewController+Spence.swift */,
+				A2E6161A1FA5DFEC00E1C6B6 /* String+Spence.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -861,6 +864,7 @@
 				A2670ACC1F9514F400E3F338 /* ExpenseListInteractor.swift in Sources */,
 				A24D915C1F5DC8530036CBEA /* ExpenseListItemViewModel.swift in Sources */,
 				A24E6BDD1FA4899900116E44 /* ExpenseListWireframe.swift in Sources */,
+				A2E6161B1FA5DFEC00E1C6B6 /* String+Spence.swift in Sources */,
 				A209FA301F51986F009DE88D /* UIColor+Spence.swift in Sources */,
 				A2E85CBB1FA4BC2B00FE648E /* ProgressBar.swift in Sources */,
 				A209F9EE1F5176F7009DE88D /* ViewController.swift in Sources */,
@@ -1104,6 +1108,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.matteo.Spence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1120,6 +1125,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.matteo.Spence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1163,6 +1169,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1178,6 +1185,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

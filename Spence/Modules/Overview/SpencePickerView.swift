@@ -32,15 +32,20 @@ final class SpencePickerView: UIView {
     }
     
     private func construct() {
-        backgroundColor = .darkBackground
+        backgroundColor = .background
+        addTopBar()
         addPickerView()
         addDoneButton()
+        layer.shadowColor = UIColor.black.withAlphaComponent(0.7).cgColor
+        layer.shadowOpacity = 1
+        layer.shadowRadius = 2
+        layer.shadowOffset = CGSize(width: 0, height: -1)
     }
     
     private func addPickerView() {
         pickerView.dataSource = self
         pickerView.delegate = self
-        addExpandedSubview(view: pickerView, insets: UIEdgeInsets(top: 40, left: 0, bottom: 0, right: 0))
+        addExpandedSubview(view: pickerView, insets: UIEdgeInsets(top: 34, left: 0, bottom: 0, right: 0))
     }
     
     private func addDoneButton() {
@@ -53,6 +58,19 @@ final class SpencePickerView: UIView {
             .absoluteConstraint(view: doneButton, attribute: .height, constant: 34)
         ])
         doneButton.addTarget(self, action: #selector(doneButtonPressed(sender:)), for: .touchUpInside)
+    }
+    
+    private func addTopBar() {
+        let bar = UIView()
+        bar.backgroundColor = .clear
+        bar.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(bar)
+        addConstraints([
+                .equalConstraint(from: bar, to: self, attribute: .leading),
+                .equalConstraint(from: bar, to: self, attribute: .trailing),
+                .equalConstraint(from: bar, to: self, attribute: .top),
+                .absoluteConstraint(view: bar, attribute: .height, constant: 50)
+        ])
     }
     
     func doneButtonPressed(sender: UIButton) {
@@ -80,5 +98,8 @@ extension SpencePickerView: UIPickerViewDelegate {
             string: items[row],
             attributes: [NSForegroundColorAttributeName: UIColor.white])
     }
+    
+    // NOTE: right align labels, currency only once
+    // dim background
     
 }

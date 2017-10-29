@@ -22,6 +22,7 @@ final class HomeViewController: UIViewController {
         listViewController.view.translatesAutoresizingMaskIntoConstraints = false
         overviewViewController.view.backgroundColor = .clear
         listViewController.view.backgroundColor = .clear
+        listViewController.view.clipsToBounds = true
         view.addConstraints([
             .equalConstraint(from: overviewViewController.view, to: view, attribute: .leading),
             .equalConstraint(from: overviewViewController.view, to: view, attribute: .top),

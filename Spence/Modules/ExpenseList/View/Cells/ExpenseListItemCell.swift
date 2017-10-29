@@ -12,5 +12,6 @@ class ExpenseListItemCell: UITableViewCell {
 
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
+    @IBOutlet weak var currencyLabel: UILabel!
     
 }
