@@ -90,6 +90,8 @@ final class OverviewViewController: UIViewController, IOverviewView {
         dimmer.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         dimmer.frame.size = window.frame.size
         dimmer.alpha = 0
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(dimmerTapped(sender:)))
+        dimmer.addGestureRecognizer(tapRecognizer)
         window.addSubview(dimmer)
         self.dimmer = dimmer
     }
@@ -101,6 +103,10 @@ final class OverviewViewController: UIViewController, IOverviewView {
 
     @IBAction func changeBudgetButtonPressed(sender: UIButton) {
         presenter?.changeBudgetButtonPressed()
+    }
+    
+    @objc private func dimmerTapped(sender: UITapGestureRecognizer) {
+        hiddenTextField.resignFirstResponder()
     }
     
 }
