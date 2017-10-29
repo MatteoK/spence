@@ -54,6 +54,7 @@ final class SpencePickerView: UIView {
     private func addDoneButton() {
         doneButton.translatesAutoresizingMaskIntoConstraints = false
         doneButton.setTitle("Done", for: .normal)
+        doneButton.style = .cta
         addSubview(doneButton)
         addConstraints([
             .equalConstraint(from: doneButton, to: self, attribute: .trailing, constant: -8),

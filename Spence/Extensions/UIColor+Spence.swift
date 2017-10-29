@@ -56,8 +56,8 @@ extension UIColor {
     static let lightBackground = UIColor(red: 76/255.0, green: 85/255.0, blue: 98/255.0, alpha: 1)
     static let spenceGreen = UIColor.green
     static let spenceRed = UIColor.red
-    static let cta = UIColor(red: 69/255.0, green: 192/255.0, blue: 197/255.0, alpha: 1)
-    static let ctaActive = UIColor(red: 49/255.0, green: 172/255.0, blue: 177/255.0, alpha: 1)
+    static let cta = UIColor(hue: 208/360.0, saturation: 0.8, brightness: 0.95, alpha: 1)
+    static let ctaActive = UIColor(hue: 220/360.0, saturation: 0.8, brightness: 0.95, alpha: 1)
     
 }
 
