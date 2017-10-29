@@ -23,7 +23,8 @@ final class OverViewViewModelFactory: IOverviewViewModelFactory {
             todaysBudget: "of \(data.todaysBudged)",
             monthlyBudget: "of \(data.monthlyBudget)",
             todaysExpenses: "\(Currency.selected.symbol)\(String.thinSpace)\(data.todaysExpenses)",
-            thisMonthsExpenses: "\(Currency.selected.symbol)\(String.thinSpace)\(data.thisMonthsExpenses)"
+            thisMonthsExpenses: "\(Currency.selected.symbol)\(String.thinSpace)\(data.thisMonthsExpenses)",
+            monthlyBudgetValue: data.monthlyBudget
         )
     }
     

@@ -42,10 +42,6 @@
 		A247BDB61FA4D11F00AF62F5 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247BDB51FA4D11F00AF62F5 /* CircularProgressBar.swift */; };
 		A247BDB81FA4D2E100AF62F5 /* OverviewWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247BDB71FA4D2E100AF62F5 /* OverviewWireframe.swift */; };
 		A247BDBA1FA4D96500AF62F5 /* CtaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247BDB91FA4D96500AF62F5 /* CtaButton.swift */; };
-		A247BDBC1FA4E03100AF62F5 /* BudgetPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247BDBB1FA4E03100AF62F5 /* BudgetPickerView.swift */; };
-		A247BDBE1FA4E5E100AF62F5 /* BudgetOptionsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247BDBD1FA4E5E100AF62F5 /* BudgetOptionsProvider.swift */; };
-		A247BDC11FA4EA4D00AF62F5 /* BudgetOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247BDC01FA4EA4D00AF62F5 /* BudgetOptionsViewModel.swift */; };
-		A247BDC31FA4EA9100AF62F5 /* BudgetOptionsViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247BDC21FA4EA9100AF62F5 /* BudgetOptionsViewModelFactory.swift */; };
 		A247BDC61FA4F0BD00AF62F5 /* HomeWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247BDC51FA4F0BD00AF62F5 /* HomeWireframe.swift */; };
 		A247BDC91FA4F13A00AF62F5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247BDC81FA4F13A00AF62F5 /* HomeViewController.swift */; };
 		A247BDCE1FA4FD3700AF62F5 /* ExpenseListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247BDCC1FA4FD3700AF62F5 /* ExpenseListItemCell.swift */; };
@@ -92,7 +88,6 @@
 		A2753B871FA51F8F00104835 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2753B861FA51F8F00104835 /* Notifications.swift */; };
 		A277751B1FA64579001968C4 /* DateAndValuePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277751A1FA64579001968C4 /* DateAndValuePicker.swift */; };
 		A277751D1FA645A6001968C4 /* Notification+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A277751C1FA645A6001968C4 /* Notification+Spence.swift */; };
-		A2CF878A1FA60E4C007FDB53 /* PickerViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CF87891FA60E4C007FDB53 /* PickerViewContainer.swift */; };
 		A2CF878F1FA615E0007FDB53 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA321F519BF0009DE88D /* RoundButton.swift */; };
 		A2E6161B1FA5DFEC00E1C6B6 /* String+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E6161A1FA5DFEC00E1C6B6 /* String+Spence.swift */; };
 		A2E85CA11FA4A9C800FE648E /* OverviewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E85CA01FA4A9C800FE648E /* OverviewPresenter.swift */; };
@@ -172,10 +167,6 @@
 		A247BDB51FA4D11F00AF62F5 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CircularProgressBar.swift; path = Modules/Overview/View/CircularProgressBar.swift; sourceTree = "<group>"; };
 		A247BDB71FA4D2E100AF62F5 /* OverviewWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewWireframe.swift; path = Modules/Overview/OverviewWireframe.swift; sourceTree = "<group>"; };
 		A247BDB91FA4D96500AF62F5 /* CtaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CtaButton.swift; path = Modules/Overview/View/CtaButton.swift; sourceTree = "<group>"; };
-		A247BDBB1FA4E03100AF62F5 /* BudgetPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BudgetPickerView.swift; path = Modules/Overview/BudgetPickerView.swift; sourceTree = "<group>"; };
-		A247BDBD1FA4E5E100AF62F5 /* BudgetOptionsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BudgetOptionsProvider.swift; path = Modules/Overview/Models/BudgetOptionsProvider.swift; sourceTree = "<group>"; };
-		A247BDC01FA4EA4D00AF62F5 /* BudgetOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BudgetOptionsViewModel.swift; path = Modules/Overview/View/ViewModels/BudgetOptions/BudgetOptionsViewModel.swift; sourceTree = "<group>"; };
-		A247BDC21FA4EA9100AF62F5 /* BudgetOptionsViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BudgetOptionsViewModelFactory.swift; path = Modules/Overview/View/ViewModels/BudgetOptions/BudgetOptionsViewModelFactory.swift; sourceTree = "<group>"; };
 		A247BDC51FA4F0BD00AF62F5 /* HomeWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeWireframe.swift; path = Modules/Home/HomeWireframe.swift; sourceTree = "<group>"; };
 		A247BDC81FA4F13A00AF62F5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Modules/Home/View/HomeViewController.swift; sourceTree = "<group>"; };
 		A247BDCC1FA4FD3700AF62F5 /* ExpenseListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ExpenseListItemCell.swift; path = Modules/ExpenseList/View/Cells/ExpenseListItemCell.swift; sourceTree = "<group>"; };
@@ -214,7 +205,6 @@
 		A2753B861FA51F8F00104835 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Common/Notifications.swift; sourceTree = "<group>"; };
 		A277751A1FA64579001968C4 /* DateAndValuePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateAndValuePicker.swift; path = Common/DateAndValuePicker.swift; sourceTree = "<group>"; };
 		A277751C1FA645A6001968C4 /* Notification+Spence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Notification+Spence.swift"; path = "Extensions/Notification+Spence.swift"; sourceTree = "<group>"; };
-		A2CF87891FA60E4C007FDB53 /* PickerViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PickerViewContainer.swift; path = Common/Views/PickerViewContainer.swift; sourceTree = "<group>"; };
 		A2E6161A1FA5DFEC00E1C6B6 /* String+Spence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+Spence.swift"; path = "Extensions/String+Spence.swift"; sourceTree = "<group>"; };
 		A2E85CA01FA4A9C800FE648E /* OverviewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewPresenter.swift; path = Modules/Overview/OverviewPresenter.swift; sourceTree = "<group>"; };
 		A2E85CA31FA4AA1100FE648E /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OverviewViewController.swift; path = Modules/Overview/View/OverviewViewController.swift; sourceTree = "<group>"; };
@@ -376,15 +366,6 @@
 				A277751C1FA645A6001968C4 /* Notification+Spence.swift */,
 			);
 			name = Extensions;
-			sourceTree = "<group>";
-		};
-		A247BDBF1FA4EA3500AF62F5 /* BudgetOptions */ = {
-			isa = PBXGroup;
-			children = (
-				A247BDC01FA4EA4D00AF62F5 /* BudgetOptionsViewModel.swift */,
-				A247BDC21FA4EA9100AF62F5 /* BudgetOptionsViewModelFactory.swift */,
-			);
-			name = BudgetOptions;
 			sourceTree = "<group>";
 		};
 		A247BDC41FA4F09900AF62F5 /* Home */ = {
@@ -620,19 +601,10 @@
 		A2753B851FA51F8400104835 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				A2CF87881FA60E3D007FDB53 /* Views */,
 				A2753B861FA51F8F00104835 /* Notifications.swift */,
 				A277751A1FA64579001968C4 /* DateAndValuePicker.swift */,
 			);
 			name = Common;
-			sourceTree = "<group>";
-		};
-		A2CF87881FA60E3D007FDB53 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				A2CF87891FA60E4C007FDB53 /* PickerViewContainer.swift */,
-			);
-			name = Views;
 			sourceTree = "<group>";
 		};
 		A2E85C9F1FA4A97A00FE648E /* Overview */ = {
@@ -655,7 +627,6 @@
 				A247BDB31FA4D10B00AF62F5 /* CircleView.swift */,
 				A247BDB51FA4D11F00AF62F5 /* CircularProgressBar.swift */,
 				A247BDB91FA4D96500AF62F5 /* CtaButton.swift */,
-				A247BDBB1FA4E03100AF62F5 /* BudgetPickerView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -674,7 +645,6 @@
 			isa = PBXGroup;
 			children = (
 				A2E85CA91FA4ABFD00FE648E /* OverviewData.swift */,
-				A247BDBD1FA4E5E100AF62F5 /* BudgetOptionsProvider.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -682,7 +652,6 @@
 		A2E85CAE1FA4AE7C00FE648E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A247BDBF1FA4EA3500AF62F5 /* BudgetOptions */,
 				A2E85CAF1FA4AE8200FE648E /* Overview */,
 			);
 			name = ViewModels;
@@ -875,7 +844,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A247BDC11FA4EA4D00AF62F5 /* BudgetOptionsViewModel.swift in Sources */,
 				A24D915E1F5DC8820036CBEA /* ExpenseListViewModel.swift in Sources */,
 				A24D91601F5DC8940036CBEA /* ExpenseListSectionViewModel.swift in Sources */,
 				A2670ACC1F9514F400E3F338 /* ExpenseListInteractor.swift in Sources */,
@@ -886,12 +854,10 @@
 				A209FA301F51986F009DE88D /* UIColor+Spence.swift in Sources */,
 				A2E85CBB1FA4BC2B00FE648E /* ProgressBar.swift in Sources */,
 				A209F9EE1F5176F7009DE88D /* ViewController.swift in Sources */,
-				A247BDBC1FA4E03100AF62F5 /* BudgetPickerView.swift in Sources */,
 				A247BDCE1FA4FD3700AF62F5 /* ExpenseListItemCell.swift in Sources */,
 				A209FA251F517B06009DE88D /* LocalRepository.swift in Sources */,
 				A24E6BD31FA4770F00116E44 /* Date+Spence.swift in Sources */,
 				A24D91471F5DC2930036CBEA /* Expense.swift in Sources */,
-				A2CF878A1FA60E4C007FDB53 /* PickerViewContainer.swift in Sources */,
 				A23AC9241FA475B600CC0352 /* NSLayoutConstraint+Spence.swift in Sources */,
 				A2670AD11F95239E00E3F338 /* ExpenseListItemViewModelFactory.swift in Sources */,
 				A24D91591F5DC6BB0036CBEA /* ExpenseListPresenter.swift in Sources */,
@@ -903,13 +869,11 @@
 				A2E85CAA1FA4ABFD00FE648E /* OverviewData.swift in Sources */,
 				A24D91571F5DC6AE0036CBEA /* ExpenseListViewController.swift in Sources */,
 				A247BDC91FA4F13A00AF62F5 /* HomeViewController.swift in Sources */,
-				A247BDC31FA4EA9100AF62F5 /* BudgetOptionsViewModelFactory.swift in Sources */,
 				A209FA2B1F518437009DE88D /* DateProvider.swift in Sources */,
 				A2E85CB31FA4AEAF00FE648E /* OverviewViewModelFactory.swift in Sources */,
 				A2670AD31F95256700E3F338 /* ExpenseListSectionViewModelFactory.swift in Sources */,
 				A247BDD21FA4FEC900AF62F5 /* SectionHeaderView.swift in Sources */,
 				A23AC92A1FA4764300CC0352 /* Int+Spence.swift in Sources */,
-				A247BDBE1FA4E5E100AF62F5 /* BudgetOptionsProvider.swift in Sources */,
 				A247BDB81FA4D2E100AF62F5 /* OverviewWireframe.swift in Sources */,
 				A24E6BE11FA48AA700116E44 /* UIViewController+Spence.swift in Sources */,
 				A2CF878F1FA615E0007FDB53 /* RoundButton.swift in Sources */,

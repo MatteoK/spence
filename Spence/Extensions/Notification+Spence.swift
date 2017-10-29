@@ -10,9 +10,11 @@ import UIKit
 
 extension Notification {
     
-    var getKeyboardHeight: CGFloat {
-        var keyboardInfo = userInfo!
-        let keyboardFrameBegin = keyboardInfo[UIKeyboardFrameEndUserInfoKey] as! NSValue
+    var getKeyboardHeight: CGFloat? {
+        guard let keyboardInfo = userInfo,
+            let keyboardFrameBegin = keyboardInfo[UIKeyboardFrameEndUserInfoKey] as? NSValue else {
+                return nil
+        }
         let keyboardFrameBeginRect = keyboardFrameBegin.cgRectValue
         let keyboardHeight = keyboardFrameBeginRect.size.height
         return keyboardHeight

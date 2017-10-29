@@ -207,10 +207,11 @@ class DateAndValuePicker {
     private var isDismissing = false
     private var date = Date()
     private var dimmer: UIView?
+    private var wasPrefilled = false
     
-    var allowDateSelection = true {
+    var isDatePickingEnabled = true {
         didSet {
-            inputAccessoryView.dateLabel.isHidden = !allowDateSelection
+            inputAccessoryView.dateLabel.isHidden = !isDatePickingEnabled
         }
     }
     
@@ -221,6 +222,11 @@ class DateAndValuePicker {
         didSet {
             updateValueLabel()
         }
+    }
+    
+    func prefill(value: Int) {
+        self.value = "\(value)"
+        wasPrefilled = true
     }
     
     init() {
@@ -250,7 +256,10 @@ class DateAndValuePicker {
     }
     
     private func add(digit: Int) {
-        if value == "0" {
+        if wasPrefilled {
+            value = "\(digit)"
+            wasPrefilled = false
+        } else if value == "0" {
             if digit != 0 {
                 value = "\(digit)"
             }
@@ -260,7 +269,10 @@ class DateAndValuePicker {
     }
     
     private func deleteDigit() {
-        if value.characters.count == 1 {
+        if wasPrefilled {
+            value = "0"
+            wasPrefilled = false
+        } else if value.characters.count == 1 {
             if value != "0" {
                 value = "0"
             }
@@ -322,9 +334,9 @@ class DateAndValuePicker {
     }
     
     @objc private func keyboardWillShow(notification: Notification) {
-        guard !isVisible else { return }
-        let keyboardHeight = max(notification.getKeyboardHeight, 200)
-        datePicker.frame.size.height = keyboardHeight - 50
+        guard !isVisible, let keyboardHeight = notification.getKeyboardHeight else { return }
+        let height = max(keyboardHeight, 200)
+        datePicker.frame.size.height = height - 50
         dimmer?.alpha = 1
     }
     

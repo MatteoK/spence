@@ -16,6 +16,7 @@ struct OverviewViewModel {
     let monthlyBudget: String
     let todaysExpenses: String
     let thisMonthsExpenses: String
+    let monthlyBudgetValue: Int
     
 }
 
@@ -27,5 +28,6 @@ func ==(lhs: OverviewViewModel, rhs: OverviewViewModel) -> Bool {
         lhs.todaysBudget == rhs.todaysBudget &&
         lhs.monthlyBudget == rhs.monthlyBudget &&
         lhs.todaysExpenses == rhs.todaysExpenses &&
-        lhs.thisMonthsExpenses == rhs.thisMonthsExpenses
+        lhs.thisMonthsExpenses == rhs.thisMonthsExpenses &&
+        lhs.monthlyBudgetValue == rhs.monthlyBudgetValue
 }

@@ -77,12 +77,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="txj-CC-hEn">
-                                <rect key="frame" x="175" y="277.5" width="25" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsi-PH-Td7" customClass="CtaButton" customModule="Spence" customModuleProvider="target">
                                 <rect key="frame" x="114" y="271.5" width="146" height="42"/>
                                 <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
@@ -113,9 +107,7 @@
                             <constraint firstItem="uUp-yf-P8t" firstAttribute="centerX" secondItem="obh-5o-8vh" secondAttribute="centerX" id="QJh-fq-oY0"/>
                             <constraint firstItem="uUp-yf-P8t" firstAttribute="top" secondItem="obh-5o-8vh" secondAttribute="bottom" constant="10" id="S2X-Ji-oLM"/>
                             <constraint firstItem="obh-5o-8vh" firstAttribute="centerX" secondItem="m5A-oH-8Mi" secondAttribute="centerX" constant="-80" id="Swj-Hv-9UG"/>
-                            <constraint firstItem="txj-CC-hEn" firstAttribute="centerX" secondItem="Lsi-PH-Td7" secondAttribute="centerX" id="eKt-g1-6eq"/>
                             <constraint firstItem="qbh-AN-id4" firstAttribute="centerX" secondItem="HCG-2z-HPY" secondAttribute="centerX" id="f78-bz-yT4"/>
-                            <constraint firstItem="txj-CC-hEn" firstAttribute="centerY" secondItem="Lsi-PH-Td7" secondAttribute="centerY" id="nvM-F2-Oxc"/>
                             <constraint firstItem="Lsi-PH-Td7" firstAttribute="top" secondItem="uUp-yf-P8t" secondAttribute="bottom" constant="30" id="pyx-I6-kci"/>
                             <constraint firstItem="HCG-2z-HPY" firstAttribute="width" secondItem="obh-5o-8vh" secondAttribute="width" id="qeo-kt-b8j"/>
                             <constraint firstItem="HCG-2z-HPY" firstAttribute="centerX" secondItem="m5A-oH-8Mi" secondAttribute="centerX" constant="80" id="w69-eG-WKB"/>
@@ -123,7 +115,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="hiddenTextField" destination="txj-CC-hEn" id="hqq-Ce-VPM"/>
                         <outlet property="thisMonthProgressBar" destination="HCG-2z-HPY" id="Nre-55-i0Q"/>
                         <outlet property="todayProgressBar" destination="obh-5o-8vh" id="pMq-Uk-f1S"/>
                     </connections>

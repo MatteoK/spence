@@ -15,11 +15,13 @@ final class OverviewPresenterTests: XCTestCase {
     private let interactor = MockInteractor()
     private let viewModelFactory = MockFactory()
     private let view = MockView()
-    private let budgetOptionsViewModelFactory = MockBudgetOptionsViewModelFactory()
     
     override func setUp() {
         super.setUp()
-        presenter = OverviewPresenter(view: view, interactor: interactor, viewModelFactory: viewModelFactory, budgetOptionsViewModelFactory: budgetOptionsViewModelFactory)
+        presenter = OverviewPresenter(
+            view: view,
+            interactor: interactor,
+            viewModelFactory: viewModelFactory)
     }
     
     func test_whenViewDidLoadIsCalled_thenAsksInteractorToFetchData() {
@@ -34,22 +36,9 @@ final class OverviewPresenterTests: XCTestCase {
         XCTAssertEqual(view.viewModel, viewModelFactory.result)
     }
     
-    func test_whenChangeBudgetButtonPressed_thenAsksViewToShowPickerViewWithOptionsViewModel() {
-        presenter.interactorDidFetch(
-            data: OverviewData(
-                monthlyBudget: 99,
-                todaysBudged: 0,
-                thisMonthsExpenses: 0,
-                todaysExpenses: 0)
-        )
-        presenter.changeBudgetButtonPressed()
-        XCTAssertEqual(view.optionsViewModel, budgetOptionsViewModelFactory.result)
-        XCTAssertEqual(budgetOptionsViewModelFactory.currentBudget, 99)
-    }
-    
-    func test_whenDidPickBudgetAtIndex_thenInteractorIsAskedToUpdateMonthlyBudget() {
-        presenter.didPickBudget(at: 3)
-        XCTAssertEqual(interactor.updatedMonthlyBudget, BudgetOptionsProvider.options[3])
+    func test_whenChangeBudgetSelected_thenAsksInteractorToChangeBudget() {
+        presenter.changeBudgetSelected(value: 50)
+        XCTAssertEqual(interactor.updatedMonthlyBudget, 50)
     }
     
 }
@@ -76,37 +65,27 @@ extension OverviewPresenterTests {
     fileprivate final class MockView: IOverviewView {
         
         var viewModel: OverviewViewModel?
-        var optionsViewModel: BudgetOptionsViewModel?
         
         func show(viewModel: OverviewViewModel) {
             self.viewModel = viewModel
-        }
-        
-        func showBudgetPicker(viewModel: BudgetOptionsViewModel) {
-            optionsViewModel = viewModel
         }
         
     }
     
     fileprivate final class MockFactory: IOverviewViewModelFactory {
         
-        let result = OverviewViewModel(thisMonthsExpenseProgress: 1, todaysExpenseProgress: 1, todaysBudget: "a", monthlyBudget: "b", todaysExpenses: "c", thisMonthsExpenses: "d")
+        let result = OverviewViewModel(
+            thisMonthsExpenseProgress: 1,
+            todaysExpenseProgress: 1,
+            todaysBudget: "a",
+            monthlyBudget: "b",
+            todaysExpenses: "c",
+            thisMonthsExpenses: "d",
+            monthlyBudgetValue: 3)
         var data: OverviewData?
         
         func create(from data: OverviewData) -> OverviewViewModel {
             self.data = data
-            return result
-        }
-        
-    }
-    
-    fileprivate final class MockBudgetOptionsViewModelFactory: IBudgetOptionsViewModelFactory {
-        
-        var currentBudget: Int?
-        let result = BudgetOptionsViewModel(options: ["a", "b", "c"], selectedIndex: 0, currency: "€")
-        
-        func create(currentBudget: Int) -> BudgetOptionsViewModel {
-            self.currentBudget = currentBudget
             return result
         }
         

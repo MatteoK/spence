@@ -48,6 +48,7 @@ final class ExpenseListViewController: UIViewController, IExpenseListView {
         picker?.onFinishPicking = { [weak self] value, date in
             guard value > 0  else { return }
             self?.presenter?.addExpense(value: value, date: date)
+            self?.picker = nil
         }
         picker?.present()
     }
