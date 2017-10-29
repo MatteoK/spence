@@ -20,7 +20,7 @@ class ProgressBar: UIView {
             removeConstraint(barWidthConstraint)
             barWidthConstraint = widthConstraint(multiplier: CGFloat(progress))
             addConstraint(barWidthConstraint)
-            bar.backgroundColor = fromColor.transition(to: toColor, progress: CGFloat(progress))
+            bar.backgroundColor = .progressColor(value: CGFloat(progress))
         }
     }
     

@@ -23,7 +23,7 @@ final class CircularProgressBar: UIView {
     func updateProgress(value: CGFloat, animated: Bool) {
         progress = value
         progressCircle?.configure(
-            color: UIColor.spenceGreen.transition(to: .spenceRed, progress: progress),
+            color: .progressColor(value: value),
             progress: value
         )
     }

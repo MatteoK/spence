@@ -79,7 +79,6 @@
 		A24E6BD51FA4770F00116E44 /* Date+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BD21FA4770F00116E44 /* Date+Spence.swift */; };
 		A24E6BD61FA4773800116E44 /* UIView+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23AC9251FA475DF00CC0352 /* UIView+Spence.swift */; };
 		A24E6BD71FA4773A00116E44 /* NSLayoutConstraint+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A23AC9231FA475B600CC0352 /* NSLayoutConstraint+Spence.swift */; };
-		A24E6BD81FA4773D00116E44 /* UIColor+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A209FA2F1F51986F009DE88D /* UIColor+Spence.swift */; };
 		A24E6BDB1FA47CD600116E44 /* ExpenseListItemFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BDA1FA47CD600116E44 /* ExpenseListItemFactoryTests.swift */; };
 		A24E6BDD1FA4899900116E44 /* ExpenseListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BDC1FA4899900116E44 /* ExpenseListWireframe.swift */; };
 		A24E6BE11FA48AA700116E44 /* UIViewController+Spence.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24E6BE01FA48AA700116E44 /* UIViewController+Spence.swift */; };
@@ -908,7 +907,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A209FA011F5176F7009DE88D /* SpenceTests.swift in Sources */,
-				A24E6BD81FA4773D00116E44 /* UIColor+Spence.swift in Sources */,
 				A2E85CB81FA4AF5500FE648E /* OverviewViewModelFactoryTests.swift in Sources */,
 				A2E85CBA1FA4B76D00FE648E /* OverviewInteractorTests.swift in Sources */,
 				A2E85CA71FA4AAAF00FE648E /* OverviewPresenterTests.swift in Sources */,

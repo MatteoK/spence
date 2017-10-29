@@ -60,3 +60,18 @@ extension UIColor {
     static let ctaActive = UIColor(red: 49/255.0, green: 172/255.0, blue: 177/255.0, alpha: 1)
     
 }
+
+extension UIColor {
+    
+    static func progressColor(value: CGFloat) -> UIColor {
+        return UIColor(hue: hue(for: value)/360, saturation: 0.8, brightness: 0.95, alpha: 1)
+    }
+    
+    private static func hue(for progress: CGFloat) -> CGFloat {
+        let greenHue: CGFloat = 130
+        let redHue: CGFloat = 0
+        let diff = greenHue - redHue
+        return greenHue - diff * progress
+    }
+    
+}
