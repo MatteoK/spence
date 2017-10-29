@@ -79,7 +79,7 @@ private final class SelectableLabel: UILabel {
     
     private func updateStyle() {
         if selected {
-            layer.borderWidth = 1
+            layer.borderWidth = 2
         } else {
             layer.borderWidth = 0
         }
@@ -160,7 +160,8 @@ final class InputAccessoryView: UIView {
         valueLabel.textColor = .white
         addConstraints([
             .attaching(view: valueLabel, attribute: .leading, to: valueDescriptionLabel, attribute: .trailing, constant: 8),
-            .equalConstraint(from: valueLabel, to: self, attribute: .centerY)
+            .equalConstraint(from: valueLabel, to: self, attribute: .centerY),
+            .absoluteConstraint(view: valueLabel, attribute: .height, constant: 34),
             ])
     }
     
@@ -182,8 +183,9 @@ final class InputAccessoryView: UIView {
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
         dateLabel.textColor = UIColor.white
         addConstraints([
-            .attaching(view: dateLabel, attribute: .trailing, to: doneButton, attribute: .leading, constant: -8),
-            .equalConstraint(from: dateLabel, to: self, attribute: .centerY)
+            .attaching(view: dateLabel, attribute: .trailing, to: doneButton, attribute: .leading, constant: -16),
+            .equalConstraint(from: dateLabel, to: self, attribute: .centerY),
+            .absoluteConstraint(view: dateLabel, attribute: .height, constant: 34),
             ])
     }
     
@@ -380,7 +382,7 @@ class DateAndValuePicker {
     private func switchToDatePicker() {
         textField.resignFirstResponder()
         textField.inputView = datePicker
-        datePicker.backgroundColor = .background
+        datePicker.backgroundColor = UIColor.black.withAlphaComponent(0.1)
         textField.becomeFirstResponder()
     }
     
