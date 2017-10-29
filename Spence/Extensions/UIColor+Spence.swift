@@ -58,6 +58,7 @@ extension UIColor {
     static let spenceRed = UIColor.red
     static let cta = UIColor(hue: 208/360.0, saturation: 0.8, brightness: 0.95, alpha: 1)
     static let ctaActive = UIColor(hue: 220/360.0, saturation: 0.8, brightness: 0.95, alpha: 1)
+    static let keyboardButton = UIColor(red: 73/255.0, green: 74/255.0, blue: 75/255.0, alpha: 1)
     
 }
 

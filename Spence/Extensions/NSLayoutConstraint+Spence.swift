@@ -25,4 +25,8 @@ extension NSLayoutConstraint {
         return NSLayoutConstraint(item: view, attribute: attribute, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: constant)
     }
     
+    static func attaching(view: UIView, attribute: NSLayoutAttribute, to otherView: UIView, attribute otherAttribute: NSLayoutAttribute, constant: CGFloat = 0) -> NSLayoutConstraint {
+        return NSLayoutConstraint(item: view, attribute: attribute, relatedBy: .equal, toItem: otherView, attribute: otherAttribute, multiplier: 1, constant: constant)
+    }
+    
 }

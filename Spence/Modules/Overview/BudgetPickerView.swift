@@ -8,17 +8,19 @@
 
 import UIKit
 
-final class SpencePickerView: UIView {
+class BudgetPickerView: UIView {
     
+    private var pickerViewContainer: PickerViewContainer!
     private let pickerView = UIPickerView()
-    private let doneButton = CtaButton()
     private let currencyLabel = UILabel()
     var items: [String] = []
+    
     var selectedIndex = 0 {
         didSet {
             pickerView.selectRow(selectedIndex, inComponent: 0, animated: false)
         }
     }
+    
     var currency: String = "" {
         didSet {
             currencyLabel.text = currency
@@ -37,38 +39,20 @@ final class SpencePickerView: UIView {
         construct()
     }
     
-    private func construct() {
-        backgroundColor = .background
+    func construct() {
         addPickerView()
-        addDoneButton()
-        addShadow()
         addCurrencyLabel()
     }
     
     private func addPickerView() {
+        pickerViewContainer = PickerViewContainer(view: pickerView)
+        pickerViewContainer.onDoneButtonPressed = { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.onDidFinishPicking?(strongSelf.pickerView.selectedRow(inComponent: 0))
+        }
         pickerView.dataSource = self
         pickerView.delegate = self
-        addExpandedSubview(view: pickerView, insets: UIEdgeInsets(top: 34, left: 0, bottom: 0, right: 0))
-    }
-    
-    private func addDoneButton() {
-        doneButton.translatesAutoresizingMaskIntoConstraints = false
-        doneButton.setTitle("Done", for: .normal)
-        doneButton.style = .cta
-        addSubview(doneButton)
-        addConstraints([
-            .equalConstraint(from: doneButton, to: self, attribute: .trailing, constant: -8),
-            .equalConstraint(from: doneButton, to: self, attribute: .top, constant: 8),
-            .absoluteConstraint(view: doneButton, attribute: .height, constant: 34)
-        ])
-        doneButton.addTarget(self, action: #selector(doneButtonPressed(sender:)), for: .touchUpInside)
-    }
-    
-    private func addShadow() {
-        layer.shadowColor = UIColor.black.withAlphaComponent(0.7).cgColor
-        layer.shadowOpacity = 1
-        layer.shadowRadius = 2
-        layer.shadowOffset = CGSize(width: 0, height: -1)
+        addExpandedSubview(view: pickerViewContainer)
     }
     
     private func addCurrencyLabel() {
@@ -83,13 +67,9 @@ final class SpencePickerView: UIView {
         ])
     }
     
-    func doneButtonPressed(sender: UIButton) {
-        onDidFinishPicking?(pickerView.selectedRow(inComponent: 0))
-    }
-    
 }
 
-extension SpencePickerView: UIPickerViewDataSource {
+extension BudgetPickerView: UIPickerViewDataSource {
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -101,7 +81,7 @@ extension SpencePickerView: UIPickerViewDataSource {
     
 }
 
-extension SpencePickerView: UIPickerViewDelegate {
+extension BudgetPickerView: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let paragraphStyle = NSMutableParagraphStyle()

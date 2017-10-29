@@ -19,6 +19,7 @@ protocol ILocalRepository: class {
     var expenses: [Expense] { get }
     func delete(expense: Expense)
     var onChange: (()->Void)? { get set }
+    func add(expense: Expense)
     
 }
 
@@ -133,6 +134,11 @@ final class LocalRepository: ILocalRepository {
     
     @objc func didChange() {
         onChange?()
+    }
+    
+    func add(expense: Expense) {
+        expenses.append(expense)
+        notifyChange()
     }
     
 }

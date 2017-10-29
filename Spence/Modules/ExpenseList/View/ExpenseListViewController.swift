@@ -21,16 +21,14 @@ final class ExpenseListViewController: UIViewController, IExpenseListView {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var titleBar: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var addButton: CtaButton!
     fileprivate var viewModel: ExpenseListViewModel?
     fileprivate let reuseIdentifier = "cell"
+    private var picker: DateAndValuePicker?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        titleBar.backgroundColor = .background
-//        titleBar.layer.shadowOpacity = 1
-//        titleBar.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        titleBar.layer.shadowRadius = 2
-//        titleBar.layer.shadowColor = UIColor.black.withAlphaComponent(0.8).cgColor
+        addButton.style = .cta
         registerCells()
         presenter?.viewDidLoad()
     }
@@ -43,6 +41,15 @@ final class ExpenseListViewController: UIViewController, IExpenseListView {
         guard tableView != nil else { return }
         self.viewModel = viewModel
         tableView.reloadData()
+    }
+    
+    @IBAction func addButtonPressed(sender: UIButton) {
+        picker = DateAndValuePicker()
+        picker?.onFinishPicking = { [weak self] value, date in
+            guard value > 0  else { return }
+            self?.presenter?.addExpense(value: value, date: date)
+        }
+        picker?.present()
     }
     
 }

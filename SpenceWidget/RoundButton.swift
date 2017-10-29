@@ -10,8 +10,6 @@ import UIKit
 
 class RoundButton: UIButton {
     
-    var blurView: UIVisualEffectView!
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         construct()

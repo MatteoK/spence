@@ -12,6 +12,7 @@ protocol IExpenseListPresenter: class {
     
     func viewDidLoad()
     func deleteButtonPressedForItem(section: Int, row: Int)
+    func addExpense(value: Int, date: Date)
     
 }
 
@@ -38,6 +39,11 @@ final class ExpenseListPresenter: IExpenseListPresenter {
     func deleteButtonPressedForItem(section: Int, row: Int) {
         let expense = domainSections[section].expenses[row]
         interactor.delete(expense: expense)
+    }
+    
+    func addExpense(value: Int, date: Date) {
+        let expense = Expense(date: date, value: Float(value))
+        interactor.add(expense: expense)
     }
     
 }

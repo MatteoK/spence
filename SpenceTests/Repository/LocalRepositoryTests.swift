@@ -123,12 +123,30 @@ final class LocalRepositoryTests: XCTestCase {
     }
     
     func test_whenAppBecomesActive_thenChangeIsNotifiedToAllInstances() {
-        let onChangeWasCalled = expectation(description: "on change was called 1")
+        let onChangeWasCalled = expectation(description: "on change was called")
         let repository = LocalRepository()
         repository.onChange = {
             onChangeWasCalled.fulfill()
         }
         NotificationCenter.default.post(name: NotificationNames.appDidBecomeActive, object: nil)
+        waitForExpectations(timeout: 1, handler: nil)
+    }
+    
+    func test_whenAddsExpense_thenExpenseIsAdded() {
+        XCTAssertEqual(localRepository.expenses, [])
+        let expense = Expense(date: Date(), value: 220)
+        localRepository.add(expense: expense)
+        XCTAssertEqual(localRepository.expenses.first, expense)
+    }
+    
+    func test_whenAddingExpense_thenChangeIsNotifiedToAllInstances() {
+        let otherRepository = LocalRepository()
+        let onChangeWasCalled = expectation(description: "on change was called")
+        otherRepository.onChange = {
+            onChangeWasCalled.fulfill()
+        }
+        let expense = Expense(date: Date(), value: 12)
+        localRepository.add(expense: expense)
         waitForExpectations(timeout: 1, handler: nil)
     }
     

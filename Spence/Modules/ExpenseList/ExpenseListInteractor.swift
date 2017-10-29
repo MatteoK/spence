@@ -19,6 +19,7 @@ protocol IExpenseListInteractor: class {
     var delegate: ExpenseListInteractorDelegate? { get set }
     func fetchExpenses()
     func delete(expense: Expense)
+    func add(expense: Expense)
     
 }
 
@@ -46,6 +47,10 @@ final class ExpenseListInteractor: IExpenseListInteractor {
     
     func delete(expense: Expense) {
         repository.delete(expense: expense)
+    }
+    
+    func add(expense: Expense) {
+        repository.add(expense: expense)
     }
     
 }

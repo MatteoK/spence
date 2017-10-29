@@ -145,7 +145,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ft1-og-egZ">
-                                <rect key="frame" x="0.0" y="40" width="375" height="627"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="OW0-Cy-DpV" id="p99-To-XpI"/>
@@ -153,20 +153,35 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1l6-z1-wbn">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expenses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ouS-Lx-F9d">
-                                        <rect key="frame" x="16" y="9.5" width="70" height="20.5"/>
+                                        <rect key="frame" x="16" y="14.5" width="70" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                         <color key="shadowColor" white="0.0" alpha="0.724884463028169" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <size key="shadowOffset" width="0.0" height="1"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kkV-0m-bLz" customClass="CtaButton" customModule="Spence" customModuleProvider="target">
+                                        <rect key="frame" x="337" y="8" width="30" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="Taz-AG-hry"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addButtonPressedWithSender:" destination="OW0-Cy-DpV" eventType="touchUpInside" id="Xs8-xb-5ta"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="ouS-Lx-F9d" firstAttribute="centerY" secondItem="1l6-z1-wbn" secondAttribute="centerY" id="Ubp-iC-6ig"/>
+                                    <constraint firstItem="kkV-0m-bLz" firstAttribute="centerY" secondItem="ouS-Lx-F9d" secondAttribute="centerY" id="ZMk-Um-56Y"/>
+                                    <constraint firstAttribute="trailing" secondItem="kkV-0m-bLz" secondAttribute="trailing" constant="8" id="c2h-8I-AY7"/>
                                     <constraint firstItem="ouS-Lx-F9d" firstAttribute="leading" secondItem="1l6-z1-wbn" secondAttribute="leading" constant="16" id="hn4-Zf-KnB"/>
                                 </constraints>
                             </view>
@@ -176,7 +191,7 @@
                             <constraint firstAttribute="trailing" secondItem="Ft1-og-egZ" secondAttribute="trailing" id="0Xe-v0-Lo1"/>
                             <constraint firstItem="ZZc-GE-YUa" firstAttribute="top" secondItem="Ft1-og-egZ" secondAttribute="bottom" id="4Lf-Xq-L9W"/>
                             <constraint firstItem="1l6-z1-wbn" firstAttribute="top" secondItem="V5n-1K-hkZ" secondAttribute="top" id="4YS-Za-kXg"/>
-                            <constraint firstItem="Ft1-og-egZ" firstAttribute="top" secondItem="V5n-1K-hkZ" secondAttribute="top" constant="40" id="Dgg-CP-ema"/>
+                            <constraint firstItem="Ft1-og-egZ" firstAttribute="top" secondItem="V5n-1K-hkZ" secondAttribute="top" constant="50" id="Dgg-CP-ema"/>
                             <constraint firstItem="Ft1-og-egZ" firstAttribute="leading" secondItem="V5n-1K-hkZ" secondAttribute="leading" id="F6h-y2-mWi"/>
                             <constraint firstItem="Ft1-og-egZ" firstAttribute="top" secondItem="1l6-z1-wbn" secondAttribute="bottom" id="avo-t0-Qtc"/>
                             <constraint firstItem="1l6-z1-wbn" firstAttribute="leading" secondItem="V5n-1K-hkZ" secondAttribute="leading" id="azo-Bi-Tq5"/>
@@ -185,6 +200,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lOq-4k-Oa8"/>
                     <connections>
+                        <outlet property="addButton" destination="kkV-0m-bLz" id="OTa-m5-6tW"/>
                         <outlet property="tableView" destination="Ft1-og-egZ" id="U48-79-SAv"/>
                         <outlet property="titleBar" destination="1l6-z1-wbn" id="IeL-mc-p0A"/>
                         <outlet property="titleLabel" destination="ouS-Lx-F9d" id="vVa-lS-YcP"/>

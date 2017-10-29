@@ -18,7 +18,11 @@ final class ExpenseListPresenterTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        presenter = ExpenseListPresenter(view: view, interactor: interactor, sectionFactory: sectionFactory)
+        presenter = ExpenseListPresenter(
+            view: view,
+            interactor: interactor,
+            sectionFactory: sectionFactory
+        )
         
     }
     
@@ -44,6 +48,14 @@ final class ExpenseListPresenterTests: XCTestCase {
         XCTAssertEqual(interactor.expenseToDelete, sectionFactory.domainResult[1].expenses[1])
     }
     
+    func test_whenAddExpenseIsCalled_thenAsksInteractorToAddExpense() {
+        let date = Date()
+        let value = 22
+        presenter.addExpense(value: value, date: date)
+        XCTAssertEqual(interactor.expenseToAdd?.date, date)
+        XCTAssertEqual(interactor.expenseToAdd?.value, Float(value))
+    }
+    
 }
 
 extension ExpenseListPresenterTests {
@@ -63,6 +75,7 @@ extension ExpenseListPresenterTests {
         var delegate: ExpenseListInteractorDelegate?
         var fetchExpensesWasCalled = false
         var expenseToDelete: Expense?
+        var expenseToAdd: Expense?
         
         func fetchExpenses() {
             fetchExpensesWasCalled = true
@@ -70,6 +83,10 @@ extension ExpenseListPresenterTests {
         
         func delete(expense: Expense) {
             expenseToDelete = expense
+        }
+        
+        func add(expense: Expense) {
+            expenseToAdd = expense
         }
         
     }

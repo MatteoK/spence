@@ -21,7 +21,7 @@ final class OverviewViewController: UIViewController, IOverviewView {
     @IBOutlet weak var todayProgressBar: CircularProgressBar!
     @IBOutlet weak var thisMonthProgressBar: CircularProgressBar!
     @IBOutlet weak var hiddenTextField: UITextField!
-    let pickerView = SpencePickerView()
+    let pickerView = BudgetPickerView()
     private var dimmer: UIView?
     
     override func viewDidLoad() {

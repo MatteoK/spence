@@ -56,6 +56,7 @@ extension OverviewInteractorTests {
         var expenses: [Expense] = []
         func delete(expense: Expense) {}
         var onChange: (() -> Void)?
+        func add(expense: Expense) {}
         
     }
     
