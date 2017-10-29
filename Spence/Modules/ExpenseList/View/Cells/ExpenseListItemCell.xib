@@ -70,8 +70,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="bottomLine" destination="c0Y-4C-hDe" id="r6X-dI-IIa"/>
                 <outlet property="currencyLabel" destination="ANc-Ut-sDT" id="683-X1-v0S"/>
                 <outlet property="timeLabel" destination="cn1-8g-tOb" id="aX2-du-PAs"/>
+                <outlet property="topLine" destination="zad-lL-hfz" id="CBg-zK-suC"/>
                 <outlet property="valueLabel" destination="zHc-VS-VKI" id="GDf-4W-kzv"/>
             </connections>
             <point key="canvasLocation" x="34" y="91"/>

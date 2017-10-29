@@ -65,7 +65,15 @@ extension ExpenseListViewController: UITableViewDataSource {
         cell.valueLabel.text = item.value
         cell.currencyLabel.text = item.currency
         cell.backgroundColor = .clear
+        cell.showsLines = shouldShowSeparatorLines(at: indexPath)
         return cell
+    }
+    
+    private func shouldShowSeparatorLines(at indexPath: IndexPath) -> Bool {
+        guard let viewModel = self.viewModel else { return false }
+        let isLastSection = indexPath.section == viewModel.sections.count - 1
+        let isLastElementInSection = indexPath.row == viewModel.sections[indexPath.section].items.count - 1
+        return isLastSection || !isLastElementInSection
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

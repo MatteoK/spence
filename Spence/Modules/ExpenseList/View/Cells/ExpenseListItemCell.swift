@@ -13,5 +13,13 @@ class ExpenseListItemCell: UITableViewCell {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
+    @IBOutlet weak var topLine: UIView!
+    @IBOutlet weak var bottomLine: UIView!
+    
+    var showsLines: Bool = true {
+        didSet {
+            [topLine, bottomLine].forEach({ $0?.isHidden = !showsLines })
+        }
+    }
     
 }
