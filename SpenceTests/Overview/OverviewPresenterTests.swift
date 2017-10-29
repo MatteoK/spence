@@ -103,7 +103,7 @@ extension OverviewPresenterTests {
     fileprivate final class MockBudgetOptionsViewModelFactory: IBudgetOptionsViewModelFactory {
         
         var currentBudget: Int?
-        let result = BudgetOptionsViewModel(options: ["a", "b", "c"], selectedIndex: 0)
+        let result = BudgetOptionsViewModel(options: ["a", "b", "c"], selectedIndex: 0, currency: "€")
         
         func create(currentBudget: Int) -> BudgetOptionsViewModel {
             self.currentBudget = currentBudget

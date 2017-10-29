@@ -66,6 +66,7 @@ final class OverviewViewController: UIViewController, IOverviewView {
     func showBudgetPicker(viewModel: BudgetOptionsViewModel) {
         pickerView.items = viewModel.options
         pickerView.selectedIndex = viewModel.selectedIndex
+        pickerView.currency = viewModel.currency
         pickerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 250)
         addDimmer()
         hiddenTextField.becomeFirstResponder()

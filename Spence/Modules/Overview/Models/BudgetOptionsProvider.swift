@@ -12,7 +12,7 @@ final class BudgetOptionsProvider {
     
     static var options: [Int] {
         get {
-            return (0..<100).map({ $0*10 })
+            return (0..<201).map({ $0*10 })
         }
     }
     

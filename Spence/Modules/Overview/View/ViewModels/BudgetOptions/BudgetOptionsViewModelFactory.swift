@@ -18,8 +18,12 @@ final class BudgetOptionsViewModelFactory: IBudgetOptionsViewModelFactory {
     
     func create(currentBudget: Int) -> BudgetOptionsViewModel {
         let index = BudgetOptionsProvider.options.index(of: currentBudget) ?? 0
-        let options = BudgetOptionsProvider.options.map({ "\($0)\(Currency.selected.symbol)" })
-        return BudgetOptionsViewModel(options: options, selectedIndex: index)
+        let options = BudgetOptionsProvider.options.map({ "\($0)" })
+        return BudgetOptionsViewModel(
+            options: options,
+            selectedIndex: index,
+            currency: "\(Currency.selected.symbol)"
+        )
     }
     
 }

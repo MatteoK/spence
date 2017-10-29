@@ -42,5 +42,9 @@ final class HomeViewController: UIViewController {
         viewController.didMove(toParentViewController: self)
     }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+    
 }
 

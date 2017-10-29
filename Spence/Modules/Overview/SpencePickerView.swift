@@ -12,10 +12,16 @@ final class SpencePickerView: UIView {
     
     private let pickerView = UIPickerView()
     private let doneButton = CtaButton()
+    private let currencyLabel = UILabel()
     var items: [String] = []
     var selectedIndex = 0 {
         didSet {
             pickerView.selectRow(selectedIndex, inComponent: 0, animated: false)
+        }
+    }
+    var currency: String = "" {
+        didSet {
+            currencyLabel.text = currency
         }
     }
     
@@ -33,13 +39,10 @@ final class SpencePickerView: UIView {
     
     private func construct() {
         backgroundColor = .background
-        addTopBar()
         addPickerView()
         addDoneButton()
-        layer.shadowColor = UIColor.black.withAlphaComponent(0.7).cgColor
-        layer.shadowOpacity = 1
-        layer.shadowRadius = 2
-        layer.shadowOffset = CGSize(width: 0, height: -1)
+        addShadow()
+        addCurrencyLabel()
     }
     
     private func addPickerView() {
@@ -60,16 +63,22 @@ final class SpencePickerView: UIView {
         doneButton.addTarget(self, action: #selector(doneButtonPressed(sender:)), for: .touchUpInside)
     }
     
-    private func addTopBar() {
-        let bar = UIView()
-        bar.backgroundColor = .clear
-        bar.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(bar)
+    private func addShadow() {
+        layer.shadowColor = UIColor.black.withAlphaComponent(0.7).cgColor
+        layer.shadowOpacity = 1
+        layer.shadowRadius = 2
+        layer.shadowOffset = CGSize(width: 0, height: -1)
+    }
+    
+    private func addCurrencyLabel() {
+        currencyLabel.font = UIFont.systemFont(ofSize: 20)
+        currencyLabel.textColor = UIColor.white
+        currencyLabel.alpha = 0.4
+        currencyLabel.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(currencyLabel)
         addConstraints([
-                .equalConstraint(from: bar, to: self, attribute: .leading),
-                .equalConstraint(from: bar, to: self, attribute: .trailing),
-                .equalConstraint(from: bar, to: self, attribute: .top),
-                .absoluteConstraint(view: bar, attribute: .height, constant: 50)
+            .equalConstraint(from: currencyLabel, to: pickerView, attribute: .centerX, constant: -30),
+            .equalConstraint(from: currencyLabel, to: pickerView, attribute: .centerY)
         ])
     }
     
@@ -94,12 +103,16 @@ extension SpencePickerView: UIPickerViewDataSource {
 extension SpencePickerView: UIPickerViewDelegate {
     
     func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .left
+        paragraphStyle.firstLineHeadIndent = pickerView.frame.width/2-25
         return NSAttributedString(
             string: items[row],
-            attributes: [NSForegroundColorAttributeName: UIColor.white])
+            attributes: [
+                NSForegroundColorAttributeName: UIColor.white,
+                NSParagraphStyleAttributeName: paragraphStyle
+            ]
+        )
     }
-    
-    // NOTE: right align labels, currency only once
-    // dim background
     
 }

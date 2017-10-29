@@ -12,11 +12,12 @@ struct BudgetOptionsViewModel {
     
     let options: [String]
     let selectedIndex: Int
+    let currency: String
     
 }
 
 extension BudgetOptionsViewModel: Equatable {}
 
 func ==(lhs: BudgetOptionsViewModel, rhs: BudgetOptionsViewModel) -> Bool {
-    return lhs.options == rhs.options && lhs.selectedIndex == rhs.selectedIndex
+    return lhs.options == rhs.options && lhs.selectedIndex == rhs.selectedIndex && lhs.currency == rhs.currency
 }
