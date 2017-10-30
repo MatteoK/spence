@@ -49,7 +49,7 @@ final class LocalRepositoryTests: XCTestCase {
     }
     
     func test_todaysBudget_isRemainingBudgetDividedByRemainingDays() {
-        localRepository.monthlyBudget = 290
+        localRepository.monthlyBudget = 300
         let firstDay = Date(timeIntervalSince1970: 0)
         dateProvider.date = firstDay
         localRepository.addToTodaysExpenses(value: 5)

@@ -104,12 +104,12 @@ final class LocalRepository: ILocalRepository {
     
     var todaysBudget: Float {
         let remainingBudget = monthlyBudget - (thisMonthsExpenses - todaysExpenses)
-        let calculatedBudget = remainingBudget / Float(daysLeftInCurrentMonth())
+        let calculatedBudget = remainingBudget / Float(daysLeftInCurrentMonthIncludingToday())
         return max(calculatedBudget, 0)
     }
     
-    private func daysLeftInCurrentMonth() -> Int {
-        return daysInCurrentMonth() - currentDay()
+    private func daysLeftInCurrentMonthIncludingToday() -> Int {
+        return daysInCurrentMonth() - currentDay() + 1
     }
     
     private func daysInCurrentMonth() -> Int {
